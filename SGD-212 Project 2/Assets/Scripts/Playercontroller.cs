@@ -6,16 +6,10 @@ using UnityEngine.AI;
 
 public class Playercontroller : MonoBehaviour
 {
-    [SerializeField] private string[] slimearray = new string[] { null, null, null};
+    [SerializeField] private List<GameObject> slimeList = new List<GameObject>();
     [SerializeField] private GameObject playerGO;
-    [SerializeField] private int levelID = 1;
-    [SerializeField] private string slimeInHand = null;
-    [SerializeField] private GameObject normSlime;
-    [SerializeField] private GameObject spikeSlime;
-    [SerializeField] private GameObject expandSlime;
-    public SlimeController slimecontroller0;
-    public SlimeController slimecontroller1;
-    public SlimeController slimecontroller2;
+    [SerializeField] private int currSlime = 0;
+    [SerializeField] private GameObject slimeholdPoint;
 
     private Vector3 mousePos;
     private Vector3 lookDirection;
@@ -24,24 +18,6 @@ public class Playercontroller : MonoBehaviour
     public CharacterController characterController;
     [SerializeField] private float speed = 5.0f;
     private Vector3 moveDirection = Vector3.zero;
-
-    public GameObject slime0;
-    public GameObject slime1;
-    public GameObject slime2;
-    
-
-    void Start()
-    {
-        if (levelID == 1)
-        {
-            slimearray[0] = "norm";
-            slimecontroller0.slimeType = slimearray[0];
-            slimearray[1] = "norm";
-            slimecontroller1.slimeType = slimearray[1];
-            slimearray[2] = "norm";
-            slimecontroller2.slimeType = slimearray[2];
-        }
-    }
 
     void Update()
     {
@@ -60,43 +36,38 @@ public class Playercontroller : MonoBehaviour
         //Cycles the slimes when the player presses space
         if (Input.GetKeyDown("space") == true)
         {
-            CycleSlimes();
+            int slimeindex = slimeList.Count - 1;
+            if (currSlime == 0)
+            {
+                currSlime = 1;
+                slimeList[currSlime].transform.position = slimeholdPoint.transform.position;
+            }
+            else if (currSlime == 1)
+            {
+                currSlime = 2;
+                slimeList[currSlime].transform.position = slimeholdPoint.transform.position;
+            }
+            else
+            {
+                currSlime = 0;
+                slimeList[currSlime].transform.position = slimeholdPoint.transform.position;
+            }
+            print(currSlime);
         }
     }
 
-    void CycleSlimes()
+    IEnumerator PickupSlime()
     {
-        string temp;
-        temp = slimeInHand;
-        slimeInHand = slimearray[0];
-        switch (slimeInHand)
+        float timeSinceStarted = 0f;
+        while (true)
         {
-            case "norm":
-                normSlime.SetActive(true);
-                spikeSlime.SetActive(false);
-                expandSlime.SetActive(false);
-                break;
-            case "spike":
-                normSlime.SetActive(false);
-                spikeSlime.SetActive(true);
-                expandSlime.SetActive(false);
-                break;
-            case "expand":
-                normSlime.SetActive(false);
-                spikeSlime.SetActive(false);
-                expandSlime.SetActive(true);
-                break;
-            case null:
-                normSlime.SetActive(false);
-                spikeSlime.SetActive(false);
-                expandSlime.SetActive(false);
-                break;
+            timeSinceStarted += Time.deltaTime;
+            slimeList[currSlime].transform.position = Vector3.Lerp(slimeList[currSlime].transform.position, slimeholdPoint.transform.position, timeSinceStarted);
+            if (slimeList[currSlime].transform.position == slimeholdPoint.transform.position)
+            {
+                yield break;
+            }
+            yield return null;
         }
-        slimearray[0] = slimearray[1];
-        slimecontroller0.slimeType = slimearray[1];
-        slimearray[1] = slimearray[2];
-        slimecontroller1.slimeType = slimearray[2];
-        slimearray[2] = temp;
-        slimecontroller2.slimeType = temp;
     }
 }
