@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.AI;
 
 public class Playercontroller : MonoBehaviour
@@ -10,6 +9,7 @@ public class Playercontroller : MonoBehaviour
     [SerializeField] private GameObject playerGO;
     [SerializeField] private int currSlime = 0;
     [SerializeField] private GameObject slimeholdPoint;
+    [SerializeField] private float throwPower = 10f;
 
     private Vector3 mousePos;
     private Vector3 lookDirection;
@@ -52,22 +52,36 @@ public class Playercontroller : MonoBehaviour
                 currSlime = 0;
                 slimeList[currSlime].transform.position = slimeholdPoint.transform.position;
             }
-            print(currSlime);
         }
-    }
 
-    IEnumerator PickupSlime()
-    {
-        float timeSinceStarted = 0f;
-        while (true)
+        //Keeps the slimes at the holding point
+        if (currSlime == 0)
         {
-            timeSinceStarted += Time.deltaTime;
-            slimeList[currSlime].transform.position = Vector3.Lerp(slimeList[currSlime].transform.position, slimeholdPoint.transform.position, timeSinceStarted);
-            if (slimeList[currSlime].transform.position == slimeholdPoint.transform.position)
-            {
-                yield break;
-            }
-            yield return null;
+            slimeList[currSlime].transform.position = slimeholdPoint.transform.position;
         }
+        else if (currSlime == 1)
+        {
+            slimeList[currSlime].transform.position = slimeholdPoint.transform.position;
+        }
+        else if (currSlime == 2)
+        {
+            slimeList[currSlime].transform.position = slimeholdPoint.transform.position;
+        }
+
+        //Launches the slime
+        /*
+        if (Input.GetMouseButtonDown(0) == true && currSlime == 0)
+        {
+            currSlime = 1;
+        }
+        else if (Input.GetMouseButtonDown(0) && currSlime == 1)
+        {
+            currSlime = 2;
+        }
+        else
+        {
+            currSlime = 0;
+        }
+        */
     }
 }
