@@ -15,7 +15,7 @@ public class Playercontroller : MonoBehaviour
     private Vector3 lookDirection;
     private float lookAngle;
 
-    public CharacterController characterController;
+    public UnityEngine.CharacterController characterController;
     [SerializeField] private float speed = 5.0f;
     private Vector3 moveDirection = Vector3.zero;
 
