@@ -9,7 +9,7 @@ public class Playercontroller : MonoBehaviour
     [SerializeField] private GameObject playerGO;
     [SerializeField] private int currSlime = 0;
     [SerializeField] private GameObject slimeholdPoint;
-    [SerializeField] private float throwPower = 10f;
+    [SerializeField] private float throwPower = 1f;
 
     private Vector3 mousePos;
     private Vector3 lookDirection;
@@ -36,34 +36,18 @@ public class Playercontroller : MonoBehaviour
         //Cycles the slimes when the player presses space
         if (Input.GetKeyDown("space") == true)
         {
-            int slimeindex = slimeList.Count - 1;
-            if (currSlime == 0)
+            currSlime++;
+            if (currSlime > slimeList.Count - 1)
             {
-                currSlime = 1;
-                slimeList[currSlime].transform.position = slimeholdPoint.transform.position;
+                currSlime = -1;
             }
-            else if (currSlime == 1)
-            {
-                currSlime = 2;
-                slimeList[currSlime].transform.position = slimeholdPoint.transform.position;
-            }
-            else
-            {
-                currSlime = 0;
-                slimeList[currSlime].transform.position = slimeholdPoint.transform.position;
-            }
+            print("Current slime: " + currSlime);
+            print("slimeList[].count: " + slimeList.Count);
+            slimeList[currSlime].transform.position = slimeholdPoint.transform.position;
         }
 
         //Keeps the slimes at the holding point
-        if (currSlime == 0)
-        {
-            slimeList[currSlime].transform.position = slimeholdPoint.transform.position;
-        }
-        else if (currSlime == 1)
-        {
-            slimeList[currSlime].transform.position = slimeholdPoint.transform.position;
-        }
-        else if (currSlime == 2)
+        if (currSlime != -1)
         {
             slimeList[currSlime].transform.position = slimeholdPoint.transform.position;
         }
@@ -72,16 +56,24 @@ public class Playercontroller : MonoBehaviour
         /*
         if (Input.GetMouseButtonDown(0) == true && currSlime == 0)
         {
+            slimeList[2].GetComponent<NavMeshAgent>().enabled = false;
+            slimeList[0].GetComponent<NavMeshAgent>().enabled = false;
+            slimeList[0].GetComponent<Rigidbody>().AddForce(Vector3.up * throwPower);
             currSlime = 1;
         }
         else if (Input.GetMouseButtonDown(0) && currSlime == 1)
         {
+            slimeList[0].GetComponent<NavMeshAgent>().enabled = false;
+            slimeList[1].GetComponent<NavMeshAgent>().enabled = false;
+            slimeList[1].GetComponent<Rigidbody>().AddForce(Vector3.up * throwPower);
             currSlime = 2;
         }
         else
         {
+            slimeList[1].GetComponent<NavMeshAgent>().enabled = false;
+            slimeList[2].GetComponent<NavMeshAgent>().enabled = false;
+            slimeList[2].GetComponent<Rigidbody>().AddForce(Vector3.up * throwPower);
             currSlime = 0;
-        }
-        */
+        }*/
     }
 }

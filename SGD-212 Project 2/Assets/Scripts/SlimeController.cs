@@ -12,5 +12,10 @@ public class SlimeController : MonoBehaviour
     {
         //Makes the slime follow the target
         GetComponent<NavMeshAgent>().destination = targetGO.transform.position;
+
+        if (GetComponent<Rigidbody>().velocity.magnitude < 1)
+        {
+            GetComponent<Rigidbody>().velocity = Vector3.zero;
+        }
     }
 }
