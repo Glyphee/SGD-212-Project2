@@ -9,6 +9,7 @@ public class Playercontroller : MonoBehaviour
     [SerializeField] private GameObject playerGO;
     [SerializeField] private int currSlime = 0;
     [SerializeField] private GameObject slimeholdPoint;
+    [SerializeField] public int slimesHeld;
     [SerializeField] private float throwPower = 1f;
 
     private Vector3 mousePos;
@@ -18,6 +19,12 @@ public class Playercontroller : MonoBehaviour
     public UnityEngine.CharacterController characterController;
     [SerializeField] private float speed = 5.0f;
     private Vector3 moveDirection = Vector3.zero;
+    public SlimeController slimeController;
+
+    private void Start()
+    {
+        slimesHeld = slimeList.Count;
+    }
 
     void Update()
     {
@@ -39,7 +46,7 @@ public class Playercontroller : MonoBehaviour
             currSlime++;
             if (currSlime > slimeList.Count - 1)
             {
-                currSlime = -1;
+               currSlime = 0;
             }
             slimeList[currSlime].transform.position = slimeholdPoint.transform.position;
         }
@@ -51,13 +58,30 @@ public class Playercontroller : MonoBehaviour
         }
 
         //Launches the slime
-        /*
-        if (Input.GetMouseButtonDown(0) == true && currSlime == 0)
+        if (Input.GetMouseButtonDown(0) == true/* && slimesHeld != 0*/)
         {
-            slimeList[2].GetComponent<NavMeshAgent>().enabled = false;
-            slimeList[0].GetComponent<NavMeshAgent>().enabled = false;
-            slimeList[0].GetComponent<Rigidbody>().AddForce(Vector3.up * throwPower);
-            currSlime = 1;
-        }*/
+            slimeList[currSlime].GetComponent<NavMeshAgent>().enabled = false;
+            slimeList[currSlime].GetComponent<Rigidbody>().velocity = -playerGO.transform.right * throwPower;
+            currSlime++;
+            if (currSlime > slimeList.Count - 1)
+            {
+                currSlime = 0;
+            }
+            //slimesHeld--;
+        }
+
+        //Sets the slime's destination to the player
+        if (slimeList[0].GetComponent<NavMeshAgent>().enabled == true)
+        {
+            slimeList[0].GetComponent<NavMeshAgent>().destination = playerGO.transform.position;
+        }
+        if (slimeList[1].GetComponent<NavMeshAgent>().enabled == true)
+        {
+            slimeList[1].GetComponent<NavMeshAgent>().destination = playerGO.transform.position;
+        }
+        if (slimeList[2].GetComponent<NavMeshAgent>().enabled == true)
+        {
+            slimeList[2].GetComponent<NavMeshAgent>().destination = playerGO.transform.position;
+        }
     }
 }
