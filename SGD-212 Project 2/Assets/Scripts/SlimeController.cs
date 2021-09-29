@@ -22,7 +22,7 @@ public class SlimeController : MonoBehaviour
         {
             GetComponent<NavMeshAgent>().enabled = true;
             hasStopped = false;
-            playerGO.GetComponent<Playercontroller>().slimesHeld++;
+            //playerGO.GetComponent<Playercontroller>().slimesHeld++;
         }
     }
 }
