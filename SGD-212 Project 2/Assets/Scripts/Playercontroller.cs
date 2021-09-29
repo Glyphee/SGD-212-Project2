@@ -41,8 +41,6 @@ public class Playercontroller : MonoBehaviour
             {
                 currSlime = -1;
             }
-            print("Current slime: " + currSlime);
-            print("slimeList[].count: " + slimeList.Count);
             slimeList[currSlime].transform.position = slimeholdPoint.transform.position;
         }
 
@@ -60,20 +58,6 @@ public class Playercontroller : MonoBehaviour
             slimeList[0].GetComponent<NavMeshAgent>().enabled = false;
             slimeList[0].GetComponent<Rigidbody>().AddForce(Vector3.up * throwPower);
             currSlime = 1;
-        }
-        else if (Input.GetMouseButtonDown(0) && currSlime == 1)
-        {
-            slimeList[0].GetComponent<NavMeshAgent>().enabled = false;
-            slimeList[1].GetComponent<NavMeshAgent>().enabled = false;
-            slimeList[1].GetComponent<Rigidbody>().AddForce(Vector3.up * throwPower);
-            currSlime = 2;
-        }
-        else
-        {
-            slimeList[1].GetComponent<NavMeshAgent>().enabled = false;
-            slimeList[2].GetComponent<NavMeshAgent>().enabled = false;
-            slimeList[2].GetComponent<Rigidbody>().AddForce(Vector3.up * throwPower);
-            currSlime = 0;
         }*/
     }
 }
