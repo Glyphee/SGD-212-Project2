@@ -2695,8 +2695,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 44.5}
-  m_SizeDelta: {x: 301.8078, y: 150.7}
+  m_AnchoredPosition: {x: 0, y: -23.7721}
+  m_SizeDelta: {x: 301.8078, y: 287.2443}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &981754118
 MonoBehaviour:
@@ -2736,9 +2736,14 @@ MonoBehaviour:
     This is placeholder
     text, replace me with useful info!
 
+    Press space to switch between which of
+    your slime friends you hold.
 
-    You could also give some backstory and
-    a few other things '
+    Left-click to throw your slime companions towards
+    your enemies!
+
+
+    You could also give some backstory and a few other things '
 --- !u!222 &981754119
 CanvasRenderer:
   m_ObjectHideFlags: 0

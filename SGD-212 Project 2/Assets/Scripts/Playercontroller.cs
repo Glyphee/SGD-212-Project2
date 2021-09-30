@@ -16,6 +16,8 @@ public class Playercontroller : MonoBehaviour
     private Vector3 lookDirection;
     private float lookAngle;
 
+    // public Animator playerAnimator;
+
     public UnityEngine.CharacterController characterController;
     [SerializeField] private float speed = 5.0f;
     private Vector3 moveDirection = Vector3.zero;
@@ -24,6 +26,8 @@ public class Playercontroller : MonoBehaviour
     private void Start()
     {
         slimesHeld = slimeList.Count;
+
+        // playerAnimator = gameObject.GetComponent<Animator>();
     }
 
     void Update()
@@ -68,6 +72,8 @@ public class Playercontroller : MonoBehaviour
                 currSlime = 0;
             }
             //slimesHeld--;
+
+            // playerAnimator.SetBool("IsAttack01", true);
         }
 
         //Sets the slime's destination to the player

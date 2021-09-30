@@ -10,10 +10,7 @@ public class levelTransport_Script : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Player has entered levelTransport. Transporting to: " + levelName);
-
-        if(other.gameObject.tag == "Player")
-        {
-            SceneManager.LoadScene(levelName);
-        }
+        // SceneManager.LoadScene(levelName);
+        print("Que imaginary transportation to " + levelName);
     }
 }
