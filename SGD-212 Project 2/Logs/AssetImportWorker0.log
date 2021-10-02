@@ -15,11 +15,11 @@ C:/Users/Saman/OneDrive/Documents/GitHub/SGD-212-Project2/SGD-212 Project 2
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-63242
+57963
 Successfully changed project path to: C:/Users/Saman/OneDrive/Documents/GitHub/SGD-212-Project2/SGD-212 Project 2
 C:/Users/Saman/OneDrive/Documents/GitHub/SGD-212-Project2/SGD-212 Project 2
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 41.17 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 42.63 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.1f1 (270dd8c3da1c)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Resources/UnitySubsystems
@@ -35,31 +35,31 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56992
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56296
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002808 seconds.
+Registered in 0.002700 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 36.49 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 37.27 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.617 seconds
+- Completed reload, in  1.719 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001265 seconds.
+Registered in 0.001282 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.990 seconds
+- Completed reload, in  1.068 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
@@ -67,389 +67,97 @@ Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 second
 Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1112 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 59.5 MB.
-System memory in use after: 59.5 MB.
+System memory in use before: 61.2 MB.
+System memory in use after: 61.2 MB.
 
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1555.
-Total: 2.061300 ms (FindLiveObjects: 0.199000 ms CreateObjectMapping: 0.073400 ms MarkObjects: 1.722400 ms  DeleteObjects: 0.064700 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/BLACK BUBBLE.ttf
-  artifactKey: Guid(4d6e1c49cebb766419ae534672a7937d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BLACK BUBBLE.ttf using Guid(4d6e1c49cebb766419ae534672a7937d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b61d9d21e8bac5747e49d9af02fa6d7') in 0.173491 seconds
-  Import took 0.175980 seconds .
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1561.
+Total: 2.078800 ms (FindLiveObjects: 0.150000 ms CreateObjectMapping: 0.055000 ms MarkObjects: 1.790400 ms  DeleteObjects: 0.082400 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 227.062388 seconds.
-  path: Assets/Models
-  artifactKey: Guid(a9f226d6337b45c4da4d5b3f0ad1611d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models using Guid(a9f226d6337b45c4da4d5b3f0ad1611d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bce6ab2edc384aa57266cae9e91eb55a') in 0.010223 seconds
-  Import took 0.012540 seconds .
+  path: Assets/Models/SpikeSlimeFBX/SpikeSlime 1.fbx
+  artifactKey: Guid(4b2384428d3a4d148868866abe448945) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/SpikeSlimeFBX/SpikeSlime 1.fbx using Guid(4b2384428d3a4d148868866abe448945) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28f1e9c3de968b81ae87e9de26ff0d7f') in 0.311698 seconds
+  Import took 0.315705 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.005306 seconds.
-  path: Assets/Models
-  artifactKey: Guid(a9f226d6337b45c4da4d5b3f0ad1611d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models using Guid(a9f226d6337b45c4da4d5b3f0ad1611d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bce6ab2edc384aa57266cae9e91eb55a') in 0.006116 seconds
-  Import took 0.008405 seconds .
+  Time since last request: 5.829414 seconds.
+  path: Assets/Models/SpikeSlimeFBX/SpikeSlime2.0.fbx
+  artifactKey: Guid(4b2384428d3a4d148868866abe448945) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/SpikeSlimeFBX/SpikeSlime2.0.fbx using Guid(4b2384428d3a4d148868866abe448945) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21c7a6eec4fafd64a7529dfe350afdf1') in 0.051337 seconds
+  Import took 0.055442 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.046185 seconds.
-  path: Assets/Models/AbsorbSlime.fbx
-  artifactKey: Guid(5451cd1c22ebfcc41a2e81d9ca4b1245) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/AbsorbSlime.fbx using Guid(5451cd1c22ebfcc41a2e81d9ca4b1245) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f54b9a0b7516efde552dfaba0d68b933') in 0.478609 seconds
-  Import took 0.481381 seconds .
+  Time since last request: 14.990589 seconds.
+  path: Assets/Models/SpikeSlimeFBX/Materials
+  artifactKey: Guid(6a822cd512acc094281bf81415405be5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/SpikeSlimeFBX/Materials using Guid(6a822cd512acc094281bf81415405be5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86936e18ce39c28b427afe1f1016132d') in 0.011286 seconds
+  Import took 0.015350 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 18.486067 seconds.
-  path: Assets/Models/SpikeSlimeFBX
-  artifactKey: Guid(ff0fa3cb37bf5df419c39f15664a0c40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/SpikeSlimeFBX using Guid(ff0fa3cb37bf5df419c39f15664a0c40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebb15cd639749264f530c5eb6be246e8') in 0.011461 seconds
-  Import took 0.014233 seconds .
+  Time since last request: 2.062415 seconds.
+  path: Assets/Models/SpikeSlimeFBX/Materials/SpikeSlimeOutlineTex.mat
+  artifactKey: Guid(675d0385f11f1064abe9e41a30176463) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/SpikeSlimeFBX/Materials/SpikeSlimeOutlineTex.mat using Guid(675d0385f11f1064abe9e41a30176463) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5dd294b4cc60c9a87804b0ca7eba4bf1') in 0.027340 seconds
+  Import took 0.031418 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.053044 seconds.
-  path: Assets/Models/SpikeSlimeFBX/SpikeSlime.fbx
-  artifactKey: Guid(0aa659464a4c03f4e9e76542635873b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/SpikeSlimeFBX/SpikeSlime.fbx using Guid(0aa659464a4c03f4e9e76542635873b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f5aa72abe81f287c5d8e45ed775d09e') in 0.048983 seconds
-  Import took 0.051910 seconds .
+  Time since last request: 0.000360 seconds.
+  path: Assets/Models/SpikeSlimeFBX/Materials/SpikeSlimeTex.mat
+  artifactKey: Guid(e95b9fde770c1824a8ad2cb470416e15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/SpikeSlimeFBX/Materials/SpikeSlimeTex.mat using Guid(e95b9fde770c1824a8ad2cb470416e15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3cc3f4795b282a01565d0cd81e23217') in 0.019906 seconds
+  Import took 0.022403 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000407 seconds.
-  path: Assets/Models/SpikeSlimeFBX/SpikeSlimeOutlineTex.png
-  artifactKey: Guid(6d4052e892808ca4290ea85b2f54499b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/SpikeSlimeFBX/SpikeSlimeOutlineTex.png using Guid(6d4052e892808ca4290ea85b2f54499b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f323c7243a26cfb25c991927af0387b7') in 0.050272 seconds
-  Import took 0.052551 seconds .
+  Time since last request: 16.180344 seconds.
+  path: Assets/Models/SpikeSlimeFBX/SpikeSlime2.0.fbx
+  artifactKey: Guid(4b2384428d3a4d148868866abe448945) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/SpikeSlimeFBX/SpikeSlime2.0.fbx using Guid(4b2384428d3a4d148868866abe448945) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4d8174a795d9f5e3ea43c425cac3c71') in 0.039077 seconds
+  Import took 0.045577 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000385 seconds.
-  path: Assets/Models/SpikeSlimeFBX/SpikeSlimeTex.png
-  artifactKey: Guid(46352814fd8c6824f98e6cf21fa1fc84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/SpikeSlimeFBX/SpikeSlimeTex.png using Guid(46352814fd8c6824f98e6cf21fa1fc84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42f1ab063d885e6eb6664083d727f7b4') in 0.015601 seconds
-  Import took 0.018149 seconds .
+  Time since last request: 468.407196 seconds.
+  path: Assets/Models/SpikeSlime.fbx
+  artifactKey: Guid(6b02ddf8f09e00040815c356c893ff10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/SpikeSlime.fbx using Guid(6b02ddf8f09e00040815c356c893ff10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25ef65162e3b165e5146adaf1a875003') in 0.061314 seconds
+  Import took 0.065457 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 68.170169 seconds.
-  path: Assets/Prefabs/SpikeSlime.prefab
-  artifactKey: Guid(6eab5ec6019c7a549b355de188401b6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/SpikeSlime.prefab using Guid(6eab5ec6019c7a549b355de188401b6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97f6767675e698fee0197ae3dd2e42c3') in 0.025947 seconds
-  Import took 0.029019 seconds .
+  Time since last request: 18.001200 seconds.
+  path: Assets/Models/SpikeSlime2.0.fbx
+  artifactKey: Guid(6b02ddf8f09e00040815c356c893ff10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/SpikeSlime2.0.fbx using Guid(6b02ddf8f09e00040815c356c893ff10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '623d164f4bd9ae552b8f98e1b847efdc') in 0.065300 seconds
+  Import took 0.072027 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000375 seconds.
-  path: Assets/Prefabs/Slime0.prefab
-  artifactKey: Guid(69aee4b7d1e8ceb4ba73c7b79612e3d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Slime0.prefab using Guid(69aee4b7d1e8ceb4ba73c7b79612e3d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '732fa42232582ff5d1fd763253f676dd') in 0.020958 seconds
-  Import took 0.024472 seconds .
+  Time since last request: 10.777882 seconds.
+  path: Assets/Models/SpikeSlimeFBX/SpikeSlime2.0.fbx
+  artifactKey: Guid(6b02ddf8f09e00040815c356c893ff10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/SpikeSlimeFBX/SpikeSlime2.0.fbx using Guid(6b02ddf8f09e00040815c356c893ff10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '294aa438ee2ed499cf8d336de10f31ee') in 0.064293 seconds
+  Import took 0.067130 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000242 seconds.
-  path: Assets/Prefabs/Langsat.prefab
-  artifactKey: Guid(e54a0cbbf31be4644bee5f12ecfbbd03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Langsat.prefab using Guid(e54a0cbbf31be4644bee5f12ecfbbd03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd89402cf9255eeb8cdd713b020371ab2') in 0.071073 seconds
-  Import took 0.075510 seconds .
+  Time since last request: 8.152831 seconds.
+  path: Assets/Models/SpikeSlimeFBX/SpikeSlime2.0.fbx
+  artifactKey: Guid(6b02ddf8f09e00040815c356c893ff10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/SpikeSlimeFBX/SpikeSlime2.0.fbx using Guid(6b02ddf8f09e00040815c356c893ff10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '007c80d7f87393e872336975cd87acee') in 0.054889 seconds
+  Import took 0.057465 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000250 seconds.
-  path: Assets/Prefabs/AbsorbSlime.prefab
-  artifactKey: Guid(9619e1cb7cd7eda45b9efa1a9330e638) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AbsorbSlime.prefab using Guid(9619e1cb7cd7eda45b9efa1a9330e638) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0219f6531c6e596a36a853f414053ab') in 0.021606 seconds
-  Import took 0.024483 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000246 seconds.
-  path: Assets/Prefabs/Player.prefab
-  artifactKey: Guid(6efa2668371982c4a9a6e91f53a279af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Player.prefab using Guid(6efa2668371982c4a9a6e91f53a279af) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Asset 'Chara_4Hero_Controller': Transition 'Dead -> Exit' in state 'Dead' doesn't have an Exit Time or any condition, transition will be ignored
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.EditorUtility:Internal_InstantiateRemoveAllNonAnimationComponentsSingle (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
-UnityEditor.EditorUtility:InstantiateRemoveAllNonAnimationComponents (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
-UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
-UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
-UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
-UnityEditor.GameObjectInspector:GetPreviewData ()
-UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
-UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
-
-[C:\buildslave\unity\build\Editor/Src/Animation/StateMachine.cpp line 1847]
-
- -> (artifact id: '801cc5d2957ed4d76b70f21dd35e3278') in 0.361410 seconds
-  Import took 0.364559 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000322 seconds.
-  path: Assets/Prefabs/AbsorbSlime.prefab
-  artifactKey: Guid(9619e1cb7cd7eda45b9efa1a9330e638) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AbsorbSlime.prefab using Guid(9619e1cb7cd7eda45b9efa1a9330e638) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0219f6531c6e596a36a853f414053ab') in 0.017633 seconds
-  Import took 0.022084 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000254 seconds.
-  path: Assets/Prefabs/level_Transport.prefab
-  artifactKey: Guid(bf0378efe960a2542afd70b9e1a9c71e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/level_Transport.prefab using Guid(bf0378efe960a2542afd70b9e1a9c71e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '496008cce6c6ad5df600445682c41dc2') in 0.014135 seconds
-  Import took 0.016754 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000965 seconds.
-  path: Assets/Prefabs/environmentLevel1.prefab
-  artifactKey: Guid(2d262d0384d6b8b47bdd48f2071419c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/environmentLevel1.prefab using Guid(2d262d0384d6b8b47bdd48f2071419c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3bd23d39e205576aa5ef085536f3b1e') in 3.182773 seconds
-  Import took 3.207060 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 52.537073 seconds.
-  path: Assets/Models/SpikeSlimeFBX/SpikeSlime.fbx
-  artifactKey: Guid(0aa659464a4c03f4e9e76542635873b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/SpikeSlimeFBX/SpikeSlime.fbx using Guid(0aa659464a4c03f4e9e76542635873b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b03618d62c4e7fde1531bac791c6845') in 0.041403 seconds
-  Import took 0.044020 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 42.198903 seconds.
-  path: Assets/Imports/enemies
-  artifactKey: Guid(6330e1d3a4943544c8a23ff71ca3b830) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imports/enemies using Guid(6330e1d3a4943544c8a23ff71ca3b830) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a917dae5802d6626c50919b88e70de34') in 0.013610 seconds
-  Import took 0.016169 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 94.071189 seconds.
-  path: Assets/Models/SpikeSlimeFBX/SpikeSlime.fbx
-  artifactKey: Guid(0aa659464a4c03f4e9e76542635873b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/SpikeSlimeFBX/SpikeSlime.fbx using Guid(0aa659464a4c03f4e9e76542635873b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '687a79964d79ad90f4197bd3da1b10fe') in 0.033673 seconds
-  Import took 0.037370 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 38.092648 seconds.
-  path: Assets/Imports/level_Items/SinuousShrooms/Models/Materials/Shroom_03.mat
-  artifactKey: Guid(95c245d422fec23498daec41e7292629) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imports/level_Items/SinuousShrooms/Models/Materials/Shroom_03.mat using Guid(95c245d422fec23498daec41e7292629) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45f997b5a693a9eed2b3b68652bb0fd0') in 0.043356 seconds
-  Import took 0.046028 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000352 seconds.
-  path: Assets/Imports/level_Items/Jonathan Foust/Materials/Snake Eye Tree  and  Windswept Thorn Tree Leaves.mat
-  artifactKey: Guid(09155836d345a744fa10432acdc8ecee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imports/level_Items/Jonathan Foust/Materials/Snake Eye Tree  and  Windswept Thorn Tree Leaves.mat using Guid(09155836d345a744fa10432acdc8ecee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c975f9cc05eef2a67ce346523916029') in 0.033333 seconds
-  Import took 0.035727 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000190 seconds.
-  path: Assets/Imports/level_Items/BrokenVector/UltimateDungeonPack/Models/Furniture/Cauldron_Full.fbx
-  artifactKey: Guid(1dfcafeaf18a4e546b371252addce9da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imports/level_Items/BrokenVector/UltimateDungeonPack/Models/Furniture/Cauldron_Full.fbx using Guid(1dfcafeaf18a4e546b371252addce9da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '086f85e7ea61697c52faeefd47c17d10') in 0.040074 seconds
-  Import took 0.042538 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000236 seconds.
-  path: Assets/Imports/level_Items/BrokenVector/UltimateDungeonPack/Models/Objects/Jar_Big.fbx
-  artifactKey: Guid(b7e1480ce257ecf43ab1570081afc3c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imports/level_Items/BrokenVector/UltimateDungeonPack/Models/Objects/Jar_Big.fbx using Guid(b7e1480ce257ecf43ab1570081afc3c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5e522e981ebdbc8012920d8134a2386') in 0.044181 seconds
-  Import took 0.046686 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000457 seconds.
-  path: Assets/Imports/level_Items/BrokenVector/UltimateDungeonPack/Models/Tiles/Basement_Passage_Mix.fbx
-  artifactKey: Guid(0d0e4e73b580de04bb4995efc1902369) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imports/level_Items/BrokenVector/UltimateDungeonPack/Models/Tiles/Basement_Passage_Mix.fbx using Guid(0d0e4e73b580de04bb4995efc1902369) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '875374d4f91074805b50f5d0e30242c0') in 0.048426 seconds
-  Import took 0.050869 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000203 seconds.
-  path: Assets/Textures and Materials/spike.mat
-  artifactKey: Guid(ef58193fcc19c7448869497a1954739a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Textures and Materials/spike.mat using Guid(ef58193fcc19c7448869497a1954739a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bdabe2fc4986a419fc35a1c0b5dee4a5') in 0.018160 seconds
-  Import took 0.020822 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000252 seconds.
-  path: Assets/Imports/level_Items/SinuousShrooms/Models/Materials/Shroom_04.mat
-  artifactKey: Guid(e62aa16199c0e13499344f24a4f60b6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imports/level_Items/SinuousShrooms/Models/Materials/Shroom_04.mat using Guid(e62aa16199c0e13499344f24a4f60b6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '149ad95b7d1561bbcd12bc05bebe5738') in 0.021969 seconds
-  Import took 0.024817 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000276 seconds.
-  path: Assets/Imports/level_Items/Hand Painted Stone Texture/Material/Stone_mobile.mat
-  artifactKey: Guid(094c835627124fe4bbbaa762d2240cb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imports/level_Items/Hand Painted Stone Texture/Material/Stone_mobile.mat using Guid(094c835627124fe4bbbaa762d2240cb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd78f66f8cf3e9a32af1c68076f3ebb3') in 0.021633 seconds
-  Import took 0.024293 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000264 seconds.
-  path: Assets/Imports/level_Items/BrokenVector/UltimateDungeonPack/Models/Tiles/Dungeon_Wall_Var2.fbx
-  artifactKey: Guid(827885f9c6f8d734c894e9ee1ed7b6e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imports/level_Items/BrokenVector/UltimateDungeonPack/Models/Tiles/Dungeon_Wall_Var2.fbx using Guid(827885f9c6f8d734c894e9ee1ed7b6e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '116f8dbcf4d1446222eb8abee5f493e6') in 0.033748 seconds
-  Import took 0.036362 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000198 seconds.
-  path: Assets/Imports/level_Items/BrokenVector/UltimateDungeonPack/Models/Tiles/Dungeon_Wall_Var1.fbx
-  artifactKey: Guid(4fe4fc7683c898747998c195978256cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imports/level_Items/BrokenVector/UltimateDungeonPack/Models/Tiles/Dungeon_Wall_Var1.fbx using Guid(4fe4fc7683c898747998c195978256cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d8b338226a47e94a1508dbd30b0825b') in 0.035639 seconds
-  Import took 0.038002 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000110 seconds.
-  path: Assets/Imports/level_Items/BrokenVector/UltimateDungeonPack/Materials/Stone.mat
-  artifactKey: Guid(eaf560748e2d5d0449a30251bc3056be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imports/level_Items/BrokenVector/UltimateDungeonPack/Materials/Stone.mat using Guid(eaf560748e2d5d0449a30251bc3056be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef89f9d577b684ccf9bf67de143c42ee') in 0.021012 seconds
-  Import took 0.023836 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000282 seconds.
-  path: Assets/Textures and Materials/Stonefloor.mat
-  artifactKey: Guid(7e9743cfff56dd94ca901b2b79b81256) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Textures and Materials/Stonefloor.mat using Guid(7e9743cfff56dd94ca901b2b79b81256) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8f587b79da0d950ad65e85fc516b46d') in 0.019961 seconds
-  Import took 0.022742 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000387 seconds.
-  path: Assets/Imports/level_Items/BrokenVector/UltimateDungeonPack/Models/Tiles/Dungeon_Wall_Var3.fbx
-  artifactKey: Guid(b3c8bb8b6364eff4794deec64d2e92f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imports/level_Items/BrokenVector/UltimateDungeonPack/Models/Tiles/Dungeon_Wall_Var3.fbx using Guid(b3c8bb8b6364eff4794deec64d2e92f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2bd20d83b7284e0911a3856368413be') in 0.032970 seconds
-  Import took 0.035805 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000268 seconds.
-  path: Assets/Imports/level_Items/Jonathan Foust/Materials/Snake Eye Tree  and  Windswept Thorn Tree Stem.mat
-  artifactKey: Guid(e7dc29c379950474d892f3da0747acd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imports/level_Items/Jonathan Foust/Materials/Snake Eye Tree  and  Windswept Thorn Tree Stem.mat using Guid(e7dc29c379950474d892f3da0747acd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b581f3f31a1e009471870863a2e2de23') in 0.341488 seconds
-  Import took 0.344173 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000302 seconds.
-  path: Assets/Imports/level_Items/Jonathan Foust/Materials/Sunflower Stem.mat
-  artifactKey: Guid(e3fc99a8ffc9ea44d96f5eb7b7654152) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imports/level_Items/Jonathan Foust/Materials/Sunflower Stem.mat using Guid(e3fc99a8ffc9ea44d96f5eb7b7654152) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e498aa70c8abcee71fbef12f8ae8d944') in 0.332539 seconds
-  Import took 0.334996 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000415 seconds.
-  path: Assets/Imports/level_Items/Hand Painted Stone Texture/Material/Stone_normal.mat
-  artifactKey: Guid(5f73475cf0cad364b9800b85c2a229fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imports/level_Items/Hand Painted Stone Texture/Material/Stone_normal.mat using Guid(5f73475cf0cad364b9800b85c2a229fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e85da7826f9809dd6464b4cc17cf4f3') in 0.369898 seconds
-  Import took 0.372270 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000310 seconds.
-  path: Assets/Imports/level_Items/Jonathan Foust/Materials/Underbrush Vine.mat
-  artifactKey: Guid(350ed9edc69f9a14a8f58d542cbd8d13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imports/level_Items/Jonathan Foust/Materials/Underbrush Vine.mat using Guid(350ed9edc69f9a14a8f58d542cbd8d13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ca7ac1bb8e4322198734164218adfeb') in 0.035114 seconds
-  Import took 0.037461 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000251 seconds.
-  path: Assets/Imports/level_Items/Jonathan Foust/Materials/Sunflower Leaves and Petals.mat
-  artifactKey: Guid(88a879f3ca0dfa14ab625947edee4588) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imports/level_Items/Jonathan Foust/Materials/Sunflower Leaves and Petals.mat using Guid(88a879f3ca0dfa14ab625947edee4588) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05d4812aebf21981727bed02ddcc252b') in 0.031153 seconds
-  Import took 0.033695 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 44.742918 seconds.
-  path: Assets/Models/SpikeSlimeFBX/SpikeSlime.fbx
-  artifactKey: Guid(0aa659464a4c03f4e9e76542635873b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/SpikeSlimeFBX/SpikeSlime.fbx using Guid(0aa659464a4c03f4e9e76542635873b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a0f8c3b329cb2c604fe9f7d2cf37a88') in 0.040629 seconds
-  Import took 0.043307 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.615306 seconds.
-  path: Assets/Models/SpikeSlimeFBX/SpikeSlime.fbx
-  artifactKey: Guid(0aa659464a4c03f4e9e76542635873b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/SpikeSlimeFBX/SpikeSlime.fbx using Guid(0aa659464a4c03f4e9e76542635873b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1d3152a225c2cff5db0c4c5b2b3fb89') in 0.030297 seconds
-  Import took 0.033684 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 56.354052 seconds.
-  path: Assets/Prefabs/SpikeSlime 1.prefab
-  artifactKey: Guid(f44f844016cd09344be0d1de2060f2fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/SpikeSlime 1.prefab using Guid(f44f844016cd09344be0d1de2060f2fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7320688c8248d066eda2e7c85ba98452') in 0.025131 seconds
-  Import took 0.029050 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.005387 seconds.
-  path: Assets/Prefabs/SpikeSlime 1.prefab
-  artifactKey: Guid(f44f844016cd09344be0d1de2060f2fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/SpikeSlime 1.prefab using Guid(f44f844016cd09344be0d1de2060f2fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7320688c8248d066eda2e7c85ba98452') in 0.016995 seconds
-  Import took 0.019877 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 110.150132 seconds.
-  path: Assets/Scenes/SampleScene.unity
-  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/SampleScene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b183549646f3515204fec1f39c1fe57a') in 0.013439 seconds
-  Import took 0.016046 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001489 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.901 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1105 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 78.5 MB.
-System memory in use after: 78.6 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1613.
-Total: 1.688700 ms (FindLiveObjects: 0.144900 ms CreateObjectMapping: 0.045700 ms MarkObjects: 1.466000 ms  DeleteObjects: 0.031000 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 47.146044 seconds.
-  path: Assets/Prefabs/SpikeSlime.prefab
-  artifactKey: Guid(f44f844016cd09344be0d1de2060f2fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/SpikeSlime.prefab using Guid(f44f844016cd09344be0d1de2060f2fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0594e2b6328336bfcfc5ede4ffc81c47') in 0.080486 seconds
-  Import took 0.083872 seconds .
+  Time since last request: 3.471361 seconds.
+  path: Assets/Models/SpikeSlimeFBX/SpikeSlime2.0.fbx
+  artifactKey: Guid(6b02ddf8f09e00040815c356c893ff10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/SpikeSlimeFBX/SpikeSlime2.0.fbx using Guid(6b02ddf8f09e00040815c356c893ff10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a8c24bc9327fbb80590cfa8589e299f') in 0.052011 seconds
+  Import took 0.058502 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
