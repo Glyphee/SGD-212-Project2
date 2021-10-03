@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - slime
+  - key
+  - door
+  - FinalDoor
   layers:
   - Default
   - TransparentFX
