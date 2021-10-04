@@ -15,6 +15,8 @@ public class Playercontroller : MonoBehaviour
     private Vector3 mousePos;
     private Vector3 lookDirection;
     private float lookAngle;
+    public int slimesInParty = 0; //amount of slimes in your party
+    public bool isHolding = false; //if the player is holding a slime
 
     // public Animator playerAnimator;
 
@@ -22,6 +24,7 @@ public class Playercontroller : MonoBehaviour
     [SerializeField] private float speed = 5.0f;
     private Vector3 moveDirection = Vector3.zero;
     public SlimeController slimeController;
+    
 
     private void Start()
     {
@@ -47,27 +50,47 @@ public class Playercontroller : MonoBehaviour
         //Cycles the slimes when the player presses space
         if (Input.GetKeyDown("space") == true)
         {
-            currSlime++;
-            if (currSlime > slimeList.Count - 1)
+            if (slimesInParty > 1)
             {
-               currSlime = 0;
-            }
-            slimeList[currSlime].transform.position = slimeholdPoint.transform.position;
-        }
+                slimeList[currSlime].GetComponent<SlimeController>().isHeld = false;
+                slimeList[currSlime].transform.position = slimeholdPoint.transform.position;
+                if(currSlime < slimesInParty - 1)
+                {
+                    currSlime++;
+                }               
+                else
+                {
+                    currSlime = 0;
+                }
+                slimeList[currSlime].GetComponent<SlimeController>().isHeld = true;
 
-        //Keeps the slimes at the holding point
-        if (currSlime != -1)
+            }
+            
+            
+        }      
+
+        //keeps the current slime at holding point
+        if (currSlime != -1 && slimeList[currSlime].GetComponent<SlimeController>().isHeld)
         {
             slimeList[currSlime].transform.position = slimeholdPoint.transform.position;
+            isHolding = true;
         }
+
 
         //Launches the slime
         if (Input.GetMouseButtonDown(0) == true/* && slimesHeld != 0*/)
         {
-            slimeList[currSlime].GetComponent<NavMeshAgent>().enabled = false;
-            slimeList[currSlime].GetComponent<Rigidbody>().velocity = -playerGO.transform.right * throwPower;
-            currSlime++;
-            if (currSlime > slimeList.Count - 1)
+            if(isHolding)
+            {
+                slimeList[currSlime].GetComponent<NavMeshAgent>().enabled = false;
+                slimeList[currSlime].GetComponent<Rigidbody>().velocity = -playerGO.transform.right * throwPower;
+                slimeList[currSlime].GetComponent<SlimeController>().isHeld = false;
+                slimeList[currSlime].GetComponent<SlimeController>().isInParty = false;
+                currSlime++;
+                slimesInParty--;
+            }           
+            isHolding = false;
+            if (currSlime > slimesInParty)
             {
                 currSlime = 0;
             }
@@ -76,18 +99,19 @@ public class Playercontroller : MonoBehaviour
             // playerAnimator.SetBool("IsAttack01", true);
         }
 
-        //Sets the slime's destination to the player
-        if (slimeList[0].GetComponent<NavMeshAgent>().enabled == true)
+        //(navMesh logic moved to SlimeControllers)
+
+        if (slimesInParty > 0 && !isHolding) //searching for slimes in party 
         {
-            slimeList[0].GetComponent<NavMeshAgent>().destination = playerGO.transform.position;
+            print("Current slime missing, searching for slimes in party");
+
+            currSlime++;
+            
+            if (currSlime > slimeList.Count - 1)
+            {
+                currSlime = 0;
+            }
         }
-        if (slimeList[1].GetComponent<NavMeshAgent>().enabled == true)
-        {
-            slimeList[1].GetComponent<NavMeshAgent>().destination = playerGO.transform.position;
-        }
-        if (slimeList[2].GetComponent<NavMeshAgent>().enabled == true)
-        {
-            slimeList[2].GetComponent<NavMeshAgent>().destination = playerGO.transform.position;
-        }
+
     }
 }

@@ -7,22 +7,60 @@ public class SlimeController : MonoBehaviour
 {
     [SerializeField] private GameObject playerGO;
     private bool hasStopped = false;
+    NavMeshAgent nav;
+    Rigidbody rb;
+    Playercontroller controller;
+    public bool isInParty = false; //if the slime is in the player's party
+    public bool isHeld = false; //if the player is holding the slime
+
+
+    private void Start()
+    {
+        nav = GetComponent<NavMeshAgent>();
+        rb = GetComponent<Rigidbody>();
+        nav.enabled = false;
+        controller = FindObjectOfType<Playercontroller>();
+    }
 
     // Update is called once per frame
     void Update()
     {
-        if (GetComponent<Rigidbody>().velocity.magnitude < 1)
+        if (rb.velocity.magnitude < 1)
         {
-            GetComponent<Rigidbody>().velocity = Vector3.zero;
-            GetComponent<Rigidbody>().transform.rotation = Quaternion.identity;
+            rb.velocity = Vector3.zero;
+            rb.transform.rotation = Quaternion.identity;
             hasStopped = true;
+            
         }
-
+        
         if (Vector3.Distance(transform.position, playerGO.transform.position) < 1 && hasStopped == true)
-        {
-            GetComponent<NavMeshAgent>().enabled = true;
+        { //player is close and is not moving
+            nav.enabled = true;
             hasStopped = false;
-            //playerGO.GetComponent<Playercontroller>().slimesHeld++;
+            if(!isInParty)
+            {
+                isInParty = true;
+                controller.slimesInParty++;
+                print("Slimes in party: " + controller.slimesInParty);
+            }
+            if(!controller.isHolding)
+            {
+                isHeld = true;
+            }
+            
+        }
+        //not working as intended, TODO
+        /*if (Vector3.Distance(transform.position, playerGO.transform.position) > 10 && isInParty && !isHeld)
+        {
+            rb.transform.position = playerGO.transform.position;
+            print("Slime too far, moving to player");
+            isInParty = false;
+        }*/
+
+        //Sets slime's destination to the player (Moved from player controller)
+        if (nav.enabled == true)
+        {
+            nav.destination = playerGO.transform.position;
         }
     }
 }
