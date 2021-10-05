@@ -17,6 +17,8 @@ public class MainMenu : MonoBehaviour
     bool isCreditsToggle = false;
     int currentHelpPage = 0;
 
+    public Animator circleTransitionController;
+
     private void Start()
     {
         helpPanel.SetActive(false);
@@ -33,7 +35,20 @@ public class MainMenu : MonoBehaviour
 
     public void OnPlayButtonClick(string level)
     {
-        SceneManager.LoadScene(level);
+        // levelTransport_Script.J.StartButtonTransit();
+
+        StartCoroutine(ButtonTransit(level));
+
+        
+    }
+
+    private IEnumerator ButtonTransit(string level2)
+    {
+        circleTransitionController.SetTrigger("exitCircleTrigger");
+
+        yield return new WaitForSeconds(1);
+
+        SceneManager.LoadScene(level2);
     }
 
     public void OnHelpButtonClick() //toggles panel, prevents overlapping with credits panel
