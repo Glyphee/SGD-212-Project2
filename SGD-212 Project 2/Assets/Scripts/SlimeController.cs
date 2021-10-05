@@ -42,6 +42,7 @@ public class SlimeController : MonoBehaviour
                 isInParty = true;
                 controller.slimesInParty++;
                 print("Slimes in party: " + controller.slimesInParty);
+                controller.slimeList.Add(this.gameObject);
             }
             if(!controller.isHolding)
             {
@@ -49,6 +50,7 @@ public class SlimeController : MonoBehaviour
             }
             
         }
+
         //not working as intended, TODO
         /*if (Vector3.Distance(transform.position, playerGO.transform.position) > 10 && isInParty && !isHeld)
         {

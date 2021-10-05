@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class Playercontroller : MonoBehaviour
 {
-    [SerializeField] private List<GameObject> slimeList = new List<GameObject>();
+    [SerializeField] public List<GameObject> slimeList = new List<GameObject>();
     [SerializeField] private GameObject playerGO;
     [SerializeField] private int currSlime = 0;
     [SerializeField] private GameObject slimeholdPoint;
@@ -65,10 +65,7 @@ public class Playercontroller : MonoBehaviour
                     currSlime = 0;
                 }
                 slimeList[currSlime].GetComponent<SlimeController>().isHeld = true;
-
             }
-            
-            
         }      
 
         //keeps the current slime at holding point

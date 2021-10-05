@@ -1,0 +1,177 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1414540161600677991
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1414540161600677990}
+  - component: {fileID: 1414540161600677989}
+  - component: {fileID: 1414540161600677988}
+  - component: {fileID: 1414540161600678040}
+  - component: {fileID: 1414540161600678041}
+  m_Layer: 3
+  m_Name: spikeslimeAI
+  m_TagString: spike
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1414540161600677990
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414540161600677991}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -106.5, y: -14.186, z: -11.36}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_Children:
+  - {fileID: 2685113044797912108}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1414540161600677989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414540161600677991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c69206d973ad064bac542c4bbf91293, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerGO: {fileID: 0}
+  isInParty: 0
+  isHeld: 0
+--- !u!195 &1414540161600677988
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414540161600677991}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 5
+  m_Acceleration: 50
+  avoidancePriority: 1
+  m_AngularSpeed: 180
+  m_StoppingDistance: 1
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 0.75
+  m_BaseOffset: 0.25
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!54 &1414540161600678040
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414540161600677991}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 1
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
+--- !u!135 &1414540161600678041
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414540161600677991}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.47
+  m_Center: {x: 0, y: 0.08, z: 0}
+--- !u!1001 &4521696684605873229
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1414540161600677990}
+    m_Modifications:
+    - target: {fileID: 1209475535361323739, guid: f44f844016cd09344be0d1de2060f2fa, type: 3}
+      propertyPath: m_Name
+      value: SpikeSlime
+      objectReference: {fileID: 0}
+    - target: {fileID: 1982493389774186593, guid: f44f844016cd09344be0d1de2060f2fa, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1982493389774186593, guid: f44f844016cd09344be0d1de2060f2fa, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 12.586678
+      objectReference: {fileID: 0}
+    - target: {fileID: 1982493389774186593, guid: f44f844016cd09344be0d1de2060f2fa, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 12.586678
+      objectReference: {fileID: 0}
+    - target: {fileID: 1982493389774186593, guid: f44f844016cd09344be0d1de2060f2fa, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 12.586678
+      objectReference: {fileID: 0}
+    - target: {fileID: 1982493389774186593, guid: f44f844016cd09344be0d1de2060f2fa, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 1982493389774186593, guid: f44f844016cd09344be0d1de2060f2fa, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.511
+      objectReference: {fileID: 0}
+    - target: {fileID: 1982493389774186593, guid: f44f844016cd09344be0d1de2060f2fa, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.139
+      objectReference: {fileID: 0}
+    - target: {fileID: 1982493389774186593, guid: f44f844016cd09344be0d1de2060f2fa, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.57766163
+      objectReference: {fileID: 0}
+    - target: {fileID: 1982493389774186593, guid: f44f844016cd09344be0d1de2060f2fa, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.8052506
+      objectReference: {fileID: 0}
+    - target: {fileID: 1982493389774186593, guid: f44f844016cd09344be0d1de2060f2fa, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.09831112
+      objectReference: {fileID: 0}
+    - target: {fileID: 1982493389774186593, guid: f44f844016cd09344be0d1de2060f2fa, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.090628125
+      objectReference: {fileID: 0}
+    - target: {fileID: 1982493389774186593, guid: f44f844016cd09344be0d1de2060f2fa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -114.146
+      objectReference: {fileID: 0}
+    - target: {fileID: 1982493389774186593, guid: f44f844016cd09344be0d1de2060f2fa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 39.380005
+      objectReference: {fileID: 0}
+    - target: {fileID: 1982493389774186593, guid: f44f844016cd09344be0d1de2060f2fa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -40.017
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f44f844016cd09344be0d1de2060f2fa, type: 3}
+--- !u!4 &2685113044797912108 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1982493389774186593, guid: f44f844016cd09344be0d1de2060f2fa, type: 3}
+  m_PrefabInstance: {fileID: 4521696684605873229}
+  m_PrefabAsset: {fileID: 0}

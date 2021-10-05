@@ -8,6 +8,9 @@ TagManager:
   - key
   - door
   - FinalDoor
+  - absorb
+  - spike
+  - crush
   layers:
   - Default
   - TransparentFX
