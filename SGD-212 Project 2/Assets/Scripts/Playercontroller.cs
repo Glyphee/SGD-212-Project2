@@ -18,6 +18,8 @@ public class Playercontroller : MonoBehaviour
     public int slimesInParty = 0; //amount of slimes in your party
     public bool isHolding = false; //if the player is holding a slime
 
+    public MessageScript MessageScript;
+
     // public Animator playerAnimator;
 
     public UnityEngine.CharacterController characterController;
@@ -112,6 +114,14 @@ public class Playercontroller : MonoBehaviour
                 currSlime = 0;
             }
         }
+    }
 
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("key"))
+        {
+            other.gameObject.SetActive(false);
+            MessageScript.StartMessage("You found a key!");
+        }
     }
 }
