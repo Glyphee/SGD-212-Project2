@@ -11,6 +11,7 @@ public class Playercontroller : MonoBehaviour
     [SerializeField] private GameObject slimeholdPoint;
     [SerializeField] public int slimesHeld;
     [SerializeField] private float throwPower = 1f;
+    [SerializeField] private int playerHealth = 5;
 
     private Vector3 mousePos;
     private Vector3 lookDirection;
@@ -136,6 +137,21 @@ public class Playercontroller : MonoBehaviour
             other.gameObject.SetActive(false);
             MessageScript.StartMessage("You found a key!");
             audioMan.Play("Key Collect");
+        }
+        else if (other.gameObject.CompareTag("enemy1"))
+        {
+            playerHealth--;
+            audioMan.Play("Player Hurt");
+        }
+        else if (other.gameObject.CompareTag("enemy2") || other.gameObject.CompareTag("enemy3"))
+        {
+            playerHealth = playerHealth - 2;
+            audioMan.Play("Player Hurt");
+        }
+        else if (other.gameObject.CompareTag("projectile"))
+        {
+            playerHealth--;
+            audioMan.Play("Player Hurt");
         }
     }
 }
