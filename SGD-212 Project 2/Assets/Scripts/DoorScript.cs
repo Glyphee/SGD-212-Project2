@@ -7,6 +7,7 @@ public class DoorScript : MonoBehaviour
     private bool doorBool, finalDoorBool;
     private bool isPresent; // makes sure player is in range
     private bool hasKey; // for when player has a key
+    AudioManager audioMan; //add an Audio Manager to the gameobject/prefab
 
     public MessageScript MessageScript; // direct reference for MessageScript
 
@@ -24,6 +25,7 @@ public class DoorScript : MonoBehaviour
             doorBool = false;
             hasKey = false;
         }
+        //audioMan = GetComponent<AudioManager>(); //Add the AudioManager component to doors
     }
 
     void Update()
@@ -33,6 +35,7 @@ public class DoorScript : MonoBehaviour
             isPresent = false;
             MessageScript.J.DismissPrompt();
             this.gameObject.SetActive(false); // if above is true then disables the gameObject this is attached to
+            //audioMan.Play("Unlock Gate"); //Placeholder name
         }
     }
 

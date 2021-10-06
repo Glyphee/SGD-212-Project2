@@ -12,6 +12,7 @@ public class SlimeController : MonoBehaviour
     Playercontroller controller;
     public bool isInParty = false; //if the slime is in the player's party
     public bool isHeld = false; //if the player is holding the slime
+    AudioManager audioMan;
 
 
     private void Start()
@@ -20,6 +21,7 @@ public class SlimeController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         nav.enabled = false;
         controller = FindObjectOfType<Playercontroller>();
+        audioMan = GetComponent<AudioManager>();
     }
 
     // Update is called once per frame
@@ -43,10 +45,12 @@ public class SlimeController : MonoBehaviour
                 controller.slimesInParty++;
                 print("Slimes in party: " + controller.slimesInParty);
                 controller.slimeList.Add(this.gameObject);
+                
             }
             if(!controller.isHolding)
             {
                 isHeld = true;
+                audioMan.Play("Pickup");
             }
             
         }
@@ -64,5 +68,14 @@ public class SlimeController : MonoBehaviour
         {
             nav.destination = playerGO.transform.position;
         }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(!isInParty)
+        {
+            audioMan.Play("Hit SFX");
+        }
+        
     }
 }

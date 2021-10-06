@@ -1,6 +1,8 @@
 ﻿using UnityEngine.Audio;
 using UnityEngine;
-
+/// <summary>
+/// Sound settings for the AudioManager
+/// </summary>
 [System.Serializable]
 public class Sound {
 
@@ -18,7 +20,11 @@ public class Sound {
 	[Range(0f, 1f)]
 	public float pitchVariance = .1f;
 
+	[Range(0f, 1f)]
+	public float spatialBlend = 1f;
+
 	public bool loop = false;
+	public bool playOnAwake = false;
 
 	public AudioMixerGroup mixerGroup;
 

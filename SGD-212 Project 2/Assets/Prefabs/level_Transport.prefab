@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8324758972269940757}
   - component: {fileID: 8324758972269940756}
   - component: {fileID: 8324758972269940779}
+  - component: {fileID: 2255045927781588114}
   m_Layer: 0
   m_Name: level_Transport
   m_TagString: Untagged
@@ -58,3 +59,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelName: 
+  circleTransitionController: {fileID: 0}
+--- !u!114 &2255045927781588114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8324758972269940778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1451be381345494b9025a0c237ec868, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixerGroup: {fileID: 0}
+  sounds:
+  - name: Walk Transition
+    clip: {fileID: 0}
+    volume: 0.75
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    spatialBlend: 0
+    loop: 0
+    playOnAwake: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  isSingleton: 0

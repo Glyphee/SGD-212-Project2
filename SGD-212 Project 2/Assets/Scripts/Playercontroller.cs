@@ -19,6 +19,11 @@ public class Playercontroller : MonoBehaviour
     public bool isHolding = false; //if the player is holding a slime
 
     public MessageScript MessageScript;
+    AudioManager audioMan;
+    float timer;
+
+    float nextActionTime = 0.0f; //timer
+    float period = 0.15f; //happens every second
 
     // public Animator playerAnimator;
 
@@ -33,15 +38,25 @@ public class Playercontroller : MonoBehaviour
         slimesHeld = slimeList.Count;
 
         // playerAnimator = gameObject.GetComponent<Animator>();
+        audioMan = GetComponent<AudioManager>();
     }
 
     void Update()
     {
         //Move the player
-        moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
+        moveDirection = new Vector3(Input.GetAxis("Horizontal"), -0.05f, Input.GetAxis("Vertical"));
         moveDirection *= speed;
         characterController.Move(moveDirection * Time.deltaTime);
-        
+
+        timer += Time.deltaTime;
+
+        if (Time.time > nextActionTime) //timer
+        { //adds footstep sounds, gets absolute value average of both inputs and clamps it to 0.5
+            nextActionTime += period;
+            audioMan.sounds[1].volume = Mathf.Clamp(Mathf.Abs(Input.GetAxis("Horizontal")) + Mathf.Abs(Input.GetAxis("Vertical")), 0f , 0.5f);
+            audioMan.Play("Footstep");
+        }
+
         //Following the mouse
         mousePos = Input.mousePosition;
         mousePos.z = 10;
@@ -87,6 +102,7 @@ public class Playercontroller : MonoBehaviour
                 slimeList[currSlime].GetComponent<SlimeController>().isInParty = false;
                 currSlime++;
                 slimesInParty--;
+                audioMan.Play("Throw");
             }           
             isHolding = false;
             if (currSlime > slimesInParty)
@@ -119,6 +135,7 @@ public class Playercontroller : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             MessageScript.StartMessage("You found a key!");
+            audioMan.Play("Key Collect");
         }
     }
 }

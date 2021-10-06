@@ -10,9 +10,12 @@ public class levelTransport_Script : MonoBehaviour
 
     public static levelTransport_Script J;
 
+    AudioManager audioMan;
+
     void Start()
     {
         J = this;
+        audioMan = GetComponent<AudioManager>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -23,6 +26,7 @@ public class levelTransport_Script : MonoBehaviour
     public IEnumerator AnimTransit()
     {
         circleTransitionController.SetTrigger("exitCircleTrigger");
+        audioMan.Play("Walk Transition");
 
         yield return new WaitForSeconds(1);
 

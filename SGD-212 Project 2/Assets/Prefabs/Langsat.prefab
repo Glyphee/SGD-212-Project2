@@ -167,6 +167,8 @@ GameObject:
   m_Component:
   - component: {fileID: 457230141051431910}
   - component: {fileID: 457230141051431911}
+  - component: {fileID: -1739146800469028546}
+  - component: {fileID: 5091665496322083131}
   m_Layer: 0
   m_Name: Langsat
   m_TagString: Untagged
@@ -209,6 +211,70 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-1739146800469028546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 457230141051431908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1451be381345494b9025a0c237ec868, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixerGroup: {fileID: 0}
+  sounds:
+  - name: Hit 1
+    clip: {fileID: 8300000, guid: 12af8ed6f369b4c4ebeeaf14b46c3c4e, type: 3}
+    volume: 0.75
+    volumeVariance: 0.25
+    pitch: 1
+    pitchVariance: 0.5
+    spatialBlend: 1
+    loop: 0
+    playOnAwake: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Hit 2
+    clip: {fileID: 8300000, guid: 507d1729c5dc5204c89cbff0b6cf68ba, type: 3}
+    volume: 0.75
+    volumeVariance: 0.25
+    pitch: 1
+    pitchVariance: 0.5
+    spatialBlend: 1
+    loop: 0
+    playOnAwake: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Attack
+    clip: {fileID: 8300000, guid: eace6674d2383a1478fe15f846562710, type: 3}
+    volume: 0.75
+    volumeVariance: 0.25
+    pitch: 1
+    pitchVariance: 0.5
+    spatialBlend: 1
+    loop: 0
+    playOnAwake: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  isSingleton: 0
+--- !u!114 &5091665496322083131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 457230141051431908}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00f68b6d288e29b4b8deb8b3d90ac896, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerGO: {fileID: 0}
+  projectileGO: {fileID: 0}
+  detectRadius: 0
+  throwPower: 0
 --- !u!1 &457230141056021159
 GameObject:
   m_ObjectHideFlags: 0

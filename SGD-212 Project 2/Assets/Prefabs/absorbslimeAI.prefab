@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2386925291560764165}
   - component: {fileID: 2386925291560764409}
   - component: {fileID: 2386925291560764408}
+  - component: {fileID: 4083642021344278202}
   m_Layer: 3
   m_Name: absorbslimeAI
   m_TagString: absorb
@@ -101,6 +102,43 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.47
   m_Center: {x: 0, y: 0.08, z: 0}
+--- !u!114 &4083642021344278202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2386925291560764166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1451be381345494b9025a0c237ec868, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixerGroup: {fileID: 0}
+  sounds:
+  - name: Hit SFX
+    clip: {fileID: 8300000, guid: 40801cf0f3fe53a4aac1eea51e34126d, type: 3}
+    volume: 0.846
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0.5
+    spatialBlend: 1
+    loop: 0
+    playOnAwake: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Pickup
+    clip: {fileID: 8300000, guid: 88df344c299fdea48989ac1198356b03, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 2
+    pitchVariance: 0.5
+    spatialBlend: 0.5
+    loop: 0
+    playOnAwake: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  isSingleton: 0
 --- !u!1001 &9069461643676973423
 PrefabInstance:
   m_ObjectHideFlags: 0
