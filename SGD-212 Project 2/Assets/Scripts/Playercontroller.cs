@@ -141,6 +141,7 @@ public class Playercontroller : MonoBehaviour
         else if (other.gameObject.CompareTag("enemy1"))
         {
             playerHealth--;
+            print("player hurt");
             audioMan.Play("Player Hurt");
         }
         else if (other.gameObject.CompareTag("enemy2") || other.gameObject.CompareTag("enemy3"))

@@ -9,6 +9,7 @@ public class Enemy1Controller : MonoBehaviour
     [SerializeField] private GameObject projectileGO;
     [SerializeField] private float detectRadius;
     [SerializeField] private int throwPower;
+    private int health = 3;
     NavMeshAgent nav;
     AudioManager audioMan;
 
@@ -16,26 +17,43 @@ public class Enemy1Controller : MonoBehaviour
     {
         nav = GetComponent<NavMeshAgent>();
         audioMan = GetComponent<AudioManager>();
+        StartCoroutine(DetectPlayer());
     }
 
     private void Update()
     {
-        if (Vector3.Distance(playerGO.transform.position, transform.position) < detectRadius)
+        if (health <= 0)
         {
-            nav.destination = playerGO.transform.position;
-            StartCoroutine(ShootPlayer());
-        }
-        else
-        {
-            nav.destination = transform.position;
-            StopCoroutine(ShootPlayer());
+            Destroy(this.gameObject);
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    IEnumerator DetectPlayer()
+    {
+        while (true)
+        {
+            while (Vector3.Distance(playerGO.transform.position, transform.position) < detectRadius)
+            {
+                /*GameObject clone;
+                clone = Instantiate(projectileGO, transform.position, transform.rotation);
+                clone.GetComponent<Rigidbody>().AddForce(Vector3.forward * throwPower);
+                print("detected player");
+                yield return new WaitForSeconds(3.0f);*/
+                nav.destination = playerGO.transform.position;
+                yield return null;
+            }
+            while (Vector3.Distance(playerGO.transform.position, transform.position) >= detectRadius)
+            {
+                nav.destination = transform.position;
+                yield return null;
+            }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
     {
         int randSound = Random.Range(0, 2); //random sfx for getting hit by slimes
-        if (collision.gameObject.tag == "absorb")
+        if (other.gameObject.tag == "absorb")
         {
             //Absorb slime damage
             if (randSound == 0)
@@ -46,8 +64,9 @@ public class Enemy1Controller : MonoBehaviour
             {
                 audioMan.Play("Hurt 2");
             }
+            health--;
         }
-        else if (collision.gameObject.tag == "spike")
+        else if (other.gameObject.tag == "spike")
         {
             //Spike slime damage
             if (randSound == 0)
@@ -58,8 +77,9 @@ public class Enemy1Controller : MonoBehaviour
             {
                 audioMan.Play("Hurt 2");
             }
+            health--;
         }
-        else if (collision.gameObject.tag == "crush")
+        else if (other.gameObject.tag == "crush")
         {
             //Crush slime damage
             if (randSound == 0)
@@ -70,15 +90,7 @@ public class Enemy1Controller : MonoBehaviour
             {
                 audioMan.Play("Hurt 2");
             }
+            health--;
         }
-    }
-
-    IEnumerator ShootPlayer()
-    {
-        GameObject clone;
-        clone = Instantiate(projectileGO, transform.position, transform.rotation);
-        clone.GetComponent<Rigidbody>().AddForce(Vector3.forward * throwPower);
-        audioMan.Play("Attack");
-        yield return new WaitForSeconds(3.0f);
     }
 }
