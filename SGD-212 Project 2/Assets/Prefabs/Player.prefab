@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 619979722}
   m_Layer: 3
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -88,6 +88,7 @@ MonoBehaviour:
   slimeholdPoint: {fileID: 1490887128886752285}
   slimesHeld: 0
   throwPower: 10
+  playerHealth: 5
   slimesInParty: 0
   isHolding: 0
   MessageScript: {fileID: 0}
