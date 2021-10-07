@@ -6,8 +6,10 @@ public class DoorScript : MonoBehaviour
 {
     private bool doorBool, finalDoorBool;
     private bool isPresent; // makes sure player is in range
-    private bool hasKey; // for when player has a key
+    public bool hasKey; // for when player has a key
     AudioManager audioMan; //add an Audio Manager to the gameobject/prefab
+
+    public static DoorScript D;
 
     public MessageScript MessageScript; // direct reference for MessageScript
 
@@ -26,6 +28,8 @@ public class DoorScript : MonoBehaviour
             hasKey = false;
         }
         //audioMan = GetComponent<AudioManager>(); //Add the AudioManager component to doors
+
+        D = this;
     }
 
     void Update()

@@ -32,6 +32,7 @@ public class Playercontroller : MonoBehaviour
     [SerializeField] private float speed = 5.0f;
     private Vector3 moveDirection = Vector3.zero;
     public SlimeController slimeController;
+    public DoorScript DoorScript;
     
 
     private void Start()
@@ -135,6 +136,7 @@ public class Playercontroller : MonoBehaviour
         if(other.gameObject.CompareTag("key"))
         {
             other.gameObject.SetActive(false);
+            DoorScript.hasKey = true;
             MessageScript.StartMessage("You found a key!");
             audioMan.Play("Key Collect");
         }
