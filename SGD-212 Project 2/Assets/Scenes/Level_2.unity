@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FreeZombieSimpleMovement (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1190601789873990, guid: a8145fd98e506094980d05080bde9072, type: 3}
+      propertyPath: m_TagString
+      value: enemy1
+      objectReference: {fileID: 0}
     - target: {fileID: 4257605397364450, guid: a8145fd98e506094980d05080bde9072, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -189,6 +193,10 @@ PrefabInstance:
     - target: {fileID: 4257605397364450, guid: a8145fd98e506094980d05080bde9072, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 136043099458248162, guid: a8145fd98e506094980d05080bde9072, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8145fd98e506094980d05080bde9072, type: 3}
@@ -352,6 +360,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FreeZombieSimpleMovement (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1190601789873990, guid: a8145fd98e506094980d05080bde9072, type: 3}
+      propertyPath: m_TagString
+      value: enemy1
+      objectReference: {fileID: 0}
     - target: {fileID: 4257605397364450, guid: a8145fd98e506094980d05080bde9072, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -407,6 +419,10 @@ PrefabInstance:
     - target: {fileID: 4257605397364450, guid: a8145fd98e506094980d05080bde9072, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 136043099458248162, guid: a8145fd98e506094980d05080bde9072, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8145fd98e506094980d05080bde9072, type: 3}
@@ -469,6 +485,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FreeZombieSimpleMovement
       objectReference: {fileID: 0}
+    - target: {fileID: 1190601789873990, guid: a8145fd98e506094980d05080bde9072, type: 3}
+      propertyPath: m_TagString
+      value: enemy1
+      objectReference: {fileID: 0}
     - target: {fileID: 4257605397364450, guid: a8145fd98e506094980d05080bde9072, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -524,6 +544,10 @@ PrefabInstance:
     - target: {fileID: 4257605397364450, guid: a8145fd98e506094980d05080bde9072, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 136043099458248162, guid: a8145fd98e506094980d05080bde9072, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8145fd98e506094980d05080bde9072, type: 3}
@@ -1520,6 +1544,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FreeZombieSimpleMovement (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1190601789873990, guid: a8145fd98e506094980d05080bde9072, type: 3}
+      propertyPath: m_TagString
+      value: enemy1
+      objectReference: {fileID: 0}
     - target: {fileID: 4257605397364450, guid: a8145fd98e506094980d05080bde9072, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1575,6 +1603,10 @@ PrefabInstance:
     - target: {fileID: 4257605397364450, guid: a8145fd98e506094980d05080bde9072, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 136043099458248162, guid: a8145fd98e506094980d05080bde9072, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8145fd98e506094980d05080bde9072, type: 3}
