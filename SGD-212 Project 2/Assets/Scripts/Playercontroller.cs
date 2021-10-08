@@ -67,7 +67,7 @@ public class Playercontroller : MonoBehaviour
         playerGO.transform.rotation = Quaternion.Euler(0f, lookAngle + 90f, 0f);
 
         //Cycles the slimes when the player presses space
-        if (Input.GetKeyDown("space") == true)
+        if (Input.GetKeyDown("space"))
         {
             if (slimesInParty > 1)
             {
@@ -83,9 +83,16 @@ public class Playercontroller : MonoBehaviour
                 }
                 slimeList[currSlime].GetComponent<SlimeController>().isHeld = true;
             }
-        }      
+            else
+            {
+                slimeList[1].GetComponent<SlimeController>().isHeld = false;
+                slimeList[1].transform.position = slimeholdPoint.transform.position;
+                slimeList[1].GetComponent<SlimeController>().isHeld = true;
+            }
+        }
 
         //keeps the current slime at holding point
+        //This is where that repeating error is, i dont know why it says that it is somewhere else
         if (currSlime != -1 && slimeList[currSlime].GetComponent<SlimeController>().isHeld)
         {
             slimeList[currSlime].transform.position = slimeholdPoint.transform.position;
@@ -102,6 +109,7 @@ public class Playercontroller : MonoBehaviour
                 slimeList[currSlime].GetComponent<Rigidbody>().velocity = -playerGO.transform.right * throwPower;
                 slimeList[currSlime].GetComponent<SlimeController>().isHeld = false;
                 slimeList[currSlime].GetComponent<SlimeController>().isInParty = false;
+                slimeList.RemoveAt(currSlime);
                 currSlime++;
                 slimesInParty--;
                 audioMan.Play("Throw");
@@ -115,8 +123,6 @@ public class Playercontroller : MonoBehaviour
 
             // playerAnimator.SetBool("IsAttack01", true);
         }
-
-        //(navMesh logic moved to SlimeControllers)
 
         if (slimesInParty > 0 && !isHolding) //searching for slimes in party 
         {
