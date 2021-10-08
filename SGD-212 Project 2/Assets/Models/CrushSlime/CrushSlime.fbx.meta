@@ -1,25 +1,21 @@
 fileFormatVersion: 2
-guid: 5451cd1c22ebfcc41a2e81d9ca4b1245
+guid: 96bf8b94cbec95245bf045f9cf744a4d
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
-      74: 2324550535306821419
-    second: SlimeArmature|SlimeArmatureAction
+      74: -7111974660042863901
+    second: Grow and Crush
   - first:
-      74: 5545186704956614575
-    second: SlimeArmature|SlimeMeshAction
-  externalObjects:
+      74: 7869522925863378634
+    second: Armature|Grow and Crush
   - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Main
-    second: {instanceID: 0}
+      74: -8945691123924629249
+    second: Armature|Idle
   - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Outline
-    second: {instanceID: 0}
+      74: 8349542763059015795
+    second: Armature|Walk
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -110,7 +106,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 

@@ -265,7 +265,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c69206d973ad064bac542c4bbf91293, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetGO: {fileID: 264901189}
+  playerGO: {fileID: 0}
+  isInParty: 0
+  isHeld: 0
 --- !u!195 &103386059
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -343,8 +345,16 @@ MonoBehaviour:
   playerGO: {fileID: 2104347740}
   currSlime: 0
   slimeholdPoint: {fileID: 902430966}
+  slimesHeld: 0
+  throwPower: 1
+  playerHealth: 5
+  slimesInParty: 0
+  isHolding: 0
+  MessageScript: {fileID: 0}
   characterController: {fileID: 264901190}
   speed: 10
+  slimeController: {fileID: 0}
+  DoorScript: {fileID: 0}
 --- !u!4 &264901192
 Transform:
   m_ObjectHideFlags: 0
@@ -1120,7 +1130,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c69206d973ad064bac542c4bbf91293, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetGO: {fileID: 1380030700}
+  playerGO: {fileID: 0}
+  isInParty: 0
+  isHeld: 0
 --- !u!195 &1168143363
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1374,7 +1386,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c69206d973ad064bac542c4bbf91293, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetGO: {fileID: 103386056}
+  playerGO: {fileID: 0}
+  isInParty: 0
+  isHeld: 0
 --- !u!1 &1625897901
 GameObject:
   m_ObjectHideFlags: 0
