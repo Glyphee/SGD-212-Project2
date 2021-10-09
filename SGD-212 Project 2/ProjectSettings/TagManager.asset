@@ -11,6 +11,10 @@ TagManager:
   - absorb
   - spike
   - crush
+  - enemy1
+  - projectile
+  - enemy2
+  - enemy3
   layers:
   - Default
   - TransparentFX

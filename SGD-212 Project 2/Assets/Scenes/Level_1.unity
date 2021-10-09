@@ -530,8 +530,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1490887128366784677, guid: 6efa2668371982c4a9a6e91f53a279af, type: 3}
+      propertyPath: playerParent
+      value: 
+      objectReference: {fileID: 1268968121}
+    - target: {fileID: 1490887128366784677, guid: 6efa2668371982c4a9a6e91f53a279af, type: 3}
       propertyPath: slimeList.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1490887128366784677, guid: 6efa2668371982c4a9a6e91f53a279af, type: 3}
       propertyPath: slimeList.Array.data[0]
@@ -2174,6 +2178,8 @@ MonoBehaviour:
   playerGO: {fileID: 142233471}
   isInParty: 0
   isHeld: 0
+  isAttacking: 0
+  currEnemy: {fileID: 0}
 --- !u!4 &1721753601
 Transform:
   m_ObjectHideFlags: 0
@@ -2313,6 +2319,8 @@ MonoBehaviour:
   playerGO: {fileID: 142233471}
   isInParty: 0
   isHeld: 0
+  isAttacking: 0
+  currEnemy: {fileID: 0}
 --- !u!4 &1876241686
 Transform:
   m_ObjectHideFlags: 0
@@ -2321,7 +2329,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1876241681}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 10.73, y: 0.309, z: -4.82}
+  m_LocalPosition: {x: 10.73, y: 0.309, z: -2.25}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 1635019004}
@@ -2452,6 +2460,8 @@ MonoBehaviour:
   playerGO: {fileID: 142233471}
   isInParty: 0
   isHeld: 0
+  isAttacking: 0
+  currEnemy: {fileID: 0}
 --- !u!4 &1903750646
 Transform:
   m_ObjectHideFlags: 0

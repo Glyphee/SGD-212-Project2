@@ -7,6 +7,7 @@ public class levelTransport_Script : MonoBehaviour
 {
     public string levelName;
     public Animator circleTransitionController;
+    //public Playercontroller pcont = new Playercontroller();
 
     public static levelTransport_Script J;
 
@@ -20,6 +21,10 @@ public class levelTransport_Script : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //DontDestroyOnLoad(pcont.playerParent);
+        //DontDestroyOnLoad(pcont.slimeList[0]);
+        //DontDestroyOnLoad(pcont.slimeList[1]);
+        //DontDestroyOnLoad(pcont.slimeList[2]);
         StartCoroutine(AnimTransit());
     }
 

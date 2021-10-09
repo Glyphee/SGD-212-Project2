@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Enemy1Controller : MonoBehaviour
+public class Enemy2Controller : MonoBehaviour
 {
     [SerializeField] private GameObject playerGO;
     [SerializeField] private GameObject projectileGO;
     [SerializeField] private float detectRadius;
     [SerializeField] private int throwPower;
-    private int health = 1;
+    private int health = 3;
     NavMeshAgent nav;
     AudioManager audioMan;
 

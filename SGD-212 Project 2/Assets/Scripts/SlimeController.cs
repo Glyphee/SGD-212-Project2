@@ -12,6 +12,8 @@ public class SlimeController : MonoBehaviour
     Playercontroller controller;
     public bool isInParty = false; //if the slime is in the player's party
     public bool isHeld = false; //if the player is holding the slime
+    public bool isAttacking = false; //if the slime is stuck to an enemy and attacking it
+    public GameObject currEnemy; //the enemy that the slime is attacking
     AudioManager audioMan;
 
 
@@ -35,7 +37,7 @@ public class SlimeController : MonoBehaviour
             
         }
         
-        if (Vector3.Distance(transform.position, playerGO.transform.position) < 1 && hasStopped == true)
+        if (Vector3.Distance(transform.position, playerGO.transform.position) < 1 && hasStopped == true && isAttacking == false)
         { //player is close and is not moving
             nav.enabled = true;
             hasStopped = false;
@@ -64,10 +66,11 @@ public class SlimeController : MonoBehaviour
         }*/
 
         //Sets slime's destination to the player (Moved from player controller)
-        if (nav.enabled == true)
+        if (nav.enabled == true && isAttacking == false)
         {
             nav.destination = playerGO.transform.position;
         }
+
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -77,5 +80,10 @@ public class SlimeController : MonoBehaviour
             audioMan.Play("Hit SFX");
         }
         
+        if (collision.collider.CompareTag("enemy2") || collision.collider.CompareTag("enemy3"))
+        {
+            isAttacking = true;
+            currEnemy = collision.gameObject;
+        }
     }
 }

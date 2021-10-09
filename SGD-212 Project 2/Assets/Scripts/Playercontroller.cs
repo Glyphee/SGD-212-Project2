@@ -6,7 +6,8 @@ using UnityEngine.AI;
 public class Playercontroller : MonoBehaviour
 {
     [SerializeField] public List<GameObject> slimeList = new List<GameObject>();
-    [SerializeField] private GameObject playerGO;
+    [SerializeField] public GameObject playerGO;
+    //public GameObject playerParent;
     [SerializeField] private int currSlime = 0;
     [SerializeField] private GameObject slimeholdPoint;
     [SerializeField] public int slimesHeld;
@@ -38,7 +39,6 @@ public class Playercontroller : MonoBehaviour
     private void Start()
     {
         slimesHeld = slimeList.Count;
-
         // playerAnimator = gameObject.GetComponent<Animator>();
         audioMan = GetComponent<AudioManager>();
     }
