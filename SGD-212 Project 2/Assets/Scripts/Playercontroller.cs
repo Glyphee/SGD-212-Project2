@@ -41,6 +41,15 @@ public class Playercontroller : MonoBehaviour
         slimesHeld = slimeList.Count;
         // playerAnimator = gameObject.GetComponent<Animator>();
         audioMan = GetComponent<AudioManager>();
+
+        if (PlayerPrefs.HasKey("Volume"))
+        {
+            AudioListener.volume = PlayerPrefs.GetFloat("Volume");
+        }
+        else
+        {
+            print("No volume setting detected, setting to default");
+        }
     }
 
     void Update()
@@ -150,17 +159,17 @@ public class Playercontroller : MonoBehaviour
         {
             playerHealth--;
             print("player hurt");
-            audioMan.Play("Player Hurt");
+            audioMan.Play("Hurt");
         }
         else if (other.gameObject.CompareTag("enemy2") || other.gameObject.CompareTag("enemy3"))
         {
             playerHealth = playerHealth - 2;
-            audioMan.Play("Player Hurt");
+            audioMan.Play("Hurt");
         }
         else if (other.gameObject.CompareTag("projectile"))
         {
             playerHealth--;
-            audioMan.Play("Player Hurt");
+            audioMan.Play("Hurt");
         }
     }
 }

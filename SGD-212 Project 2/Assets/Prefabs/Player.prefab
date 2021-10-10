@@ -95,6 +95,7 @@ MonoBehaviour:
   characterController: {fileID: 1490887128366784682}
   speed: 5
   slimeController: {fileID: 0}
+  DoorScript: {fileID: 0}
 --- !u!143 &1490887128366784682
 CharacterController:
   m_ObjectHideFlags: 0
@@ -155,7 +156,7 @@ MonoBehaviour:
     volumeVariance: 0.434
     pitch: 1
     pitchVariance: 0.852
-    spatialBlend: 1
+    spatialBlend: 0
     loop: 0
     playOnAwake: 0
     mixerGroup: {fileID: 0}
@@ -178,6 +179,28 @@ MonoBehaviour:
     pitch: 1
     pitchVariance: 0
     spatialBlend: 1
+    loop: 0
+    playOnAwake: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Unlock
+    clip: {fileID: 8300000, guid: d97dff12e8a88db4886c59753b7cca0c, type: 3}
+    volume: 0.6
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    spatialBlend: 0
+    loop: 0
+    playOnAwake: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Open
+    clip: {fileID: 8300000, guid: 3b8e0c416840a214382dace6999aa5c7, type: 3}
+    volume: 0.6
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    spatialBlend: 0
     loop: 0
     playOnAwake: 0
     mixerGroup: {fileID: 0}
