@@ -7,7 +7,8 @@ public class levelTransport_Script : MonoBehaviour
 {
     public string levelName;
     public Animator circleTransitionController;
-    //public Playercontroller pcont = new Playercontroller();
+    public GameObject playerGO;
+    public PersistentController persCont = new PersistentController();
 
     public static levelTransport_Script J;
 
@@ -21,11 +22,26 @@ public class levelTransport_Script : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //DontDestroyOnLoad(pcont.playerParent);
-        //DontDestroyOnLoad(pcont.slimeList[0]);
-        //DontDestroyOnLoad(pcont.slimeList[1]);
-        //DontDestroyOnLoad(pcont.slimeList[2]);
+        //Checks the slimeList[] on the player and adds one the repective PersistentController value
+        for (int i = 0; i <= 2; i++)
+        {
+            if (playerGO.GetComponent<Playercontroller>().slimeList[i].gameObject.tag == "absorb")
+            {
+                persCont.GetComponent<PersistentController>().absorbCount++;
+            }
+            else if (playerGO.GetComponent<Playercontroller>().slimeList[i].gameObject.tag == "spike")
+            {
+                persCont.GetComponent<PersistentController>().spikeCount++;
+            }
+            else if (playerGO.GetComponent<Playercontroller>().slimeList[i].gameObject.tag == "crush")
+            {
+                persCont.GetComponent<PersistentController>().crushCount++;
+            }
+        }
+
         StartCoroutine(AnimTransit());
+
+        persCont.levelChanged = true;
     }
 
     public IEnumerator AnimTransit()

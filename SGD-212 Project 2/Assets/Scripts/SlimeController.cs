@@ -13,6 +13,7 @@ public class SlimeController : MonoBehaviour
     public bool isInParty = false; //if the slime is in the player's party
     public bool isHeld = false; //if the player is holding the slime
     public bool isAttacking = false; //if the slime is stuck to an enemy and attacking it
+    public bool willPersist = false; //if the slime will persist through scene changes
     public GameObject currEnemy; //the enemy that the slime is attacking
     AudioManager audioMan;
 
@@ -70,7 +71,6 @@ public class SlimeController : MonoBehaviour
         {
             nav.destination = playerGO.transform.position;
         }
-
     }
 
     private void OnCollisionEnter(Collision collision)
