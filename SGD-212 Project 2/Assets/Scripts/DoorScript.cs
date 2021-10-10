@@ -27,7 +27,7 @@ public class DoorScript : MonoBehaviour
             doorBool = false;
             hasKey = false;
         }
-        //audioMan = GetComponent<AudioManager>(); //Add the AudioManager component to doors
+        audioMan = GameObject.FindGameObjectWithTag("Player").GetComponent<AudioManager>();
 
         D = this;
     }
@@ -35,11 +35,11 @@ public class DoorScript : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.P) && isPresent && hasKey) // checks to see if player presses the key to interact with objects, is present in the collision range, and has key
-        {
+        {           
             isPresent = false;
             MessageScript.J.DismissPrompt();
-            this.gameObject.SetActive(false); // if above is true then disables the gameObject this is attached to
-            //audioMan.Play("Unlock Gate"); //Placeholder name
+            audioMan.Play("Open");
+            this.gameObject.SetActive(false); // if above is true then disables the gameObject this is attached to           
         }
     }
 

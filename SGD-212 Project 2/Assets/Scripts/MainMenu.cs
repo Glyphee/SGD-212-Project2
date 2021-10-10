@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 /// <summary>
 /// Logic for the main menu but can be used for general use, by Josiah
@@ -12,12 +13,18 @@ public class MainMenu : MonoBehaviour
     [SerializeField] GameObject helpPanel; //main help panel
     [SerializeField] GameObject[] helpPage; //multiple help panel pages
     [SerializeField] GameObject creditsPanel;
+    
+    [SerializeField] Slider volumeSlider;
+    [SerializeField] Image volumeIcon;
+    [SerializeField] Sprite[] speakerIcons;
 
     bool isHelpToggle = false;
     bool isCreditsToggle = false;
     int currentHelpPage = 0;
 
     public Animator circleTransitionController;
+
+    AudioManager audioMan;
 
     private void Start()
     {
@@ -31,6 +38,15 @@ public class MainMenu : MonoBehaviour
         helpPage[currentHelpPage].SetActive(true);
 
         creditsPanel.SetActive(false);
+        audioMan = GetComponent<AudioManager>();
+        audioMan.Play("BGM");
+
+        if(PlayerPrefs.HasKey("Volume"))
+        {
+            PlayerPrefs.SetFloat("Volume", 1); //resets the volume to 1, comment this out if you want to keep player prefs
+            AudioListener.volume = PlayerPrefs.GetFloat("Volume");
+            volumeSlider.value = PlayerPrefs.GetFloat("Volume");
+        }       
     }
 
     public void OnPlayButtonClick(string level)
@@ -45,8 +61,13 @@ public class MainMenu : MonoBehaviour
     private IEnumerator ButtonTransit(string level2)
     {
         circleTransitionController.SetTrigger("exitCircleTrigger");
-
-        yield return new WaitForSeconds(1);
+        float offset = 1 - AudioListener.volume;
+        for (float vol = AudioListener.volume; vol >= 0; vol -= 0.1f) //lowers the volume for transition
+        {
+            AudioListener.volume = vol;
+            yield return new WaitForSeconds(0.1f);
+        }
+        yield return new WaitForSeconds(offset); //always has a second to transition
 
         SceneManager.LoadScene(level2);
     }
@@ -126,5 +147,38 @@ public class MainMenu : MonoBehaviour
     {
         Application.Quit();
         Debug.Log("Quit button pressed");
+    }
+
+    public void ChangeVolume() //changes volume to slider value
+    {
+        AudioListener.volume = volumeSlider.value;
+        PlayerPrefs.SetFloat("Volume", AudioListener.volume);
+
+        if(volumeSlider.value == 0)
+        {
+            volumeIcon.sprite = speakerIcons[1];
+        }
+        else
+        {
+            volumeIcon.sprite = speakerIcons[0];
+        }
+    }
+    float volume;
+    bool isMute = false;
+    public void OnMuteButtonClick() //toggles mute button
+    {
+        if (!isMute)
+        {
+            volume = AudioListener.volume;
+            AudioListener.volume = 0;
+            volumeSlider.value = 0;
+            isMute = true;
+        }
+        else
+        {
+            AudioListener.volume = volume;
+            volumeSlider.value = volume;
+            isMute = false;
+        }
     }
 }

@@ -51,6 +51,8 @@ MonoBehaviour:
   playerGO: {fileID: 0}
   isInParty: 0
   isHeld: 0
+  isAttacking: 0
+  currEnemy: {fileID: 0}
 --- !u!195 &1414540161600677988
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -117,7 +119,7 @@ MonoBehaviour:
   mixerGroup: {fileID: 0}
   sounds:
   - name: Hit SFX
-    clip: {fileID: 8300000, guid: 40801cf0f3fe53a4aac1eea51e34126d, type: 3}
+    clip: {fileID: 8300000, guid: 2c5770af669d2b14cb8a067ce6b32f4a, type: 3}
     volume: 0.846
     volumeVariance: 0
     pitch: 1
