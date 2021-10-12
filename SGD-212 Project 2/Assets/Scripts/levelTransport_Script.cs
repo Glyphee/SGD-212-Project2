@@ -2,14 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class levelTransport_Script : MonoBehaviour
 {
     public string levelName;
     public Animator circleTransitionController;
     public GameObject playerGO;
-    public PersistentController persCont = new PersistentController();
+    public Image levelCompleteImage;
 
+    public PersistentController persCont = new PersistentController();
     public static levelTransport_Script J;
 
     AudioManager audioMan;
@@ -46,6 +48,10 @@ public class levelTransport_Script : MonoBehaviour
 
     public IEnumerator AnimTransit()
     {
+        levelCompleteImage.gameObject.SetActive(true);
+        yield return new WaitForSeconds(4);
+        levelCompleteImage.gameObject.SetActive(false);
+
         circleTransitionController.SetTrigger("exitCircleTrigger");
         audioMan.Play("Walk Transition");
 
@@ -59,6 +65,5 @@ public class levelTransport_Script : MonoBehaviour
 
         Debug.Log("Player has entered levelTransport. Transporting to: " + levelName);
         SceneManager.LoadScene(levelName);
-        // print("Que imaginary transportation to " + levelName);
     }
 }

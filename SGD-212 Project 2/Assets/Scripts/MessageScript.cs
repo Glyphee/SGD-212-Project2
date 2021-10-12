@@ -10,6 +10,7 @@ public class MessageScript : MonoBehaviour
     public GameObject messagePanel;
     public Text messageText;
     public GameObject promptPanel;
+    public int messageTime;
 
     void Start()
     {
@@ -19,20 +20,45 @@ public class MessageScript : MonoBehaviour
     public void StartMessage(string desiredMessage1) // drags string from where this is called -> desiredMessage2 in SummonMessageBubble()
     {
         StartCoroutine(SummonMessageBubble(desiredMessage1));
+        
     }
 
-    private IEnumerator SummonMessageBubble(string desiredMessage2) // Call from anywhere and set perameters to summon the messagePanel w/text, then off after 2 seconds
+    private IEnumerator SummonMessageBubble(string desiredMessage2) // Call from anywhere and set perameters to summon the messagePanel w/text, then off after 3 seconds
     {
-        // desiredMessage2 = desiredMessage1
         Debug.Log("message bubble on");
         messagePanel.SetActive(true);
         messageText.text = desiredMessage2;
 
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(messageTime);
 
         messageText.text = "Temp Text";
         messagePanel.SetActive(false);
         Debug.Log("message bubble off");
+    }
+
+    public IEnumerator MultipleMessages(string[] tempArray) // Similar to above but for multiple messages
+    {
+        TurnOnBubble();
+
+        for(int n = 0; n < tempArray.Length; n++)
+        {
+            messageText.text = tempArray[n];
+            yield return new WaitForSeconds(messageTime);
+        }
+
+        TurnOffBubble();
+    }
+
+    public void TurnOnBubble()
+    {
+        Debug.Log("message bubble on");
+        messagePanel.SetActive(true);
+    }
+
+    public void TurnOffBubble()
+    {
+        Debug.Log("message bubble off");
+        messagePanel.SetActive(false);
     }
 
     public void SummonPrompt() // turns on promptPanel

@@ -92,6 +92,7 @@ MonoBehaviour:
   slimesInParty: 0
   isHolding: 0
   MessageScript: {fileID: 0}
+  absorbSlimeAnim: {fileID: 0}
   characterController: {fileID: 1490887128366784682}
   speed: 5
   slimeController: {fileID: 0}
@@ -109,7 +110,7 @@ CharacterController:
   serializedVersion: 2
   m_Height: 2
   m_Radius: 0.5
-  m_SlopeLimit: 0
+  m_SlopeLimit: 90
   m_StepOffset: 0
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001

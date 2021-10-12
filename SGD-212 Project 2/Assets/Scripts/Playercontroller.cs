@@ -22,6 +22,7 @@ public class Playercontroller : MonoBehaviour
 
     public MessageScript MessageScript;
     AudioManager audioMan;
+    // public Animator SlimeAnim;
     float timer;
 
     float nextActionTime = 0.0f; //timer
@@ -122,6 +123,8 @@ public class Playercontroller : MonoBehaviour
                 currSlime++;
                 slimesInParty--;
                 audioMan.Play("Throw");
+
+                // SlimeAnim.SetTrigger("Trow");
             }           
             isHolding = false;
             if (currSlime > slimesInParty)
@@ -152,7 +155,7 @@ public class Playercontroller : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             DoorScript.hasKey = true;
-            MessageScript.StartMessage("You found a key!");
+            MessageScript.StartMessage("You found a key! Maybe it unlocks a door somewhere on this floor.");
             audioMan.Play("Key Collect");
         }
         else if (other.gameObject.CompareTag("enemy1"))

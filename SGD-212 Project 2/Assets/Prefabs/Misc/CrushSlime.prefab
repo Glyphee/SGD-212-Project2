@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 829184942657517341}
+  - component: {fileID: 7676438919356602620}
   m_Layer: 0
   m_Name: CrushSlime
   m_TagString: crush
@@ -25,13 +26,32 @@ Transform:
   m_GameObject: {fileID: 56871016802315687}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 8588661482602882947}
   - {fileID: 9012043640595899010}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &7676438919356602620
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56871016802315687}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 96bf8b94cbec95245bf045f9cf744a4d, type: 3}
+  m_Controller: {fileID: 9100000, guid: a702702d84b4e8a4a9b97fbe961afce1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4061983461280719660
 GameObject:
   m_ObjectHideFlags: 0

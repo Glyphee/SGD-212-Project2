@@ -54,6 +54,7 @@ MonoBehaviour:
   isAttacking: 0
   willPersist: 0
   currEnemy: {fileID: 0}
+  SlimeAnim: {fileID: 5099762690558040599}
 --- !u!114 &3192436010658034070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,18 +159,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 829184942657517341, guid: b68fb4889ba80ef4f9bd97fde9603957, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 829184942657517341, guid: b68fb4889ba80ef4f9bd97fde9603957, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 829184942657517341, guid: b68fb4889ba80ef4f9bd97fde9603957, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 829184942657517341, guid: b68fb4889ba80ef4f9bd97fde9603957, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -214,5 +203,10 @@ PrefabInstance:
 --- !u!4 &2867690069820405238 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 829184942657517341, guid: b68fb4889ba80ef4f9bd97fde9603957, type: 3}
+  m_PrefabInstance: {fileID: 3192436010562306795}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &5099762690558040599 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7676438919356602620, guid: b68fb4889ba80ef4f9bd97fde9603957, type: 3}
   m_PrefabInstance: {fileID: 3192436010562306795}
   m_PrefabAsset: {fileID: 0}

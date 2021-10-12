@@ -51,3 +51,4 @@ MonoBehaviour:
   messagePanel: {fileID: 0}
   messageText: {fileID: 0}
   promptPanel: {fileID: 0}
+  messageTime: 4

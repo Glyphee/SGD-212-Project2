@@ -17,6 +17,8 @@ public class SlimeController : MonoBehaviour
     public GameObject currEnemy; //the enemy that the slime is attacking
     AudioManager audioMan;
 
+    public Animator SlimeAnim;
+
 
     private void Start()
     {
@@ -70,6 +72,8 @@ public class SlimeController : MonoBehaviour
         if (nav.enabled == true && isAttacking == false)
         {
             nav.destination = playerGO.transform.position;
+
+            SlimeAnim.SetTrigger("Walk");
         }
     }
 
@@ -84,6 +88,8 @@ public class SlimeController : MonoBehaviour
         {
             isAttacking = true;
             currEnemy = collision.gameObject;
+
+            SlimeAnim.SetTrigger("Attack");
         }
     }
 }
