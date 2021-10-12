@@ -247,7 +247,6 @@ MonoBehaviour:
   - {fileID: 5794164252361455805}
   - {fileID: 5794164252015259999}
   - {fileID: 5794164252893837879}
-  healthImageInt: 3
 --- !u!1 &5794164252361455683
 GameObject:
   m_ObjectHideFlags: 0

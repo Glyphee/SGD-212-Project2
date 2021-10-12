@@ -49,8 +49,8 @@ public class levelTransport_Script : MonoBehaviour
     public IEnumerator AnimTransit()
     {
         levelCompleteImage.gameObject.SetActive(true);
-        yield return new WaitForSeconds(4);
-        levelCompleteImage.gameObject.SetActive(false);
+        yield return new WaitForSeconds(3);
+        // levelCompleteImage.gameObject.SetActive(false);
 
         circleTransitionController.SetTrigger("exitCircleTrigger");
         audioMan.Play("Walk Transition");

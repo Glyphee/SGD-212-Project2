@@ -116,6 +116,7 @@ public class Playercontroller : MonoBehaviour
             if(isHolding)
             {
                 slimeList[currSlime].GetComponent<NavMeshAgent>().enabled = false;
+                // slimeList[currSlime].GetComponentInChildren<Animator>().SetTrigger("Thrown");
                 slimeList[currSlime].GetComponent<Rigidbody>().velocity = -playerGO.transform.right * throwPower;
                 slimeList[currSlime].GetComponent<SlimeController>().isHeld = false;
                 slimeList[currSlime].GetComponent<SlimeController>().isInParty = false;
@@ -123,8 +124,6 @@ public class Playercontroller : MonoBehaviour
                 currSlime++;
                 slimesInParty--;
                 audioMan.Play("Throw");
-
-                // SlimeAnim.SetTrigger("Trow");
             }           
             isHolding = false;
             if (currSlime > slimesInParty)

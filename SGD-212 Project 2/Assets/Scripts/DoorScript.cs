@@ -7,6 +7,8 @@ public class DoorScript : MonoBehaviour
     private bool doorBool, finalDoorBool;
     private bool isPresent; // makes sure player is in range
     public bool hasKey; // for when player has a key
+    public int deadBosses;
+
     AudioManager audioMan; //add an Audio Manager to the gameobject/prefab
 
     public static DoorScript D;
@@ -27,6 +29,12 @@ public class DoorScript : MonoBehaviour
             doorBool = false;
             hasKey = false;
         }
+        else if(this.gameObject.tag == "castleDoor")
+        {
+            hasKey = false;
+            deadBosses = 0;
+        }
+        
         audioMan = GameObject.FindGameObjectWithTag("Player").GetComponent<AudioManager>();
 
         D = this;
@@ -52,6 +60,10 @@ public class DoorScript : MonoBehaviour
             if(finalDoorBool && !hasKey) // summons messagePanel upon player entering
             {
                 MessageScript.StartMessage("It's locked, seems we'll need a key. There should be one somewhere...");
+            }
+            else if(deadBosses == 0)
+            {
+                MessageScript.StartMessage("The door is a bit stuck. Might want to defeat the two skeletons around here first.");
             }
             else if(doorBool || finalDoorBool && hasKey) // turns on promptPanel when player enters
             {
