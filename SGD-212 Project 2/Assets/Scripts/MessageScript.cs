@@ -25,7 +25,7 @@ public class MessageScript : MonoBehaviour
 
     private IEnumerator SummonMessageBubble(string desiredMessage2) // Call from anywhere and set perameters to summon the messagePanel w/text, then off after 3 seconds
     {
-        Debug.Log("message bubble on");
+        //Debug.Log("message bubble on");
         messagePanel.SetActive(true);
         messageText.text = desiredMessage2;
 
@@ -33,7 +33,7 @@ public class MessageScript : MonoBehaviour
 
         messageText.text = "Temp Text";
         messagePanel.SetActive(false);
-        Debug.Log("message bubble off");
+        //Debug.Log("message bubble off");
     }
 
     public IEnumerator MultipleMessages(string[] tempArray) // Similar to above but for multiple messages
@@ -51,13 +51,13 @@ public class MessageScript : MonoBehaviour
 
     public void TurnOnBubble()
     {
-        Debug.Log("message bubble on");
+        //Debug.Log("message bubble on");
         messagePanel.SetActive(true);
     }
 
     public void TurnOffBubble()
     {
-        Debug.Log("message bubble off");
+        //Debug.Log("message bubble off");
         messagePanel.SetActive(false);
     }
 
@@ -65,12 +65,12 @@ public class MessageScript : MonoBehaviour
     {
         promptPanel.gameObject.SetActive(true);
 
-        Debug.Log("turned on prompt panel");
+        //Debug.Log("turned on prompt panel");
     }
     public void DismissPrompt() // turns off promptPanel
     {
         promptPanel.gameObject.SetActive(false);
 
-        Debug.Log("turned off prompt panel");
+        //Debug.Log("turned off prompt panel");
     }
 }

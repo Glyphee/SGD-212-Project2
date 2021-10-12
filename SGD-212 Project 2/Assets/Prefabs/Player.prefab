@@ -79,10 +79,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66f3392b858d7144a9923e6e84b89977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slimeList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  slimeList: []
   playerGO: {fileID: 1490887127539430703}
   currSlime: 0
   slimeholdPoint: {fileID: 1490887128886752285}
@@ -92,7 +89,6 @@ MonoBehaviour:
   slimesInParty: 0
   isHolding: 0
   MessageScript: {fileID: 0}
-  absorbSlimeAnim: {fileID: 0}
   characterController: {fileID: 1490887128366784682}
   speed: 5
   slimeController: {fileID: 0}

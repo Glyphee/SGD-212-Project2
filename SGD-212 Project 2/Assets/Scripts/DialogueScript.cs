@@ -26,7 +26,7 @@ public class DialogueScript : MonoBehaviour
         {
             // StartCoroutine(MultiDialogue());
             StartDialogue();
-            Debug.Log("This dialogue object turned off");
+            //Debug.Log("This dialogue object turned off");
             this.gameObject.GetComponent<Collider>().enabled = false;
         }
     }

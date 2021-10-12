@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Enemy2Controller : MonoBehaviour
+public class Enemy3Controller : MonoBehaviour
 {
     [SerializeField] private GameObject playerGO;
     [SerializeField] private float detectRadius;
@@ -46,24 +46,7 @@ public class Enemy2Controller : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         int randSound = Random.Range(0, 2); //random sfx for getting hit by slimes
-        if (other.gameObject.tag == "absorb")
-        {
-            //Absorb slime damage
-            if (randSound == 0)
-            {
-                audioMan.Play("Hurt 1");
-            }
-            else
-            {
-                audioMan.Play("Hurt 2");
-            }
-            health--;
-        }
-        else if (other.gameObject.tag == "spike")
-        {
-            this.gameObject.GetComponent<NavMeshAgent>().speed = 0.5f;
-        }
-        else if (other.gameObject.tag == "crush")
+        if (other.gameObject.tag == "crush")
         {
             //Crush slime damage
             if (randSound == 0)
@@ -74,8 +57,6 @@ public class Enemy2Controller : MonoBehaviour
             {
                 audioMan.Play("Hurt 2");
             }
-            health--;
-            health--;
             health--;
         }
     }

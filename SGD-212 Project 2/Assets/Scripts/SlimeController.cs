@@ -48,7 +48,7 @@ public class SlimeController : MonoBehaviour
             {
                 isInParty = true;
                 controller.slimesInParty++;
-                print("Slimes in party: " + controller.slimesInParty);
+                //print("Slimes in party: " + controller.slimesInParty);
                 controller.slimeList.Add(this.gameObject);
                 
             }
@@ -68,6 +68,12 @@ public class SlimeController : MonoBehaviour
             isInParty = false;
         }*/
 
+        if (isAttacking)
+        {
+            transform.position = currEnemy.transform.position + new Vector3(0,0.5f,0);
+            nav.enabled = false;
+        }
+
         //Sets slime's destination to the player (Moved from player controller)
         if (nav.enabled == true && isAttacking == false)
         {
@@ -77,19 +83,29 @@ public class SlimeController : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collider)
     {
-        if(!isInParty)
+        print(collider.tag);
+        if (!isInParty)
         {
             audioMan.Play("Hit SFX");
         }
         
-        if (collision.collider.CompareTag("enemy2") || collision.collider.CompareTag("enemy3"))
+        if (collider.CompareTag("enemy2") && this.gameObject.CompareTag("spike"))
         {
             isAttacking = true;
-            currEnemy = collision.gameObject;
+            currEnemy = collider.gameObject;
 
             SlimeAnim.SetTrigger("Attack");
         }
     }
+
+    private void OnTriggerExit(Collider collider)
+    {
+        if (collider.CompareTag("enemy2") || collider.CompareTag("enemy3"))
+        {
+            isAttacking = false;
+        }
+    }
+
 }

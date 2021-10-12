@@ -49,7 +49,7 @@ public class Playercontroller : MonoBehaviour
         }
         else
         {
-            print("No volume setting detected, setting to default");
+            //print("No volume setting detected, setting to default");
         }
     }
 
@@ -82,7 +82,7 @@ public class Playercontroller : MonoBehaviour
             if (slimesInParty > 1)
             {
                 slimeList[currSlime].GetComponent<SlimeController>().isHeld = false;
-                slimeList[currSlime].transform.position = slimeholdPoint.transform.position;
+                //slimeList[currSlime].transform.position = slimeholdPoint.transform.position;
                 if(currSlime < slimesInParty - 1)
                 {
                     currSlime++;
@@ -138,7 +138,7 @@ public class Playercontroller : MonoBehaviour
 
         if (slimesInParty > 0 && !isHolding) //searching for slimes in party 
         {
-            print("Current slime missing, searching for slimes in party");
+            //print("Current slime missing, searching for slimes in party");
 
             currSlime++;
             
@@ -161,7 +161,7 @@ public class Playercontroller : MonoBehaviour
         else if (other.gameObject.CompareTag("enemy1"))
         {
             playerHealth--;
-            print("player hurt");
+            //print("player hurt");
             audioMan.Play("Hurt");
         }
         else if (other.gameObject.CompareTag("enemy2") || other.gameObject.CompareTag("enemy3"))
