@@ -93,6 +93,9 @@ MonoBehaviour:
   speed: 5
   slimeController: {fileID: 0}
   DoorScript: {fileID: 0}
+  gravity: 10
+  constantGravity: -0.6
+  maxGravity: -15
 --- !u!143 &1490887128366784682
 CharacterController:
   m_ObjectHideFlags: 0

@@ -678,6 +678,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1490887128366784677, guid: 6efa2668371982c4a9a6e91f53a279af, type: 3}
+      propertyPath: gravity
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1490887128366784677, guid: 6efa2668371982c4a9a6e91f53a279af, type: 3}
+      propertyPath: maxGravity
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1490887128366784677, guid: 6efa2668371982c4a9a6e91f53a279af, type: 3}
       propertyPath: playerParent
       value: 
       objectReference: {fileID: 1268968121}
@@ -689,6 +697,10 @@ PrefabInstance:
       propertyPath: absorbSlimeAnim
       value: 
       objectReference: {fileID: 5866666021909216657, guid: 4fe7f14362d758641849c7f88b52b3f8, type: 3}
+    - target: {fileID: 1490887128366784677, guid: 6efa2668371982c4a9a6e91f53a279af, type: 3}
+      propertyPath: constantGravity
+      value: -0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 1490887128366784677, guid: 6efa2668371982c4a9a6e91f53a279af, type: 3}
       propertyPath: slimeList.Array.size
       value: 3
@@ -3715,6 +3727,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2255045927781588114, guid: bf0378efe960a2542afd70b9e1a9c71e, type: 3}
+      propertyPath: sounds.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: c9ba837f31dcad24996a9c377aba97b4, type: 3}
     - target: {fileID: 2255045927781588114, guid: bf0378efe960a2542afd70b9e1a9c71e, type: 3}
       propertyPath: sounds.Array.data[0].volume
       value: 0.5

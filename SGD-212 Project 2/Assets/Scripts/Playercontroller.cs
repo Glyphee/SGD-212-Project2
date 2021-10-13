@@ -35,7 +35,18 @@ public class Playercontroller : MonoBehaviour
     private Vector3 moveDirection = Vector3.zero;
     public SlimeController slimeController;
     public DoorScript DoorScript;
-    
+
+    //Gravity related things
+    [Header("Gravity")]
+    [SerializeField] float gravity;
+    [SerializeField] float constantGravity;
+    [SerializeField] float maxGravity;
+    float currentGravity;
+
+    Vector3 gravityDirection = Vector3.down;
+    Vector3 gravityMovement;
+
+
 
     private void Start()
     {
@@ -55,10 +66,12 @@ public class Playercontroller : MonoBehaviour
 
     void Update()
     {
+        CalculateGravity();
+        //was -0.05f
         //Move the player
-        moveDirection = new Vector3(Input.GetAxis("Horizontal"), -0.05f, Input.GetAxis("Vertical"));
+        moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
         moveDirection *= speed;
-        characterController.Move(moveDirection * Time.deltaTime);
+        characterController.Move(moveDirection * Time.deltaTime + gravityMovement);
 
         timer += Time.deltaTime;
 
@@ -146,6 +159,23 @@ public class Playercontroller : MonoBehaviour
                 currSlime = 0;
             }
         }
+    }
+
+    void CalculateGravity()
+    {
+        if(characterController.isGrounded)
+        {
+            currentGravity = constantGravity;
+        }
+        else
+        {
+            if(currentGravity > maxGravity)
+            {
+                currentGravity -= gravity * Time.deltaTime;
+            }
+        }
+
+        gravityMovement = gravityDirection * -currentGravity * Time.deltaTime;
     }
 
     void OnTriggerEnter(Collider other)
