@@ -89,6 +89,7 @@ MonoBehaviour:
   slimesInParty: 0
   isHolding: 0
   MessageScript: {fileID: 0}
+  playerAnimator: {fileID: 1577033598850911169}
   characterController: {fileID: 1490887128366784682}
   speed: 5
   slimeController: {fileID: 0}
@@ -835,5 +836,10 @@ PrefabInstance:
 --- !u!4 &1486238971658160629 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4679013640650686, guid: f85c4948bfaac4e48b32c1254bdec6b8, type: 3}
+  m_PrefabInstance: {fileID: 1490887128072451659}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1577033598850911169 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95154219944295818, guid: f85c4948bfaac4e48b32c1254bdec6b8, type: 3}
   m_PrefabInstance: {fileID: 1490887128072451659}
   m_PrefabAsset: {fileID: 0}

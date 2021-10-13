@@ -12,7 +12,7 @@ public class Playercontroller : MonoBehaviour
     [SerializeField] private GameObject slimeholdPoint;
     [SerializeField] public int slimesHeld;
     [SerializeField] private float throwPower = 1f;
-    [SerializeField] private int playerHealth = 5;
+    // [SerializeField] private int playerHealth = 3;
 
     private Vector3 mousePos;
     private Vector3 lookDirection;
@@ -28,7 +28,8 @@ public class Playercontroller : MonoBehaviour
     float nextActionTime = 0.0f; //timer
     float period = 0.15f; //happens every second
 
-    // public Animator playerAnimator;
+    private bool isMoving;
+    public Animator playerAnimator;
 
     public UnityEngine.CharacterController characterController;
     [SerializeField] private float speed = 5.0f;
@@ -50,6 +51,8 @@ public class Playercontroller : MonoBehaviour
 
     private void Start()
     {
+        isMoving = true;
+
         slimesHeld = slimeList.Count;
         // playerAnimator = gameObject.GetComponent<Animator>();
         audioMan = GetComponent<AudioManager>();
@@ -69,9 +72,12 @@ public class Playercontroller : MonoBehaviour
         CalculateGravity();
         //was -0.05f
         //Move the player
-        moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
-        moveDirection *= speed;
-        characterController.Move(moveDirection * Time.deltaTime + gravityMovement);
+        if(isMoving == true)
+        {
+            moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
+            moveDirection *= speed;
+            characterController.Move(moveDirection * Time.deltaTime + gravityMovement);
+        }
 
         timer += Time.deltaTime;
 
@@ -189,19 +195,34 @@ public class Playercontroller : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("enemy1"))
         {
-            playerHealth--;
+            // playerHealth--;
+            healthImageScript.instance.playerHealth--;
             //print("player hurt");
             audioMan.Play("Hurt");
+            healthImageScript.instance.CheckHealth();
         }
         else if (other.gameObject.CompareTag("enemy2") || other.gameObject.CompareTag("enemy3"))
         {
-            playerHealth = playerHealth - 2;
+            // playerHealth = playerHealth - 2;
+            healthImageScript.instance.playerHealth -= 2;
             audioMan.Play("Hurt");
+            healthImageScript.instance.CheckHealth();
         }
         else if (other.gameObject.CompareTag("projectile"))
         {
-            playerHealth--;
+            // playerHealth--;
+            healthImageScript.instance.playerHealth--;
             audioMan.Play("Hurt");
+            healthImageScript.instance.CheckHealth();
         }
+    }
+
+    public IEnumerator GameOver()
+    {
+        isMoving = false;
+        playerAnimator.SetBool("IsDead", true);
+        yield return new WaitForSeconds(2);
+
+        StartCoroutine(levelTransport_Script.J.RegularTransit("GameOver"));
     }
 }

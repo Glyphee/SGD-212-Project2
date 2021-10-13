@@ -3126,18 +3126,19 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Arissa Guard - Level design, programming, UI
+  m_Text: 'Arissa Guard - Level design, minor programming, UI
 
 
-    Noah Posey - Programming
-    (Player, enemy/slime AI, game functions)
+    Noah Posey -
+    Programming (Player, enemy/slime AI, game functions)
 
 
-    Josiah Holcom - Arranging audio,
-    programming, UI
+    Josiah Holcom - Arranging
+    audio, programming, UI
 
 
-    Samantha Burke - 3D slime models, background art'
+    Samantha Burke - 3D slime models, slime animations,
+    background art'
 --- !u!222 &887367156
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4163,7 +4164,36 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '[List Unity Asset Credits Here]'
+  m_Text: 'Unity Asset Store
+
+
+    Low Poly Dungeons Lite || JustCreate
+
+    Ultimate
+    Low Poly Dungeon || Broken Vector
+
+    Stylized Hand Painted Dungeon (Free)
+    || L2S ARTS
+
+    Hand Painted Stone Texture || LowlyPoly
+
+    (PBR) Low-Lying
+    Plant Pack || Jonathan Foust
+
+    Sinuous Shrooms || Thomas Rasor
+
+    Vert
+    Vaults - Rocks pack LITE || VERTVAULT
+
+    Food Monsters Character and Animation
+    Pack 1 || Catgear Games
+
+    SD Martial Arts Girl Xia-Chan || masatomo
+
+    Low
+    Pol? Skeleton || Comeback
+
+    Character Pack: Zombie Sample || Supercyan'
 --- !u!222 &1047184595
 CanvasRenderer:
   m_ObjectHideFlags: 0
