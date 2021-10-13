@@ -13,6 +13,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] GameObject helpPanel; //main help panel
     [SerializeField] GameObject[] helpPage; //multiple help panel pages
     [SerializeField] GameObject creditsPanel;
+    [SerializeField] GameObject[] creditsPage;
     
     [SerializeField] Slider volumeSlider;
     [SerializeField] Image volumeIcon;
@@ -21,6 +22,7 @@ public class MainMenu : MonoBehaviour
     bool isHelpToggle = false;
     bool isCreditsToggle = false;
     int currentHelpPage = 0;
+    int currentCreditsPage = 0;
 
     public Animator circleTransitionController;
 
@@ -34,10 +36,15 @@ public class MainMenu : MonoBehaviour
         {
             page.SetActive(false);
         }
+        foreach (GameObject page in creditsPage)
+        {
+            page.SetActive(false);
+        }
 
         helpPage[currentHelpPage].SetActive(true);
-
+        creditsPage[currentCreditsPage].SetActive(true);
         creditsPanel.SetActive(false);
+
         audioMan = GetComponent<AudioManager>();
         audioMan.Play("BGM");
 
@@ -140,6 +147,36 @@ public class MainMenu : MonoBehaviour
             creditsPanel.SetActive(false);
             isCreditsToggle = false;
         }
+    }
+
+    public void CreditsButtonPageTurn(bool nextPage)
+    {
+        creditsPage[currentCreditsPage].SetActive(false);
+
+        if (nextPage) //next page
+        {
+            if (currentCreditsPage != creditsPage.Length - 1)
+            {
+                currentCreditsPage++;
+            }
+            else //set back to the beginning
+            {
+                currentCreditsPage = 0;
+            }
+        }
+        else //previous page
+        {
+            if (currentCreditsPage != 0)
+            {
+                currentCreditsPage--;
+            }
+            else //set back to the end
+            {
+                currentCreditsPage = creditsPage.Length - 1;
+            }
+        }
+
+        creditsPage[currentCreditsPage].SetActive(true);
     }
 
 
