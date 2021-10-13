@@ -85,7 +85,6 @@ public class SlimeController : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
-        print(collider.tag);
         if (!isInParty)
         {
             audioMan.Play("Hit SFX");

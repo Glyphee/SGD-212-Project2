@@ -34,11 +34,10 @@ public class Enemy1Controller : MonoBehaviour
         {
             while (Vector3.Distance(playerGO.transform.position, transform.position) < detectRadius)
             {
-                /*GameObject clone;
-                clone = Instantiate(projectileGO, transform.position, transform.rotation);
-                clone.GetComponent<Rigidbody>().AddForce(Vector3.forward * throwPower);
-                print("detected player");
-                yield return new WaitForSeconds(3.0f);*/
+                Instantiate(projectileGO, new Vector3(0, 0, 5), Quaternion.identity);
+                print("test");
+                yield return new WaitForSeconds(3f);
+
                 nav.destination = playerGO.transform.position;
                 yield return null;
             }
