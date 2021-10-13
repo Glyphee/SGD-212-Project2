@@ -681,6 +681,18 @@ MonoBehaviour:
           m_StringArgument: Level_1
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1938633150}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Click
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &915984774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1038,6 +1050,18 @@ MonoBehaviour:
           m_StringArgument: Frontend
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1938633150}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Click
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1777377306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1244,6 +1268,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1938633149}
   - component: {fileID: 1938633148}
+  - component: {fileID: 1938633150}
   m_Layer: 0
   m_Name: MenuController
   m_TagString: Untagged
@@ -1285,3 +1310,62 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1938633150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938633147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1451be381345494b9025a0c237ec868, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixerGroup: {fileID: 0}
+  sounds:
+  - name: Click
+    clip: {fileID: 8300000, guid: b6d7ede7e000d754394b890dfeceeeb6, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    spatialBlend: 0
+    loop: 0
+    playOnAwake: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Miniclick adv
+    clip: {fileID: 8300000, guid: 094cef3400f93a9499dd301ce95b5068, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 2
+    pitchVariance: 0
+    spatialBlend: 0
+    loop: 0
+    playOnAwake: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Miniclick bck
+    clip: {fileID: 8300000, guid: 4dcd8e6144d2d424884948d5221cec78, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 2
+    pitchVariance: 0
+    spatialBlend: 0
+    loop: 0
+    playOnAwake: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: BGM
+    clip: {fileID: 8300000, guid: 20ae4dccfc862874290c3845d94f1901, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    spatialBlend: 0
+    loop: 1
+    playOnAwake: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  isSingleton: 0

@@ -3908,7 +3908,11 @@ MonoBehaviour:
 
 
     Press P to open doors, though
-    some need keys.'
+    some need keys.
+
+
+    You can only take 3 hits, so be careful otherwise you''ll
+    find yourself back at the dungeons!'
 --- !u!222 &981754119
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4172,26 +4176,26 @@ MonoBehaviour:
     Ultimate
     Low Poly Dungeon || Broken Vector
 
-    Stylized Hand Painted Dungeon (Free)
-    || L2S ARTS
+    Stylized Hand Painted Dungeon (Free) ||
+    L2S ARTS
 
     Hand Painted Stone Texture || LowlyPoly
 
-    (PBR) Low-Lying
-    Plant Pack || Jonathan Foust
+    (PBR) Low-Lying Plant
+    Pack || Jonathan Foust
 
     Sinuous Shrooms || Thomas Rasor
 
-    Vert
-    Vaults - Rocks pack LITE || VERTVAULT
+    Vert Vaults
+    - Rocks pack LITE || VERTVAULT
 
-    Food Monsters Character and Animation
-    Pack 1 || Catgear Games
+    Food Monsters Character and Animation Pack
+    1 || Catgear Games
 
     SD Martial Arts Girl Xia-Chan || masatomo
 
-    Low
-    Pol? Skeleton || Comeback
+    Low Pol?
+    Skeleton || Comeback
 
     Character Pack: Zombie Sample || Supercyan'
 --- !u!222 &1047184595
