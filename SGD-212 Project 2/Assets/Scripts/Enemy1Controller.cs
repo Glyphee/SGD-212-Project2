@@ -34,8 +34,7 @@ public class Enemy1Controller : MonoBehaviour
         {
             while (Vector3.Distance(playerGO.transform.position, transform.position) < detectRadius)
             {
-                Instantiate(projectileGO, new Vector3(0, 0, 5), Quaternion.identity);
-                print("test");
+                Instantiate(projectileGO, new Vector3(0, 0, 0), Quaternion.identity);
                 yield return new WaitForSeconds(3f);
 
                 nav.destination = playerGO.transform.position;
