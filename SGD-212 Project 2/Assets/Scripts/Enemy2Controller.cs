@@ -45,18 +45,11 @@ public class Enemy2Controller : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        int randSound = Random.Range(0, 2); //random sfx for getting hit by slimes
+        
         if (other.gameObject.tag == "absorb")
         {
             //Absorb slime damage
-            if (randSound == 0)
-            {
-                audioMan.Play("Hurt 1");
-            }
-            else
-            {
-                audioMan.Play("Hurt 2");
-            }
+            HurtSFX();
             health--;
         }
         else if (other.gameObject.tag == "spike")
@@ -66,17 +59,23 @@ public class Enemy2Controller : MonoBehaviour
         else if (other.gameObject.tag == "crush")
         {
             //Crush slime damage
-            if (randSound == 0)
-            {
-                audioMan.Play("Hurt 1");
-            }
-            else
-            {
-                audioMan.Play("Hurt 2");
-            }
+            HurtSFX();
             health--;
             health--;
             health--;
+        }
+    }
+
+    void HurtSFX()
+    {
+        int randSound = Random.Range(0, 2); //random sfx for getting hit by slimes
+        if (randSound == 0)
+        {
+            audioMan.Play("Hurt 1");
+        }
+        else
+        {
+            audioMan.Play("Hurt 2");
         }
     }
 }
