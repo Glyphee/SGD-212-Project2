@@ -25,7 +25,7 @@ public class levelTransport_Script : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //Checks the slimeList[] on the player and adds one the repective PersistentController value
-        for (int i = 0; i <= 2; i++)
+        for (int i = 0; i <= playerGO.GetComponent<Playercontroller>().slimeList.Count - 1; i++)
         {
             if (playerGO.GetComponent<Playercontroller>().slimeList[i].gameObject.tag == "absorb")
             {
