@@ -70,7 +70,7 @@ MonoBehaviour:
   mixerGroup: {fileID: 0}
   sounds:
   - name: Hit SFX
-    clip: {fileID: 8300000, guid: 40801cf0f3fe53a4aac1eea51e34126d, type: 3}
+    clip: {fileID: 8300000, guid: b91734001a236cb45b976b3d73ed69b2, type: 3}
     volume: 0.846
     volumeVariance: 0
     pitch: 1
