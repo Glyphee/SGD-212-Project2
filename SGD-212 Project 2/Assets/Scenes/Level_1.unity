@@ -3015,8 +3015,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectScript:
-  - '"Uh oh, seems like I manged to get myself lost in a dungeon. I need to get out.
-    Huh? Is that... a slime?"'
+  - '"Uh oh, seems like I managed to get myself lost in a dungeon. I need to get
+    out. Huh? Is that... a slime?"'
 --- !u!4 &8194709610595080817
 Transform:
   m_ObjectHideFlags: 0

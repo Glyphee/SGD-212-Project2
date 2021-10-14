@@ -150,6 +150,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1008923120}
     m_Modifications:
+    - target: {fileID: -9028373708675909193, guid: 51b48e36d0c9fd94682ca6d9916acad2, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2252299165788293849, guid: 51b48e36d0c9fd94682ca6d9916acad2, type: 3}
       propertyPath: m_Name
       value: Skeleton (2)
@@ -198,6 +202,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4027181786425733195, guid: 51b48e36d0c9fd94682ca6d9916acad2, type: 3}
+      propertyPath: playerGO
+      value: 
+      objectReference: {fileID: 1689816371}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51b48e36d0c9fd94682ca6d9916acad2, type: 3}
 --- !u!4 &23426217 stripped
@@ -1270,6 +1278,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1008923120}
     m_Modifications:
+    - target: {fileID: -9028373708675909193, guid: 51b48e36d0c9fd94682ca6d9916acad2, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2252299165788293849, guid: 51b48e36d0c9fd94682ca6d9916acad2, type: 3}
       propertyPath: m_Name
       value: Skeleton (1)
@@ -1318,6 +1330,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4027181786425733195, guid: 51b48e36d0c9fd94682ca6d9916acad2, type: 3}
+      propertyPath: playerGO
+      value: 
+      objectReference: {fileID: 1689816371}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51b48e36d0c9fd94682ca6d9916acad2, type: 3}
 --- !u!4 &758598813 stripped
@@ -2161,12 +2177,17 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1490887128366784677, guid: 6efa2668371982c4a9a6e91f53a279af, type: 3}
   m_PrefabInstance: {fileID: 1589025469}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1689816371}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 66f3392b858d7144a9923e6e84b89977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1689816371 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1490887128366784683, guid: 6efa2668371982c4a9a6e91f53a279af, type: 3}
+  m_PrefabInstance: {fileID: 1589025469}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1742789269
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2359,6 +2380,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1008923120}
     m_Modifications:
+    - target: {fileID: -9028373708675909193, guid: 51b48e36d0c9fd94682ca6d9916acad2, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2252299165788293849, guid: 51b48e36d0c9fd94682ca6d9916acad2, type: 3}
       propertyPath: m_Name
       value: Skeleton
@@ -2407,6 +2432,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4027181786425733195, guid: 51b48e36d0c9fd94682ca6d9916acad2, type: 3}
+      propertyPath: playerGO
+      value: 
+      objectReference: {fileID: 1689816371}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51b48e36d0c9fd94682ca6d9916acad2, type: 3}
 --- !u!4 &1869985322 stripped
