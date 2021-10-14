@@ -22,12 +22,14 @@ public class DoorScript : MonoBehaviour
             doorBool = true;
             finalDoorBool = false;
             hasKey = true;
+            deadBosses = 1;
         }
         else if(this.gameObject.tag == "FinalDoor")
         {
             finalDoorBool = true;
             doorBool = false;
             hasKey = false;
+            deadBosses = 1;
         }
         else if(this.gameObject.tag == "castleDoor")
         {
