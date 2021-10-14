@@ -22,6 +22,7 @@ public class Enemy3Controller : MonoBehaviour
     {
         if (health <= 0)
         {
+            DoorScript.D.deadBosses++;
             Destroy(this.gameObject);
         }
     }
@@ -57,7 +58,23 @@ public class Enemy3Controller : MonoBehaviour
             {
                 audioMan.Play("Hurt 2");
             }
+            health =- 3;
+        }
+        else if(other.gameObject.tag == "absorb")
+        {
+            if (randSound == 0)
+            {
+                audioMan.Play("Hurt 1");
+            }
+            else
+            {
+                audioMan.Play("Hurt 2");
+            }
             health--;
+        }
+        else if(other.gameObject.tag == "spike")
+        {
+            this.gameObject.GetComponent<NavMeshAgent>().speed = 0.5f;
         }
     }
 }

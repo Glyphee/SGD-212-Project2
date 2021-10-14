@@ -44,7 +44,7 @@ public class DoorScript : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.P) && isPresent && hasKey) // checks to see if player presses the key to interact with objects, is present in the collision range, and has key
+        if(Input.GetKeyDown(KeyCode.P) && isPresent && hasKey || Input.GetKeyDown(KeyCode.P) && isPresent && hasKey && deadBosses == 3) // checks to see if player presses the key to interact with objects, is present in the collision range, and has key
         {           
             isPresent = false;
             MessageScript.J.DismissPrompt();

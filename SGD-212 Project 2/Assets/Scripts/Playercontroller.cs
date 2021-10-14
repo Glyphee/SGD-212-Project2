@@ -205,7 +205,8 @@ public class Playercontroller : MonoBehaviour
         else if (other.gameObject.CompareTag("enemy2") || other.gameObject.CompareTag("enemy3"))
         {
             // playerHealth = playerHealth - 2;
-            healthImageScript.instance.playerHealth -= 2;
+            healthImageScript.instance.playerHealth--;
+            healthImageScript.instance.playerHealth--;
             audioMan.Play("Hurt");
             healthImageScript.instance.CheckHealth();
         }

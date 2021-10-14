@@ -33,27 +33,30 @@ public class healthImageScript : MonoBehaviour
         print("Starting Health: " + playerHealth);
     }
 
+    void Update()
+    {
+        CheckHealth();
+    }
+
     public void ChangeHealthImage(int temp)
     {
         currentImage.gameObject.SetActive(false);
         healthImages[temp].gameObject.SetActive(true);
         currentImage = healthImages[temp];
-        Debug.Log("Current healt image " + currentImage);
+        Debug.Log("Current health image " + currentImage);
     }
 
     public void CheckHealth()
     {
-        print("Player health: " + playerHealth);
-
         if(playerHealth > -1)
         {
             ChangeHealthImage(playerHealth);
-
-            if(playerHealth < 1)
-            {
-                Debug.Log("Starting GameOver");
-                StartCoroutine(playercontroller.GameOver());
-            }
+        }
+        else if(playerHealth <= 0)
+        {
+            ChangeHealthImage(0);
+            Debug.Log("Starting GameOver");
+            StartCoroutine(playercontroller.GameOver());
         }
     }
 }

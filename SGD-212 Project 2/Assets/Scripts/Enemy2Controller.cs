@@ -51,6 +51,7 @@ public class Enemy2Controller : MonoBehaviour
             //Absorb slime damage
             HurtSFX();
             health--;
+            
         }
         else if (other.gameObject.tag == "spike")
         {

@@ -5,9 +5,17 @@ using UnityEngine;
 public class ProjectileController : MonoBehaviour
 {
     private float createTime;
+    private float projectileForce = 10f;
+    Rigidbody projRB;
     void Start()
     {
         createTime = Time.time;
+        projRB = GetComponent<Rigidbody>();
+    }
+
+    void FixedUpdate()
+    {
+        // projRB.AddForce(Vector3.forward* projectileForce);
     }
 
     void Update()

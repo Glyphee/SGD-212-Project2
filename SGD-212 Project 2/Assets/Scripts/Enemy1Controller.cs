@@ -64,5 +64,9 @@ public class Enemy1Controller : MonoBehaviour
             }
             health--;
         }
+        else if(other.gameObject.tag == "spike")
+        {
+            this.gameObject.GetComponent<NavMeshAgent>().speed = 0.5f;
+        }
     }
 }
