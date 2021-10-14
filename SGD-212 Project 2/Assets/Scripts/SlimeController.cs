@@ -5,9 +5,10 @@ using UnityEngine.AI;
 
 public class SlimeController : MonoBehaviour
 {
+    public static SlimeController slimeController;
     [SerializeField] private GameObject playerGO;
     private bool hasStopped = false;
-    NavMeshAgent nav;
+    public NavMeshAgent nav;
     Rigidbody rb;
     Playercontroller controller;
     public bool isInParty = false; //if the slime is in the player's party
@@ -86,7 +87,7 @@ public class SlimeController : MonoBehaviour
     private void OnTriggerEnter(Collider collider)
     {        
         
-        if (collider.CompareTag("enemy2") && this.gameObject.CompareTag("spike") || collider.CompareTag("enemy3") && this.gameObject.CompareTag("spike"))
+        if (collider.CompareTag("enemy2") && this.gameObject.CompareTag("spike") || collider.CompareTag("enemy3") && this.gameObject.CompareTag("spike") || collider.CompareTag("enemy1") && this.gameObject.CompareTag("spike"))
         {
             isAttacking = true;
             currEnemy = collider.gameObject;
@@ -97,7 +98,7 @@ public class SlimeController : MonoBehaviour
 
     private void OnTriggerExit(Collider collider)
     {
-        if (collider.CompareTag("enemy2") || collider.CompareTag("enemy3"))
+        if (collider.CompareTag("enemy2") || collider.CompareTag("enemy3") || collider.CompareTag("enemy1"))
         {
             isAttacking = false;
         }

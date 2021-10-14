@@ -12,6 +12,7 @@ public class Enemy1Controller : MonoBehaviour
     private int health = 1;
     NavMeshAgent nav;
     AudioManager audioMan;
+    private GameObject thisTemp;
 
     private void Start()
     {
@@ -24,6 +25,9 @@ public class Enemy1Controller : MonoBehaviour
     {
         if (health <= 0)
         {
+            thisTemp.GetComponent<SlimeController>().currEnemy = null;
+            thisTemp.GetComponent<SlimeController>().isAttacking = false;
+            thisTemp.GetComponent<SlimeController>().nav.enabled = true;
             Destroy(this.gameObject);
         }
     }
@@ -34,8 +38,8 @@ public class Enemy1Controller : MonoBehaviour
         {
             while (Vector3.Distance(playerGO.transform.position, transform.position) < detectRadius)
             {
-                Instantiate(projectileGO, new Vector3(0, 0, 0), Quaternion.identity);
-                yield return new WaitForSeconds(3f);
+                // Instantiate(projectileGO, new Vector3(0, 0, 0), Quaternion.identity);
+                // yield return new WaitForSeconds(3f);
 
                 nav.destination = playerGO.transform.position;
                 yield return null;
@@ -66,6 +70,7 @@ public class Enemy1Controller : MonoBehaviour
         }
         else if(other.gameObject.tag == "spike")
         {
+            thisTemp = other.gameObject;
             this.gameObject.GetComponent<NavMeshAgent>().speed = 0.5f;
         }
     }

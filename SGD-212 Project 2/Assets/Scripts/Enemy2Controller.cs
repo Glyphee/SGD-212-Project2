@@ -7,9 +7,10 @@ public class Enemy2Controller : MonoBehaviour
 {
     [SerializeField] private GameObject playerGO;
     [SerializeField] private float detectRadius;
-    private int health = 3;
+    private int health = 2;
     NavMeshAgent nav;
     AudioManager audioMan;
+    private GameObject thisTemp;
 
     private void Start()
     {
@@ -22,6 +23,9 @@ public class Enemy2Controller : MonoBehaviour
     {
         if (health <= 0)
         {
+            thisTemp.GetComponent<SlimeController>().currEnemy = null;
+            thisTemp.GetComponent<SlimeController>().isAttacking = false;
+            thisTemp.GetComponent<SlimeController>().nav.enabled = true;
             Destroy(this.gameObject);
         }
     }
@@ -56,6 +60,7 @@ public class Enemy2Controller : MonoBehaviour
         else if (other.gameObject.tag == "spike")
         {
             this.gameObject.GetComponent<NavMeshAgent>().speed = 0.5f;
+            thisTemp = other.gameObject;
         }
         else if (other.gameObject.tag == "crush")
         {

@@ -10,6 +10,7 @@ public class Enemy3Controller : MonoBehaviour
     private int health = 3;
     NavMeshAgent nav;
     AudioManager audioMan;
+    private GameObject thisTemp;
 
     private void Start()
     {
@@ -22,6 +23,9 @@ public class Enemy3Controller : MonoBehaviour
     {
         if (health <= 0)
         {
+            thisTemp.GetComponent<SlimeController>().currEnemy = null;
+            thisTemp.GetComponent<SlimeController>().isAttacking = false;
+            thisTemp.GetComponent<SlimeController>().nav.enabled = true;
             DoorScript.D.deadBosses++;
             Destroy(this.gameObject);
         }
@@ -58,7 +62,9 @@ public class Enemy3Controller : MonoBehaviour
             {
                 audioMan.Play("Hurt 2");
             }
-            health =- 3;
+            health--;
+            health--;
+            health--;
         }
         else if(other.gameObject.tag == "absorb")
         {
@@ -74,6 +80,7 @@ public class Enemy3Controller : MonoBehaviour
         }
         else if(other.gameObject.tag == "spike")
         {
+            thisTemp = other.gameObject;
             this.gameObject.GetComponent<NavMeshAgent>().speed = 0.5f;
         }
     }

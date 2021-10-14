@@ -721,7 +721,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Langsat:
 
-    Runs towards opponents and fires fruit projectiles at them!'
+    Runs towards its opponents and tries to tackle them!'
 --- !u!222 &197410193
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3046,8 +3046,8 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Zombie:
 
-    Though dead-looking, it is pretty fast. Unfortunately for
-    it, it has poor eyesight.'
+    A bit more tougher and faster than the langsat. Thankfully
+    it has poor eyesight.'
 --- !u!222 &868679741
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3364,7 +3364,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Absorb Slime:
 
-    An adorable green slime that aborbs its enemies.'
+    An adorable green slime that tries to aborbs its enemies.'
 --- !u!222 &902757026
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3912,7 +3912,7 @@ MonoBehaviour:
 
 
     You can only take 3 hits, so be careful otherwise you''ll
-    find yourself back at the dungeons!'
+    find yourself back at the beginning!'
 --- !u!222 &981754119
 CanvasRenderer:
   m_ObjectHideFlags: 0
