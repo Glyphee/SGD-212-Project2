@@ -122,10 +122,11 @@ public class Playercontroller : MonoBehaviour
 
         //keeps the current slime at holding point
         //This is where that repeating error is, i dont know why it says that it is somewhere else
-        if (currSlime != -1 && slimeList[currSlime].GetComponent<SlimeController>().isHeld)
+        if (currSlime != -1 && slimesInParty != 0)
         {
             slimeList[currSlime].transform.position = slimeholdPoint.transform.position;
             isHolding = true;
+            slimeList[currSlime].GetComponent<SlimeController>().isHeld = true;
         }
 
 

@@ -84,11 +84,7 @@ public class SlimeController : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider collider)
-    {
-        if (!isInParty)
-        {
-            audioMan.Play("Hit SFX");
-        }
+    {        
         
         if (collider.CompareTag("enemy2") && this.gameObject.CompareTag("spike"))
         {
@@ -107,4 +103,11 @@ public class SlimeController : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (!isInParty)
+        {
+            audioMan.Play("Hit SFX");
+        }
+    }
 }
