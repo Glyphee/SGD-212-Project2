@@ -24,6 +24,9 @@ public class MainMenu : MonoBehaviour
     int currentHelpPage = 0;
     int currentCreditsPage = 0;
 
+    float volume;
+    bool isMute = false;
+
     public Animator circleTransitionController;
 
     AudioManager audioMan;
@@ -50,7 +53,7 @@ public class MainMenu : MonoBehaviour
 
         if(PlayerPrefs.HasKey("Volume"))
         {
-            PlayerPrefs.SetFloat("Volume", 1); //resets the volume to 1, comment this out if you want to keep player prefs
+            //PlayerPrefs.SetFloat("Volume", 1); //resets the volume to 1, comment this out if you want to keep player prefs
             AudioListener.volume = PlayerPrefs.GetFloat("Volume");
             volumeSlider.value = PlayerPrefs.GetFloat("Volume");
         }       
@@ -189,7 +192,7 @@ public class MainMenu : MonoBehaviour
     public void ChangeVolume() //changes volume to slider value
     {
         AudioListener.volume = volumeSlider.value;
-        PlayerPrefs.SetFloat("Volume", AudioListener.volume);
+        PlayerPrefs.SetFloat("Volume", AudioListener.volume);       
 
         if(volumeSlider.value == 0)
         {
@@ -200,8 +203,7 @@ public class MainMenu : MonoBehaviour
             volumeIcon.sprite = speakerIcons[0];
         }
     }
-    float volume;
-    bool isMute = false;
+    
     public void OnMuteButtonClick() //toggles mute button
     {
         if (!isMute)
