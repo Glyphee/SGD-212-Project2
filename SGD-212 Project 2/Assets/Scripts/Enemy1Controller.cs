@@ -12,22 +12,19 @@ public class Enemy1Controller : MonoBehaviour
     private int health = 1;
     NavMeshAgent nav;
     AudioManager audioMan;
-    private GameObject thisTemp;
 
     private void Start()
     {
         nav = GetComponent<NavMeshAgent>();
         audioMan = GetComponent<AudioManager>();
         StartCoroutine(DetectPlayer());
+        StartCoroutine(ShootPlayer());
     }
 
     private void Update()
     {
         if (health <= 0)
         {
-            thisTemp.GetComponent<SlimeController>().currEnemy = null;
-            thisTemp.GetComponent<SlimeController>().isAttacking = false;
-            thisTemp.GetComponent<SlimeController>().nav.enabled = true;
             Destroy(this.gameObject);
         }
     }
@@ -38,15 +35,31 @@ public class Enemy1Controller : MonoBehaviour
         {
             while (Vector3.Distance(playerGO.transform.position, transform.position) < detectRadius)
             {
-                // Instantiate(projectileGO, new Vector3(0, 0, 0), Quaternion.identity);
-                // yield return new WaitForSeconds(3f);
-
                 nav.destination = playerGO.transform.position;
                 yield return null;
             }
             while (Vector3.Distance(playerGO.transform.position, transform.position) >= detectRadius)
             {
                 nav.destination = transform.position;
+                yield return null;
+            }
+        }
+    }
+
+    IEnumerator ShootPlayer()
+    {
+        while (true)
+        {
+            while (Vector3.Distance(playerGO.transform.position, transform.position) < detectRadius)
+            {
+                GameObject projectile;
+                projectile = Instantiate(projectileGO, transform.position + new Vector3(0, .5f, 0), transform.rotation);
+                projectile.GetComponent<Rigidbody>().AddForce(transform.forward * 500 * throwPower);
+                print("shooting");
+                yield return new WaitForSeconds(3f);
+            } 
+            while (Vector3.Distance(playerGO.transform.position, transform.position) >= detectRadius)
+            {
                 yield return null;
             }
         }
@@ -67,11 +80,6 @@ public class Enemy1Controller : MonoBehaviour
                 audioMan.Play("Hurt 2");
             }
             health--;
-        }
-        else if(other.gameObject.tag == "spike")
-        {
-            thisTemp = other.gameObject;
-            this.gameObject.GetComponent<NavMeshAgent>().speed = 0.5f;
         }
     }
 }
