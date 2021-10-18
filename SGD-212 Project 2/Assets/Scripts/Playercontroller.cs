@@ -200,7 +200,8 @@ public class Playercontroller : MonoBehaviour
             audioMan.Play("Hurt");
             playerAnimator.SetTrigger("damaged");
             healthImageScript.instance.CheckHealth();
-        }
+            
+        }       
         else if (other.gameObject.CompareTag("enemy2") || other.gameObject.CompareTag("enemy3"))
         {
             // playerHealth = playerHealth - 2;
@@ -209,6 +210,7 @@ public class Playercontroller : MonoBehaviour
             audioMan.Play("Hurt");
             playerAnimator.SetTrigger("damaged");
             healthImageScript.instance.CheckHealth();
+            other.gameObject.GetComponent<AudioManager>().Play("Attack");
         }
         else if (other.gameObject.CompareTag("projectile"))
         {

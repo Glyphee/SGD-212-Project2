@@ -1307,11 +1307,11 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Attack
     clip: {fileID: 8300000, guid: eace6674d2383a1478fe15f846562710, type: 3}
-    volume: 0.75
+    volume: 1
     volumeVariance: 0.25
     pitch: 1
-    pitchVariance: 0.5
-    spatialBlend: 1
+    pitchVariance: 0.2
+    spatialBlend: 0.25
     loop: 0
     playOnAwake: 0
     mixerGroup: {fileID: 0}
