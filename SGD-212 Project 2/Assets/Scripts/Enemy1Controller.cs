@@ -55,6 +55,7 @@ public class Enemy1Controller : MonoBehaviour
                 GameObject projectile;
                 projectile = Instantiate(projectileGO, transform.position + new Vector3(0, .5f, 0), transform.rotation);
                 projectile.GetComponent<Rigidbody>().AddForce(transform.forward * 500 * throwPower);
+                audioMan.Play("Attack");
                 print("shooting");
                 yield return new WaitForSeconds(3f);
             } 

@@ -229,6 +229,7 @@ GameObject:
   - component: {fileID: 1141245329429510773}
   - component: {fileID: -9028373708675909193}
   - component: {fileID: 4027181786425733195}
+  - component: {fileID: -939854579023072011}
   m_Layer: 0
   m_Name: Skeleton
   m_TagString: enemy3
@@ -322,6 +323,54 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerGO: {fileID: 1490887128366784683, guid: 6efa2668371982c4a9a6e91f53a279af, type: 3}
   detectRadius: 5
+--- !u!114 &-939854579023072011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2252299165788293849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1451be381345494b9025a0c237ec868, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixerGroup: {fileID: 0}
+  sounds:
+  - name: Attack
+    clip: {fileID: 8300000, guid: 56e66c6f320c97a499f8a52105fd114e, type: 3}
+    volume: 1
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.25
+    spatialBlend: 0.1
+    loop: 0
+    playOnAwake: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Hurt
+    clip: {fileID: 8300000, guid: bc2ff750b813ddf4a8192ccda48ace90, type: 3}
+    volume: 1
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.25
+    spatialBlend: 0.1
+    loop: 0
+    playOnAwake: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Death
+    clip: {fileID: 8300000, guid: bc2ff750b813ddf4a8192ccda48ace90, type: 3}
+    volume: 1
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.25
+    spatialBlend: 0.1
+    loop: 0
+    playOnAwake: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  isSingleton: 0
 --- !u!1 &2406429376922799226
 GameObject:
   m_ObjectHideFlags: 0

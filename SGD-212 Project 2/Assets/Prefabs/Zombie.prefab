@@ -540,6 +540,7 @@ GameObject:
   - component: {fileID: 6931909972494483763}
   - component: {fileID: 7158142334296874431}
   - component: {fileID: 931809709599651842}
+  - component: {fileID: 2646725296324757413}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: enemy2
@@ -668,10 +669,10 @@ MonoBehaviour:
   - name: Idle
     clip: {fileID: 8300000, guid: 17ed157c919f86e4a8adc85198bc01f6, type: 3}
     volume: 1
-    volumeVariance: 0.25
+    volumeVariance: 0
     pitch: 1
     pitchVariance: 0.5
-    spatialBlend: 1
+    spatialBlend: 0.3
     loop: 0
     playOnAwake: 0
     mixerGroup: {fileID: 0}
@@ -681,30 +682,30 @@ MonoBehaviour:
     volume: 1
     volumeVariance: 0.25
     pitch: 1
-    pitchVariance: 0.5
-    spatialBlend: 1
+    pitchVariance: 0.25
+    spatialBlend: 0.1
     loop: 0
     playOnAwake: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: Hurt
     clip: {fileID: 8300000, guid: fad462aef7d4e2848bec76e83bc82d3f, type: 3}
-    volume: 1
+    volume: 0.5
     volumeVariance: 0.25
     pitch: 1
-    pitchVariance: 0.5
-    spatialBlend: 1
+    pitchVariance: 0.3
+    spatialBlend: 0.25
     loop: 0
     playOnAwake: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: Hurt2
     clip: {fileID: 8300000, guid: b99660258aa78c64ea87ca9a54c4c60e, type: 3}
-    volume: 1
+    volume: 0.5
     volumeVariance: 0.25
     pitch: 1
-    pitchVariance: 0.5
-    spatialBlend: 1
+    pitchVariance: 0.3
+    spatialBlend: 0.25
     loop: 0
     playOnAwake: 0
     mixerGroup: {fileID: 0}
@@ -724,6 +725,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerGO: {fileID: 0}
   detectRadius: 5
+--- !u!136 &2646725296324757413
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3511466945249848985}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  m_Radius: 0.15
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!1 &3511508236751813807
 GameObject:
   m_ObjectHideFlags: 0
