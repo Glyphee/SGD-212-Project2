@@ -29,7 +29,7 @@ public class Enemy1Controller : MonoBehaviour
 
     private void SelfDeath()
     {
-        Debug.Log("Starting Langsat Death");
+        //Debug.Log("Starting Langsat Death");
         if(thisTemp != null)
         {
             thisTemp.GetComponent<SlimeController>().currEnemy = null;

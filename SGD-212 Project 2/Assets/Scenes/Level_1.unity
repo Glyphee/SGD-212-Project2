@@ -2281,56 +2281,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1935689417
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1935689419}
-  - component: {fileID: 1935689418}
-  m_Layer: 0
-  m_Name: PersistentController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1935689418
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1935689417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f695b1aae43dd73428f073dce7e8eabf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  absorbCount: 0
-  absorbSlime: {fileID: 2386925291560764166, guid: 5b15cb71741ec534a9527b24479773a4, type: 3}
-  spikeCount: 0
-  spikeSlime: {fileID: 6672608496992016017, guid: 7cd9ff1d018a28b4cb3c7d6580d2535c, type: 3}
-  crushCount: 0
-  crushSlime: {fileID: 3192436010658034074, guid: 32cd6146f723aca499931cbc1c4ece1a, type: 3}
-  levelChanged: 0
---- !u!4 &1935689419
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1935689417}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1967641936 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2178028544206262738, guid: 4e622f1d44ab02341a3888286df47a49, type: 3}
@@ -3145,7 +3095,7 @@ PrefabInstance:
     - target: {fileID: 8324758972269940779, guid: bf0378efe960a2542afd70b9e1a9c71e, type: 3}
       propertyPath: persCont
       value: 
-      objectReference: {fileID: 1935689418}
+      objectReference: {fileID: 0}
     - target: {fileID: 8324758972269940779, guid: bf0378efe960a2542afd70b9e1a9c71e, type: 3}
       propertyPath: playerGO
       value: 
