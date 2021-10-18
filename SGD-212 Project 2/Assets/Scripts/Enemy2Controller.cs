@@ -11,6 +11,7 @@ public class Enemy2Controller : MonoBehaviour
     NavMeshAgent nav;
     AudioManager audioMan;
     private GameObject thisTemp;
+    public Animator enemyAnimator;
 
     private void Start()
     {
@@ -23,11 +24,26 @@ public class Enemy2Controller : MonoBehaviour
     {
         if (health <= 0)
         {
+            StartCoroutine(SelfDeath());
+        }
+    }
+
+    private IEnumerator SelfDeath()
+    {
+        Debug.Log("Starting Zombie Death");
+        nav.speed = 0;
+        if(thisTemp != null)
+        {
             thisTemp.GetComponent<SlimeController>().currEnemy = null;
             thisTemp.GetComponent<SlimeController>().isAttacking = false;
             thisTemp.GetComponent<SlimeController>().nav.enabled = true;
-            Destroy(this.gameObject);
+            thisTemp.GetComponent<Collider>().enabled = true;
         }
+        enemyAnimator.SetTrigger("Dead");
+        this.gameObject.GetComponent<Collider>().enabled = false;
+
+        yield return new WaitForSeconds(2);
+        Destroy(this.gameObject);
     }
 
     IEnumerator DetectPlayer()
@@ -60,16 +76,27 @@ public class Enemy2Controller : MonoBehaviour
         else if (other.gameObject.tag == "spike")
         {
             this.gameObject.GetComponent<NavMeshAgent>().speed = 0.5f;
+            other.gameObject.GetComponent<Collider>().enabled = false;
             thisTemp = other.gameObject;
         }
         else if (other.gameObject.tag == "crush")
         {
             //Crush slime damage
             HurtSFX();
-            health--;
-            health--;
-            health--;
+            health = 0;
         }
+        else if(other.gameObject.tag == "Player")
+        {
+            StartCoroutine(IsAttacking());
+        }
+    }
+
+    private IEnumerator IsAttacking()
+    {
+        nav.speed = 0;
+        enemyAnimator.SetTrigger("Attack");
+        yield return new WaitForSeconds(1);
+        nav.speed = 2;
     }
 
     void HurtSFX()

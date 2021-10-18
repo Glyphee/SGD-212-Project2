@@ -536,6 +536,7 @@ GameObject:
   - component: {fileID: 3597283703649746295}
   - component: {fileID: 3494636422299537417}
   - component: {fileID: 3556810405038763069}
+  - component: {fileID: 7761288199364640790}
   - component: {fileID: 3542710783974165617}
   - component: {fileID: 6931909972494483763}
   - component: {fileID: 7158142334296874431}
@@ -572,7 +573,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3511466945249848985}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 520328afa68e691429451635bbb84c79, type: 3}
+  m_Avatar: {fileID: 9000000, guid: 8c53cffd52097cf4582f0a090c9a833e, type: 3}
   m_Controller: {fileID: 9100000, guid: c929656c07909194ab8a5cd79f5f371d, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
@@ -607,6 +608,20 @@ CapsuleCollider:
   m_GameObject: {fileID: 3511466945249848985}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.15
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!136 &7761288199364640790
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3511466945249848985}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.15
   m_Height: 1
@@ -724,6 +739,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerGO: {fileID: 0}
   detectRadius: 5
+  enemyAnimator: {fileID: 3597283703649746295}
 --- !u!1 &3511508236751813807
 GameObject:
   m_ObjectHideFlags: 0

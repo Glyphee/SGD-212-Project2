@@ -11,6 +11,7 @@ public class Enemy3Controller : MonoBehaviour
     NavMeshAgent nav;
     AudioManager audioMan;
     private GameObject thisTemp;
+    public Animator enemyAnimator;
 
     private void Start()
     {
@@ -23,12 +24,27 @@ public class Enemy3Controller : MonoBehaviour
     {
         if (health <= 0)
         {
+            StartCoroutine(SelfDeath());
+        }
+    }
+
+    private IEnumerator SelfDeath()
+    {
+        Debug.Log("Starting Skeleton Death");
+        nav.speed = 0;
+        if(thisTemp != null)
+        {
             thisTemp.GetComponent<SlimeController>().currEnemy = null;
             thisTemp.GetComponent<SlimeController>().isAttacking = false;
             thisTemp.GetComponent<SlimeController>().nav.enabled = true;
-            DoorScript.D.deadBosses++;
-            Destroy(this.gameObject);
+            thisTemp.GetComponent<Collider>().enabled = true;
         }
+        enemyAnimator.SetTrigger("Dead_1");
+        this.gameObject.GetComponent<Collider>().enabled = false;
+
+        yield return new WaitForSeconds(2);
+        DoorScript.D.deadBosses++;
+        Destroy(this.gameObject);
     }
 
     IEnumerator DetectPlayer()
@@ -53,18 +69,16 @@ public class Enemy3Controller : MonoBehaviour
         int randSound = Random.Range(0, 2); //random sfx for getting hit by slimes
         if (other.gameObject.tag == "crush")
         {
-            //Crush slime damage
-            if (randSound == 0)
-            {
-                audioMan.Play("Hurt 1");
-            }
-            else
-            {
-                audioMan.Play("Hurt 2");
-            }
-            health--;
-            health--;
-            health--;
+            //Crush slime damage // needs audio
+            // if (randSound == 0)
+            // {
+            //     audioMan.Play("Hurt 1");
+            // }
+            // else
+            // {
+            //     audioMan.Play("Hurt 2");
+            // }
+            health = 0;
         }
         else if(other.gameObject.tag == "absorb")
         {
@@ -82,6 +96,19 @@ public class Enemy3Controller : MonoBehaviour
         {
             thisTemp = other.gameObject;
             this.gameObject.GetComponent<NavMeshAgent>().speed = 0.5f;
+            other.gameObject.GetComponent<Collider>().enabled = false;
         }
+        else if(other.gameObject.tag == "Player")
+        {
+            StartCoroutine(IsAttacking());
+        }
+    }
+
+    private IEnumerator IsAttacking()
+    {
+        nav.speed = 0;
+        enemyAnimator.SetTrigger("Strike_1");
+        yield return new WaitForSeconds(1);
+        nav.speed = 2;
     }
 }

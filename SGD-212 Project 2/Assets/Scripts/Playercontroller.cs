@@ -133,6 +133,7 @@ public class Playercontroller : MonoBehaviour
         //Launches the slime
         if (Input.GetMouseButtonDown(0) == true/* && slimesHeld != 0*/)
         {
+            playerAnimator.SetTrigger("Attack01");
             if(isHolding)
             {
                 slimeList[currSlime].GetComponent<NavMeshAgent>().enabled = false;
@@ -151,8 +152,6 @@ public class Playercontroller : MonoBehaviour
                 currSlime = 0;
             }
             //slimesHeld--;
-
-            // playerAnimator.SetBool("IsAttack01", true);
         }
 
         if (slimesInParty > 0 && !isHolding) //searching for slimes in party 
@@ -198,8 +197,8 @@ public class Playercontroller : MonoBehaviour
         {
             // playerHealth--;
             healthImageScript.instance.playerHealth--;
-            //print("player hurt");
             audioMan.Play("Hurt");
+            playerAnimator.SetTrigger("damaged");
             healthImageScript.instance.CheckHealth();
         }
         else if (other.gameObject.CompareTag("enemy2") || other.gameObject.CompareTag("enemy3"))
@@ -208,6 +207,7 @@ public class Playercontroller : MonoBehaviour
             healthImageScript.instance.playerHealth--;
             healthImageScript.instance.playerHealth--;
             audioMan.Play("Hurt");
+            playerAnimator.SetTrigger("damaged");
             healthImageScript.instance.CheckHealth();
         }
         else if (other.gameObject.CompareTag("projectile"))

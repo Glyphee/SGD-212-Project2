@@ -49,6 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerGO: {fileID: 0}
+  nav: {fileID: 0}
   isInParty: 0
   isHeld: 0
   isAttacking: 0
@@ -197,6 +198,10 @@ PrefabInstance:
     - target: {fileID: 829184942657517341, guid: b68fb4889ba80ef4f9bd97fde9603957, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7434320076533437766, guid: b68fb4889ba80ef4f9bd97fde9603957, type: 3}
+      propertyPath: m_TagString
+      value: crush
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b68fb4889ba80ef4f9bd97fde9603957, type: 3}

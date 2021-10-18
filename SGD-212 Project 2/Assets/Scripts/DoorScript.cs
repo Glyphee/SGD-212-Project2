@@ -22,19 +22,20 @@ public class DoorScript : MonoBehaviour
             doorBool = true;
             finalDoorBool = false;
             hasKey = true;
-            deadBosses = 1;
+            deadBosses = 3;
         }
         else if(this.gameObject.tag == "FinalDoor")
         {
             finalDoorBool = true;
             doorBool = false;
             hasKey = false;
-            deadBosses = 1;
+            deadBosses = 3;
         }
         else if(this.gameObject.tag == "castleDoor")
         {
-            hasKey = false;
+            hasKey = true;
             deadBosses = 0;
+            print("Boss count " + deadBosses);
         }
         
         audioMan = GameObject.FindGameObjectWithTag("Player").GetComponent<AudioManager>();
@@ -51,23 +52,26 @@ public class DoorScript : MonoBehaviour
             audioMan.Play("Open");
             this.gameObject.SetActive(false); // if above is true then disables the gameObject this is attached to           
         }
+
+        print("Boss count " + deadBosses);
     }
 
     void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")
         {
+            Debug.Log("Player at door");
             isPresent = true;
 
             if(finalDoorBool && !hasKey) // summons messagePanel upon player entering
             {
                 MessageScript.StartMessage("It's locked, seems we'll need a key. There should be one somewhere...");
             }
-            else if(deadBosses == 0)
+            else if(deadBosses != 3)
             {
-                MessageScript.StartMessage("The door is a bit stuck. Might want to defeat the two skeletons around here first.");
+                MessageScript.StartMessage("The door is a bit stuck. Might want to defeat the skeletons around here first.");
             }
-            else if(doorBool || finalDoorBool && hasKey) // turns on promptPanel when player enters
+            else if(doorBool || finalDoorBool && hasKey || deadBosses == 3) // turns on promptPanel when player enters
             {
                 MessageScript.J.SummonPrompt();
             }
