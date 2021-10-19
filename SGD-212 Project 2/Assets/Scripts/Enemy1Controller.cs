@@ -21,6 +21,7 @@ public class Enemy1Controller : MonoBehaviour
         nav = GetComponent<NavMeshAgent>();
         audioMan = GetComponent<AudioManager>();
         StartCoroutine(DetectPlayer());
+        StartCoroutine(ShootPlayer());
     }
 
     private void Update()
@@ -57,6 +58,24 @@ public class Enemy1Controller : MonoBehaviour
             while (Vector3.Distance(playerGO.transform.position, transform.position) >= detectRadius)
             {
                 nav.destination = transform.position;
+                yield return null;
+            }
+        }
+    }
+
+    IEnumerator ShootPlayer()
+    {
+        while (true)
+        {
+            while (Vector3.Distance(playerGO.transform.position, transform.position) < detectRadius)
+            {
+                GameObject projectile;
+                projectile = Instantiate(projectileGO, transform.position + new Vector3(0, 0.5f, 0), transform.rotation);
+                projectile.GetComponent<Rigidbody>().AddForce(transform.forward * 500 * throwPower);
+                yield return new WaitForSeconds(3f);
+            }
+            while (Vector3.Distance(playerGO.transform.position, transform.position) >= detectRadius)
+            {
                 yield return null;
             }
         }
