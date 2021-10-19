@@ -11,7 +11,6 @@ public class levelTransport_Script : MonoBehaviour
     public GameObject playerGO;
     public Image levelCompleteImage;
 
-    public PersistentController persCont = new PersistentController();
     public static levelTransport_Script J;
 
     AudioManager audioMan;
@@ -24,26 +23,7 @@ public class levelTransport_Script : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //Checks the slimeList[] on the player and adds one the repective PersistentController value
-        for (int i = 0; i <= playerGO.GetComponent<Playercontroller>().slimeList.Count - 1; i++)
-        {
-            if (playerGO.GetComponent<Playercontroller>().slimeList[i].gameObject.tag == "absorb")
-            {
-                persCont.GetComponent<PersistentController>().absorbCount++;
-            }
-            else if (playerGO.GetComponent<Playercontroller>().slimeList[i].gameObject.tag == "spike")
-            {
-                persCont.GetComponent<PersistentController>().spikeCount++;
-            }
-            else if (playerGO.GetComponent<Playercontroller>().slimeList[i].gameObject.tag == "crush")
-            {
-                persCont.GetComponent<PersistentController>().crushCount++;
-            }
-        }
-
         StartCoroutine(AnimTransit());
-
-        persCont.levelChanged = true;
     }
 
     public IEnumerator AnimTransit()

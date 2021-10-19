@@ -43,12 +43,12 @@ public class healthImageScript : MonoBehaviour
         currentImage.gameObject.SetActive(false);
         healthImages[temp].gameObject.SetActive(true);
         currentImage = healthImages[temp];
-        Debug.Log("Current health image " + currentImage);
+        //Debug.Log("Current health image " + currentImage);
     }
 
     public void CheckHealth()
     {
-        if(playerHealth > -1)
+        if(playerHealth > 0)
         {
             ChangeHealthImage(playerHealth);
         }
