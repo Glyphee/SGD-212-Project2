@@ -516,6 +516,10 @@ PrefabInstance:
       propertyPath: playerGO
       value: 
       objectReference: {fileID: 1878209041}
+    - target: {fileID: 931809709599651842, guid: 47fcf4ce93427f44b80aebc69b7fe00b, type: 3}
+      propertyPath: doorScript
+      value: 
+      objectReference: {fileID: 1052854266}
     - target: {fileID: 3508345928168247101, guid: 47fcf4ce93427f44b80aebc69b7fe00b, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -831,6 +835,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 904149206}
     - target: {fileID: 7576810686995425434, guid: e54a0cbbf31be4644bee5f12ecfbbd03, type: 3}
+      propertyPath: doorScript
+      value: 
+      objectReference: {fileID: 1052854266}
+    - target: {fileID: 7576810686995425434, guid: e54a0cbbf31be4644bee5f12ecfbbd03, type: 3}
       propertyPath: throwPower
       value: 3
       objectReference: {fileID: 0}
@@ -1002,6 +1010,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 904149206}
     - target: {fileID: 7576810686995425434, guid: e54a0cbbf31be4644bee5f12ecfbbd03, type: 3}
+      propertyPath: doorScript
+      value: 
+      objectReference: {fileID: 1052854266}
+    - target: {fileID: 7576810686995425434, guid: e54a0cbbf31be4644bee5f12ecfbbd03, type: 3}
       propertyPath: throwPower
       value: 3
       objectReference: {fileID: 0}
@@ -1131,6 +1143,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 904149206}
     - target: {fileID: 7576810686995425434, guid: e54a0cbbf31be4644bee5f12ecfbbd03, type: 3}
+      propertyPath: doorScript
+      value: 
+      objectReference: {fileID: 1052854266}
+    - target: {fileID: 7576810686995425434, guid: e54a0cbbf31be4644bee5f12ecfbbd03, type: 3}
       propertyPath: throwPower
       value: 3
       objectReference: {fileID: 0}
@@ -1243,6 +1259,10 @@ PrefabInstance:
       propertyPath: playerGO
       value: 
       objectReference: {fileID: 1878209041}
+    - target: {fileID: 931809709599651842, guid: 47fcf4ce93427f44b80aebc69b7fe00b, type: 3}
+      propertyPath: doorScript
+      value: 
+      objectReference: {fileID: 1052854266}
     - target: {fileID: 3508345928168247101, guid: 47fcf4ce93427f44b80aebc69b7fe00b, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -1390,6 +1410,10 @@ PrefabInstance:
       propertyPath: playerGO
       value: 
       objectReference: {fileID: 904149206}
+    - target: {fileID: 7576810686995425434, guid: e54a0cbbf31be4644bee5f12ecfbbd03, type: 3}
+      propertyPath: doorScript
+      value: 
+      objectReference: {fileID: 1052854266}
     - target: {fileID: 7576810686995425434, guid: e54a0cbbf31be4644bee5f12ecfbbd03, type: 3}
       propertyPath: throwPower
       value: 3
@@ -1849,6 +1873,10 @@ PrefabInstance:
       propertyPath: playerGO
       value: 
       objectReference: {fileID: 1878209041}
+    - target: {fileID: 931809709599651842, guid: 47fcf4ce93427f44b80aebc69b7fe00b, type: 3}
+      propertyPath: doorScript
+      value: 
+      objectReference: {fileID: 1052854266}
     - target: {fileID: 3508345928168247101, guid: 47fcf4ce93427f44b80aebc69b7fe00b, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -1920,21 +1948,38 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 216189288, guid: 45488c3e0711a4c4f9e5203ea74e97ee, type: 3}
-      propertyPath: MessageScript
-      value: 
-      objectReference: {fileID: 1911230946}
+      propertyPath: hasKey
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 775878992, guid: 45488c3e0711a4c4f9e5203ea74e97ee, type: 3}
-      propertyPath: MessageScript
-      value: 
-      objectReference: {fileID: 1911230946}
+      propertyPath: hasKey
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1221797968, guid: 45488c3e0711a4c4f9e5203ea74e97ee, type: 3}
-      propertyPath: MessageScript
-      value: 
-      objectReference: {fileID: 1911230946}
+      propertyPath: hasKey
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1935636273, guid: 45488c3e0711a4c4f9e5203ea74e97ee, type: 3}
+      propertyPath: deadEnemies
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 1935636273, guid: 45488c3e0711a4c4f9e5203ea74e97ee, type: 3}
       propertyPath: MessageScript
       value: 
       objectReference: {fileID: 1911230946}
+    - target: {fileID: 1935636273, guid: 45488c3e0711a4c4f9e5203ea74e97ee, type: 3}
+      propertyPath: stringArray.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1935636273, guid: 45488c3e0711a4c4f9e5203ea74e97ee, type: 3}
+      propertyPath: stringArray.Array.data[0]
+      value: '"It''s locked, seems we''ll need a key. There should be one somewhere..."'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1935636273, guid: 45488c3e0711a4c4f9e5203ea74e97ee, type: 3}
+      propertyPath: stringArray.Array.data[1]
+      value: '"The door also seems a bit jammed, so we probably should take care
+        of the enemies on this floor as well."'
+      objectReference: {fileID: 0}
     - target: {fileID: 3600725322182969748, guid: 45488c3e0711a4c4f9e5203ea74e97ee, type: 3}
       propertyPath: m_Name
       value: environmentLevel2
@@ -1982,10 +2027,6 @@ PrefabInstance:
     - target: {fileID: 3600725322182969749, guid: 45488c3e0711a4c4f9e5203ea74e97ee, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5482912078938799972, guid: 45488c3e0711a4c4f9e5203ea74e97ee, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45488c3e0711a4c4f9e5203ea74e97ee, type: 3}
@@ -2253,7 +2294,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 0.8852795, g: 0.89018553, b: 0.9245283, a: 1}
-  m_Intensity: 0.7
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -2404,7 +2445,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1490887128366784676, guid: 6efa2668371982c4a9a6e91f53a279af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.059999466
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: 1490887128366784676, guid: 6efa2668371982c4a9a6e91f53a279af, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2412,7 +2453,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1490887128366784676, guid: 6efa2668371982c4a9a6e91f53a279af, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 1490887128366784676, guid: 6efa2668371982c4a9a6e91f53a279af, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2692,6 +2733,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 904149206}
     - target: {fileID: 7576810686995425434, guid: e54a0cbbf31be4644bee5f12ecfbbd03, type: 3}
+      propertyPath: doorScript
+      value: 
+      objectReference: {fileID: 1052854266}
+    - target: {fileID: 7576810686995425434, guid: e54a0cbbf31be4644bee5f12ecfbbd03, type: 3}
       propertyPath: throwPower
       value: 3
       objectReference: {fileID: 0}
@@ -2904,6 +2949,10 @@ PrefabInstance:
       propertyPath: playerGO
       value: 
       objectReference: {fileID: 1878209041}
+    - target: {fileID: 931809709599651842, guid: 47fcf4ce93427f44b80aebc69b7fe00b, type: 3}
+      propertyPath: doorScript
+      value: 
+      objectReference: {fileID: 1052854266}
     - target: {fileID: 3508345928168247101, guid: 47fcf4ce93427f44b80aebc69b7fe00b, type: 3}
       propertyPath: m_RootOrder
       value: 5

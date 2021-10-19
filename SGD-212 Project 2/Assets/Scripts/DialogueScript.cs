@@ -6,8 +6,6 @@ using UnityEngine.SceneManagement;
 public class DialogueScript : MonoBehaviour
 {
     public string[] objectScript;
-    // public string startingDialogue;
-    // public string currentLevel;
 
     private int dialogueLength;
 

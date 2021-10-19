@@ -12,6 +12,7 @@ public class Enemy2Controller : MonoBehaviour
     AudioManager audioMan;
     private GameObject thisTemp;
     public Animator enemyAnimator;
+    public DoorScript doorScript;
 
     private void Start()
     {
@@ -43,6 +44,8 @@ public class Enemy2Controller : MonoBehaviour
         this.gameObject.GetComponent<Collider>().enabled = false;
 
         yield return new WaitForSeconds(2);
+        doorScript.deadEnemies--;
+        print("Enemies left: " + doorScript.deadEnemies);
         Destroy(this.gameObject);
     }
 

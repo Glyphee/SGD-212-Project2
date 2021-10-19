@@ -14,6 +14,7 @@ public class Enemy1Controller : MonoBehaviour
     AudioManager audioMan;
     private GameObject thisTemp;
     public Animator enemyAnimator;
+    public DoorScript doorScript;
 
     private void Start()
     {
@@ -36,6 +37,8 @@ public class Enemy1Controller : MonoBehaviour
             thisTemp.GetComponent<SlimeController>().isAttacking = false;
             thisTemp.GetComponent<SlimeController>().nav.enabled = true;
         }
+        doorScript.deadEnemies--;
+        print("Enemies left: " + doorScript.deadEnemies);
         Destroy(this.gameObject);
     }
 

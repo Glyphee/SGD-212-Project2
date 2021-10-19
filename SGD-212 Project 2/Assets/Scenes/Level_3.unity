@@ -445,6 +445,10 @@ PrefabInstance:
       propertyPath: playerGO
       value: 
       objectReference: {fileID: 785096029}
+    - target: {fileID: 931809709599651842, guid: 47fcf4ce93427f44b80aebc69b7fe00b, type: 3}
+      propertyPath: doorScript
+      value: 
+      objectReference: {fileID: 871348244}
     - target: {fileID: 3508345928168247101, guid: 47fcf4ce93427f44b80aebc69b7fe00b, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -803,7 +807,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 0.8852795, g: 0.89018553, b: 0.9245283, a: 1}
-  m_Intensity: 0.7
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1412,6 +1416,10 @@ PrefabInstance:
       propertyPath: playerGO
       value: 
       objectReference: {fileID: 785096029}
+    - target: {fileID: 931809709599651842, guid: 47fcf4ce93427f44b80aebc69b7fe00b, type: 3}
+      propertyPath: doorScript
+      value: 
+      objectReference: {fileID: 871348244}
     - target: {fileID: 3508345928168247101, guid: 47fcf4ce93427f44b80aebc69b7fe00b, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -1700,6 +1708,10 @@ PrefabInstance:
       propertyPath: playerGO
       value: 
       objectReference: {fileID: 785096029}
+    - target: {fileID: 7576810686995425434, guid: e54a0cbbf31be4644bee5f12ecfbbd03, type: 3}
+      propertyPath: doorScript
+      value: 
+      objectReference: {fileID: 871348244}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e54a0cbbf31be4644bee5f12ecfbbd03, type: 3}
 --- !u!4 &1030407503 stripped
@@ -1825,9 +1837,26 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 504576112304678669, guid: 02c774442065ecb428da9e122b90f213, type: 3}
+      propertyPath: deadEnemies
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 504576112304678669, guid: 02c774442065ecb428da9e122b90f213, type: 3}
       propertyPath: MessageScript
       value: 
       objectReference: {fileID: 468341325}
+    - target: {fileID: 504576112304678669, guid: 02c774442065ecb428da9e122b90f213, type: 3}
+      propertyPath: stringArray.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 504576112304678669, guid: 02c774442065ecb428da9e122b90f213, type: 3}
+      propertyPath: stringArray.Array.data[0]
+      value: '"It''s locked, seems we''ll need a key. There should be one somewhere..."'
+      objectReference: {fileID: 0}
+    - target: {fileID: 504576112304678669, guid: 02c774442065ecb428da9e122b90f213, type: 3}
+      propertyPath: stringArray.Array.data[1]
+      value: '"The door also seems a bit jammed, so we probably should take care
+        of the enemies on this floor as well."'
+      objectReference: {fileID: 0}
     - target: {fileID: 504576112326216872, guid: 02c774442065ecb428da9e122b90f213, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1894,6 +1923,10 @@ PrefabInstance:
       propertyPath: playerGO
       value: 
       objectReference: {fileID: 785096029}
+    - target: {fileID: 931809709599651842, guid: 47fcf4ce93427f44b80aebc69b7fe00b, type: 3}
+      propertyPath: doorScript
+      value: 
+      objectReference: {fileID: 871348244}
     - target: {fileID: 3508345928168247101, guid: 47fcf4ce93427f44b80aebc69b7fe00b, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -2008,6 +2041,10 @@ PrefabInstance:
       propertyPath: playerGO
       value: 
       objectReference: {fileID: 785096029}
+    - target: {fileID: 7576810686995425434, guid: e54a0cbbf31be4644bee5f12ecfbbd03, type: 3}
+      propertyPath: doorScript
+      value: 
+      objectReference: {fileID: 871348244}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e54a0cbbf31be4644bee5f12ecfbbd03, type: 3}
 --- !u!4 &1323976710 stripped
@@ -2074,6 +2111,10 @@ PrefabInstance:
       propertyPath: playerGO
       value: 
       objectReference: {fileID: 785096029}
+    - target: {fileID: 7576810686995425434, guid: e54a0cbbf31be4644bee5f12ecfbbd03, type: 3}
+      propertyPath: doorScript
+      value: 
+      objectReference: {fileID: 871348244}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e54a0cbbf31be4644bee5f12ecfbbd03, type: 3}
 --- !u!4 &1423688498 stripped
@@ -2422,6 +2463,10 @@ PrefabInstance:
       propertyPath: playerGO
       value: 
       objectReference: {fileID: 785096029}
+    - target: {fileID: 7576810686995425434, guid: e54a0cbbf31be4644bee5f12ecfbbd03, type: 3}
+      propertyPath: doorScript
+      value: 
+      objectReference: {fileID: 871348244}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e54a0cbbf31be4644bee5f12ecfbbd03, type: 3}
 --- !u!4 &1742789270 stripped
@@ -2550,6 +2595,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasKey: 1
   deadBosses: 0
+  deadEnemies: 0
+  stringArray: []
   MessageScript: {fileID: 468341325}
 --- !u!65 &1827065915
 BoxCollider:
@@ -2623,6 +2670,10 @@ PrefabInstance:
       propertyPath: playerGO
       value: 
       objectReference: {fileID: 785096029}
+    - target: {fileID: 7576810686995425434, guid: e54a0cbbf31be4644bee5f12ecfbbd03, type: 3}
+      propertyPath: doorScript
+      value: 
+      objectReference: {fileID: 871348244}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e54a0cbbf31be4644bee5f12ecfbbd03, type: 3}
 --- !u!4 &1843010622 stripped
@@ -2646,6 +2697,10 @@ PrefabInstance:
       propertyPath: playerGO
       value: 
       objectReference: {fileID: 785096029}
+    - target: {fileID: 931809709599651842, guid: 47fcf4ce93427f44b80aebc69b7fe00b, type: 3}
+      propertyPath: doorScript
+      value: 
+      objectReference: {fileID: 871348244}
     - target: {fileID: 3508345928168247101, guid: 47fcf4ce93427f44b80aebc69b7fe00b, type: 3}
       propertyPath: m_RootOrder
       value: 5
