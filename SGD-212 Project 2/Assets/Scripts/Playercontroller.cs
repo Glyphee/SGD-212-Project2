@@ -49,6 +49,8 @@ public class Playercontroller : MonoBehaviour
 
 
 
+
+
     private void Start()
     {
         isMoving = true;
@@ -125,6 +127,8 @@ public class Playercontroller : MonoBehaviour
         if (currSlime != -1 && slimesInParty != 0)
         {
             slimeList[currSlime].transform.position = slimeholdPoint.transform.position;
+            slimeList[currSlime].transform.rotation = playerGO.transform.rotation;
+            slimeList[currSlime].transform.rotation *= Quaternion.Euler(0, -110, 0);
             isHolding = true;
             slimeList[currSlime].GetComponent<SlimeController>().isHeld = true;
         }

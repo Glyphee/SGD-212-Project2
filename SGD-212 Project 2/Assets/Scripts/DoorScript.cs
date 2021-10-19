@@ -67,7 +67,7 @@ public class DoorScript : MonoBehaviour
             this.gameObject.SetActive(false);
         }
 
-        print("Boss count " + deadBosses);
+        //print("Boss count " + deadBosses);
     }
 
     void OnTriggerEnter(Collider other)
