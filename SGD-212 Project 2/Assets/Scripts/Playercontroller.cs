@@ -203,7 +203,7 @@ public class Playercontroller : MonoBehaviour
             healthImageScript.instance.playerHealth--;
             audioMan.Play("Hurt");
             playerAnimator.SetTrigger("damaged");
-            healthImageScript.instance.CheckHealth();
+            healthImageScript.instance.ChangeHealthImage();
             
         }       
         else if (other.gameObject.CompareTag("enemy2") || other.gameObject.CompareTag("enemy3"))
@@ -213,7 +213,7 @@ public class Playercontroller : MonoBehaviour
             healthImageScript.instance.playerHealth--;
             audioMan.Play("Hurt");
             playerAnimator.SetTrigger("damaged");
-            healthImageScript.instance.CheckHealth();
+            healthImageScript.instance.ChangeHealthImage();
             other.gameObject.GetComponent<AudioManager>().Play("Attack");
         }
         else if (other.gameObject.CompareTag("projectile"))
@@ -221,7 +221,7 @@ public class Playercontroller : MonoBehaviour
             // playerHealth--;
             healthImageScript.instance.playerHealth--;
             audioMan.Play("Hurt");
-            healthImageScript.instance.CheckHealth();
+            healthImageScript.instance.ChangeHealthImage();
         }
     }
 

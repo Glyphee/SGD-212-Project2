@@ -29,8 +29,7 @@ public class healthImageScript : MonoBehaviour
     void Start()
     {
         currentImage = healthImages[3];
-        Debug.Log("Current health image " + currentImage);
-        print("Starting Health: " + playerHealth);
+        // Debug.Log("Current health image " + currentImage);
     }
 
     void Update()
@@ -38,25 +37,22 @@ public class healthImageScript : MonoBehaviour
         CheckHealth();
     }
 
-    public void ChangeHealthImage(int temp)
+    public void ChangeHealthImage()
     {
         currentImage.gameObject.SetActive(false);
-        healthImages[temp].gameObject.SetActive(true);
-        currentImage = healthImages[temp];
+        healthImages[playerHealth].gameObject.SetActive(true);
+        currentImage = healthImages[playerHealth];
         //Debug.Log("Current health image " + currentImage);
     }
 
     public void CheckHealth()
     {
-        if(playerHealth > 0)
+        if(playerHealth <= 0)
         {
-            ChangeHealthImage(playerHealth);
-        }
-        else if(playerHealth <= 0)
-        {
-            ChangeHealthImage(0);
+            ChangeHealthImage();
             Debug.Log("Starting GameOver");
             StartCoroutine(playercontroller.GameOver());
+            this.gameObject.GetComponent<healthImageScript>().enabled = false;
         }
     }
 }
