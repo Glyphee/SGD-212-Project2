@@ -85,7 +85,11 @@ public class SlimeController : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider collider)
-    {        
+    {
+        if (collider.CompareTag("enemy1"))
+        {
+            audioMan.Play("Enemy1 Hit");
+        }
         
         if (collider.CompareTag("enemy2") && this.gameObject.CompareTag("spike") || collider.CompareTag("enemy3") && this.gameObject.CompareTag("spike") || collider.CompareTag("enemy1") && this.gameObject.CompareTag("spike"))
         {

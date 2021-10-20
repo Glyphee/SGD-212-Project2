@@ -7,12 +7,14 @@ public class Enemy2Controller : MonoBehaviour
 {
     [SerializeField] private GameObject playerGO;
     [SerializeField] private float detectRadius;
+    [SerializeField] GameObject deathDust;
     private int health = 2;
     NavMeshAgent nav;
     AudioManager audioMan;
     private GameObject thisTemp;
     public Animator enemyAnimator;
     public DoorScript doorScript;
+    bool playIdleSound = false;
 
     private void Start()
     {
@@ -31,7 +33,7 @@ public class Enemy2Controller : MonoBehaviour
 
     private IEnumerator SelfDeath()
     {
-        Debug.Log("Starting Zombie Death");
+        Debug.Log("Starting Zombie Death");       
         nav.speed = 0;
         if(thisTemp != null)
         {
@@ -41,11 +43,15 @@ public class Enemy2Controller : MonoBehaviour
             thisTemp.GetComponent<Collider>().enabled = true;
         }
         enemyAnimator.SetTrigger("Dead");
-        this.gameObject.GetComponent<Collider>().enabled = false;
-
+        this.gameObject.GetComponent<Collider>().enabled = false;       
+        nav.isStopped = true;
+        
         yield return new WaitForSeconds(2);
         doorScript.deadEnemies--;
         print("Enemies left: " + doorScript.deadEnemies);
+        GameObject dust = Instantiate(deathDust) as GameObject;
+        dust.transform.position = transform.position;
+        dust.transform.localScale = new Vector3(3, 3, 3);
         Destroy(this.gameObject);
     }
 
@@ -56,12 +62,18 @@ public class Enemy2Controller : MonoBehaviour
             while (Vector3.Distance(playerGO.transform.position, transform.position) < detectRadius)
             {
                 nav.destination = playerGO.transform.position;
+                if (playIdleSound)
+                {
+                    audioMan.Play("Idle");
+                    playIdleSound = false;
+                }
                 yield return null;
             }
             while (Vector3.Distance(playerGO.transform.position, transform.position) >= detectRadius)
             {
                 nav.destination = transform.position;
                 yield return null;
+                playIdleSound = true;
             }
         }
     }
@@ -72,7 +84,6 @@ public class Enemy2Controller : MonoBehaviour
         if (other.gameObject.tag == "absorb")
         {
             //Absorb slime damage
-            HurtSFX();
             health--;
             
         }
@@ -85,7 +96,6 @@ public class Enemy2Controller : MonoBehaviour
         else if (other.gameObject.tag == "crush")
         {
             //Crush slime damage
-            HurtSFX();
             health = 0;
         }
         else if(other.gameObject.tag == "Player")
@@ -102,16 +112,27 @@ public class Enemy2Controller : MonoBehaviour
         nav.speed = 2;
     }
 
-    void HurtSFX()
+    private void OnCollisionEnter(Collision collision)
     {
-        int randSound = Random.Range(0, 2); //random sfx for getting hit by slimes
-        if (randSound == 0)
+        if (collision.gameObject.tag == "absorb" || collision.gameObject.tag == "spike" || collision.gameObject.tag == "crush")
         {
-            audioMan.Play("Hurt 1");
-        }
-        else
-        {
-            audioMan.Play("Hurt 2");
+            if(health > 0)
+            {
+                int randSound = Random.Range(0, 2); //random sfx for getting hit by slimes
+                if (randSound == 0)
+                {
+                    audioMan.Play("Hurt 1");
+                }
+                else
+                {
+                    audioMan.Play("Hurt 2");
+                }
+            }
+            else
+            {
+                audioMan.Play("Death");
+            }
         }
     }
+
 }

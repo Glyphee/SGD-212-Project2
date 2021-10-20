@@ -686,7 +686,7 @@ MonoBehaviour:
     volumeVariance: 0.25
     pitch: 1
     pitchVariance: 0.5
-    spatialBlend: 1
+    spatialBlend: 0.3
     loop: 0
     playOnAwake: 0
     mixerGroup: {fileID: 0}
@@ -697,29 +697,40 @@ MonoBehaviour:
     volumeVariance: 0.25
     pitch: 1
     pitchVariance: 0.5
-    spatialBlend: 1
+    spatialBlend: 0.3
     loop: 0
     playOnAwake: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
-  - name: Hurt
+  - name: Hurt 1
     clip: {fileID: 8300000, guid: fad462aef7d4e2848bec76e83bc82d3f, type: 3}
-    volume: 1
+    volume: 0.5
     volumeVariance: 0.25
     pitch: 1
     pitchVariance: 0.5
-    spatialBlend: 1
+    spatialBlend: 0.3
     loop: 0
     playOnAwake: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
-  - name: Hurt2
+  - name: Hurt 2
     clip: {fileID: 8300000, guid: b99660258aa78c64ea87ca9a54c4c60e, type: 3}
-    volume: 1
+    volume: 0.5
     volumeVariance: 0.25
     pitch: 1
     pitchVariance: 0.5
-    spatialBlend: 1
+    spatialBlend: 0.3
+    loop: 0
+    playOnAwake: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Death
+    clip: {fileID: 8300000, guid: 58f3ef2d7e243be4b960548382d9940a, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0.1
+    spatialBlend: 0.3
     loop: 0
     playOnAwake: 0
     mixerGroup: {fileID: 0}
@@ -739,7 +750,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerGO: {fileID: 0}
   detectRadius: 5
+  deathDust: {fileID: 6945023616769639881, guid: 1ed349931e0079c498da95c274242a63, type: 3}
   enemyAnimator: {fileID: 3597283703649746295}
+  doorScript: {fileID: 0}
 --- !u!1 &3511508236751813807
 GameObject:
   m_ObjectHideFlags: 0

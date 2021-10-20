@@ -1333,8 +1333,10 @@ MonoBehaviour:
   projectileGO: {fileID: 5804502450447587531, guid: e61dec74384cdab4da1966c0f39b7f26, type: 3}
   detectRadius: 7
   throwPower: 1
+  deathDust: {fileID: 6945023616769639881, guid: 1ed349931e0079c498da95c274242a63, type: 3}
   health: 1
   enemyAnimator: {fileID: 3015001087571790406}
+  doorScript: {fileID: 0}
 --- !u!195 &3426966532650657723
 NavMeshAgent:
   m_ObjectHideFlags: 0

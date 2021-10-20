@@ -9,6 +9,7 @@ public class Enemy1Controller : MonoBehaviour
     [SerializeField] private GameObject projectileGO;
     [SerializeField] private float detectRadius;
     [SerializeField] private int throwPower;
+    [SerializeField] GameObject deathDust;
     public int health;
     NavMeshAgent nav;
     AudioManager audioMan;
@@ -40,6 +41,8 @@ public class Enemy1Controller : MonoBehaviour
         }
         doorScript.deadEnemies--;
         print("Enemies left: " + doorScript.deadEnemies);
+        GameObject dust = Instantiate(deathDust) as GameObject;
+        dust.transform.position = transform.position;
         Destroy(this.gameObject);
     }
 
@@ -72,6 +75,7 @@ public class Enemy1Controller : MonoBehaviour
                 GameObject projectile;
                 projectile = Instantiate(projectileGO, transform.position + new Vector3(0, 0.5f, 0), transform.rotation);
                 projectile.GetComponent<Rigidbody>().AddForce(transform.forward * 500 * throwPower);
+                audioMan.Play("Attack");
                 yield return new WaitForSeconds(3f);
             }
             while (Vector3.Distance(playerGO.transform.position, transform.position) >= detectRadius)

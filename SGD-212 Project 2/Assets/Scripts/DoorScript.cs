@@ -45,21 +45,21 @@ public class DoorScript : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.P) && isPresent && hasKey && this.gameObject.tag == "door") // checks to see if player presses the key to interact with objects, is present in the collision range, and has key
+        if(Input.GetKeyDown(KeyCode.E) && isPresent && hasKey && this.gameObject.tag == "door") // checks to see if player presses the key to interact with objects, is present in the collision range, and has key
         {           
             isPresent = false;
             MessageScript.J.DismissPrompt();
             audioMan.Play("Open");
             this.gameObject.SetActive(false);
         }
-        else if(Input.GetKeyDown(KeyCode.P) && isPresent && hasKey && deadEnemies <= 0 && this.gameObject.tag == "FinalDoor") // finalDoor
+        else if(Input.GetKeyDown(KeyCode.E) && isPresent && hasKey && deadEnemies <= 0 && this.gameObject.tag == "FinalDoor") // finalDoor
         {
             isPresent = false;
             MessageScript.J.DismissPrompt();
             audioMan.Play("Open");
             this.gameObject.SetActive(false);
         }
-        else if(Input.GetKeyDown(KeyCode.P) && isPresent && deadBosses == 3 && this.gameObject.tag == "castleDoor") // casleDoor
+        else if(Input.GetKeyDown(KeyCode.E) && isPresent && deadBosses == 3 && this.gameObject.tag == "castleDoor") // casleDoor
         {
             isPresent = false;
             MessageScript.J.DismissPrompt();

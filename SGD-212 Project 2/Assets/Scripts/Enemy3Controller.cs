@@ -7,6 +7,7 @@ public class Enemy3Controller : MonoBehaviour
 {
     [SerializeField] private GameObject playerGO;
     [SerializeField] private float detectRadius;
+    [SerializeField] GameObject deathDust;
     private int health = 3;
     NavMeshAgent nav;
     AudioManager audioMan;
@@ -44,6 +45,9 @@ public class Enemy3Controller : MonoBehaviour
 
         yield return new WaitForSeconds(2);
         DoorScript.D.deadBosses++;
+        GameObject dust = Instantiate(deathDust) as GameObject;
+        dust.transform.position = transform.position;
+        dust.transform.localScale = new Vector3(3, 3, 3);
         Destroy(this.gameObject);
     }
 
@@ -66,30 +70,14 @@ public class Enemy3Controller : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        int randSound = Random.Range(0, 2); //random sfx for getting hit by slimes
+        
         if (other.gameObject.tag == "crush")
         {
-            //Crush slime damage // needs audio
-            // if (randSound == 0)
-            // {
-            //     audioMan.Play("Hurt 1");
-            // }
-            // else
-            // {
-            //     audioMan.Play("Hurt 2");
-            // }
             health = 0;
         }
         else if(other.gameObject.tag == "absorb")
         {
-            if (randSound == 0)
-            {
-                audioMan.Play("Hurt 1");
-            }
-            else
-            {
-                audioMan.Play("Hurt 2");
-            }
+            
             health--;
         }
         else if(other.gameObject.tag == "spike")
@@ -104,10 +92,26 @@ public class Enemy3Controller : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "absorb" || collision.gameObject.tag == "spike" || collision.gameObject.tag == "crush")
+        {
+            if (health > 0)
+            {
+                audioMan.Play("Hurt");
+            }
+            else
+            {
+                audioMan.Play("Death");
+            }
+        }
+    }
+
     private IEnumerator IsAttacking()
     {
+        audioMan.Play("Attack");
         nav.speed = 0;
-        enemyAnimator.SetTrigger("Strike_1");
+        enemyAnimator.SetTrigger("Strike_1");       
         yield return new WaitForSeconds(1);
         nav.speed = 2;
     }
