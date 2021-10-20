@@ -25,15 +25,10 @@ public class Enemy1Controller : MonoBehaviour
         StartCoroutine(ShootPlayer());
     }
 
-    private void Update()
-    {
-
-    }
-
     private void SelfDeath()
     {
         //Debug.Log("Starting Langsat Death");
-        if(thisTemp != null)
+        if(thisTemp != null) // detaches spike slime from enemy
         {
             thisTemp.GetComponent<SlimeController>().currEnemy = null;
             thisTemp.GetComponent<SlimeController>().isAttacking = false;
@@ -94,9 +89,6 @@ public class Enemy1Controller : MonoBehaviour
         int randSound = Random.Range(0, 2); //random sfx for getting hit by slimes
         if (other.gameObject.tag == "absorb" || other.gameObject.tag == "crush")
         {
-            // Debug.Log("Langsat hit by AbsorbSlime");
-
-            //Absorb slime damage
             if (randSound == 0)
             {
                 audioMan.Play("Hurt 1");
@@ -108,23 +100,23 @@ public class Enemy1Controller : MonoBehaviour
 
             SelfDeath();
         }
-        else if(other.gameObject.tag == "spike")
+        else if(other.gameObject.tag == "spike") // allows the spike slime to latch onto the Langsat
         {
             // Debug.Log("Langsat hit by SpikebSlime");
             thisTemp = other.gameObject;
             this.gameObject.GetComponent<NavMeshAgent>().speed = 0.5f;
         }
-        else if(other.gameObject.tag == "Player")
-        {
-            StartCoroutine(IsAttacking());
-        }
+        // else if(other.gameObject.tag == "Player")
+        // {
+        //     StartCoroutine(IsAttacking());
+        // }
     }
 
-    private IEnumerator IsAttacking()
-    {
-        nav.speed = 0;
-        enemyAnimator.SetTrigger("attack");
-        yield return new WaitForSeconds(1);
-        nav.speed = 2;
-    }
+    // private IEnumerator IsAttacking()
+    // {
+    //     nav.speed = 0;
+    //     enemyAnimator.SetTrigger("attack");
+    //     yield return new WaitForSeconds(1);
+    //     nav.speed = 2;
+    // }
 }

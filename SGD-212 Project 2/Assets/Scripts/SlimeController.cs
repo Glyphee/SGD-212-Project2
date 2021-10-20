@@ -80,15 +80,21 @@ public class SlimeController : MonoBehaviour
         {
             nav.destination = playerGO.transform.position;
 
-            SlimeAnim.SetTrigger("Walk");
+            SlimeAnim.SetBool("IsWalking", true);
+        }
+        else
+        {
+            SlimeAnim.SetBool("IsWalking", false);
         }
     }
 
     private void OnTriggerEnter(Collider collider)
     {
-        if (collider.CompareTag("enemy1"))
+        if (collider.CompareTag("enemy1") || collider.CompareTag("enemy2") || collider.CompareTag("enemy3"))
         {
             audioMan.Play("Enemy1 Hit");
+            // isAttacking = true;
+            SlimeAnim.SetTrigger("Attack");
         }
         
         if (collider.CompareTag("enemy2") && this.gameObject.CompareTag("spike") || collider.CompareTag("enemy3") && this.gameObject.CompareTag("spike") || collider.CompareTag("enemy1") && this.gameObject.CompareTag("spike"))

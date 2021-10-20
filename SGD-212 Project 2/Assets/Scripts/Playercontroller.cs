@@ -5,6 +5,14 @@ using UnityEngine.AI;
 
 public class Playercontroller : MonoBehaviour
 {
+    // Scripts
+    public static Playercontroller P;
+    public MessageScript MessageScript;
+    AudioManager audioMan;
+    public SlimeController slimeController;
+    public DoorScript DoorScript;
+
+    // player-slime variables
     [SerializeField] public List<GameObject> slimeList = new List<GameObject>();
     [SerializeField] public GameObject playerGO;
     //public GameObject playerParent;
@@ -14,17 +22,12 @@ public class Playercontroller : MonoBehaviour
     [SerializeField] private float throwPower = 1f;
     // [SerializeField] private int playerHealth = 3;
 
-    public static Playercontroller P;
-
     private Vector3 mousePos;
     private Vector3 lookDirection;
     private float lookAngle;
     public int slimesInParty = 0; //amount of slimes in your party
     public bool isHolding = false; //if the player is holding a slime
 
-    public MessageScript MessageScript;
-    AudioManager audioMan;
-    // public Animator SlimeAnim;
     float timer;
 
     float nextActionTime = 0.0f; //timer
@@ -36,8 +39,7 @@ public class Playercontroller : MonoBehaviour
     public UnityEngine.CharacterController characterController;
     [SerializeField] private float speed = 5.0f;
     private Vector3 moveDirection = Vector3.zero;
-    public SlimeController slimeController;
-    public DoorScript DoorScript;
+    
 
     //Gravity related things
     [Header("Gravity")]
@@ -45,12 +47,8 @@ public class Playercontroller : MonoBehaviour
     [SerializeField] float constantGravity;
     [SerializeField] float maxGravity;
     float currentGravity;
-
     Vector3 gravityDirection = Vector3.down;
     Vector3 gravityMovement;
-
-
-
 
 
     private void Start()

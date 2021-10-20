@@ -721,7 +721,8 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Langsat:
 
-    Runs towards its opponents and tries to tackle them!'
+    Throws yellow fruit projectiles at its opponents to damage
+    them!'
 --- !u!222 &197410193
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1182,7 +1183,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 16
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -1717,7 +1718,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 16
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -1796,7 +1797,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 16
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -3126,19 +3127,19 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Arissa Guard - Level design, minor programming, UI
+  m_Text: 'Arissa Guard - Level design, programming, UI
 
 
-    Noah Posey -
-    Programming (Player, enemy/slime AI, game functions)
+    Noah Posey - Programming
+    (Player, enemy/slime AI, game functions)
 
 
-    Josiah Holcom - Arranging
-    audio, programming, UI
+    Josiah Holcom - Arranging audio,
+    programming, UI
 
 
-    Samantha Burke - 3D slime models, slime animations,
-    background art'
+    Samantha Burke - 3D slime models, slime animations, background
+    art'
 --- !u!222 &887367156
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3904,15 +3905,19 @@ MonoBehaviour:
 
 
     Left-click
-    to throw your slime companions towards your enemies!
+    to throw your slime companions to attack your enemies!
 
 
-    Press E to open doors,
-    though some need keys.
+    Press E to open
+    doors, though some need a key.
 
 
-    You can only take 3 hits, so be careful otherwise
-    you''ll find yourself back at the beginning!'
+    Press ESC to bring up the pause menu.
+
+
+    You
+    can only take 3 hits, so be careful otherwise you''ll find yourself back at the
+    beginning!'
 --- !u!222 &981754119
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4652,7 +4657,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 16
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
