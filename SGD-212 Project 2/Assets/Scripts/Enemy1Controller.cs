@@ -41,6 +41,10 @@ public class Enemy1Controller : MonoBehaviour
         }
         doorScript.deadEnemies--;
         print("Enemies left: " + doorScript.deadEnemies);
+        if(doorScript.deadEnemies == 0)
+        {
+            MessageScript.J.StartMessage("That seems to be the last of them! Let's go see if the door is unjammed now.");
+        }
         GameObject dust = Instantiate(deathDust) as GameObject;
         dust.transform.position = transform.position;
         Destroy(this.gameObject);

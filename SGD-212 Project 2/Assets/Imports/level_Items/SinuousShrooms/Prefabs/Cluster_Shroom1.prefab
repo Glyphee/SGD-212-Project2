@@ -1569,6 +1569,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 482002}
+  - component: {fileID: 4914412660552750022}
   m_Layer: 0
   m_Name: Cluster_Shroom1
   m_TagString: Untagged
@@ -1595,6 +1596,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4914412660552750022
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175578}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8546427, y: 1.9216844, z: 1.8961045}
+  m_Center: {x: 0.024537385, y: 0.8062311, z: 0.14948481}
 --- !u!1 &176548
 GameObject:
   m_ObjectHideFlags: 0

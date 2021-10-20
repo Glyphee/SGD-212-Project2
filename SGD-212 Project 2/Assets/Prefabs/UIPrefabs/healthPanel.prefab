@@ -161,7 +161,7 @@ GameObject:
   - component: {fileID: 5794164252314153434}
   - component: {fileID: 5794164252314153428}
   - component: {fileID: 5794164252314153429}
-  - component: {fileID: -3130692562468077288}
+  - component: {fileID: 8642108839694449486}
   m_Layer: 5
   m_Name: healthPanel
   m_TagString: Untagged
@@ -230,7 +230,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &-3130692562468077288
+--- !u!114 &8642108839694449486
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -248,7 +248,6 @@ MonoBehaviour:
   - {fileID: 5794164252015259999}
   - {fileID: 5794164252893837879}
   playerHealth: 3
-  playercontroller: {fileID: 0}
 --- !u!1 &5794164252361455683
 GameObject:
   m_ObjectHideFlags: 0

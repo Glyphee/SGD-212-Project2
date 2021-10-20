@@ -48,6 +48,10 @@ public class Enemy2Controller : MonoBehaviour
         
         yield return new WaitForSeconds(2);
         doorScript.deadEnemies--;
+        if(doorScript.deadEnemies == 0)
+        {
+            MessageScript.J.StartMessage("That seems to be the last of them! Let's go see if the door is unjammed now.");
+        }
         print("Enemies left: " + doorScript.deadEnemies);
         GameObject dust = Instantiate(deathDust) as GameObject;
         dust.transform.position = transform.position;

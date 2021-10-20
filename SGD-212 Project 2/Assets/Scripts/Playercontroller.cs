@@ -14,6 +14,8 @@ public class Playercontroller : MonoBehaviour
     [SerializeField] private float throwPower = 1f;
     // [SerializeField] private int playerHealth = 3;
 
+    public static Playercontroller P;
+
     private Vector3 mousePos;
     private Vector3 lookDirection;
     private float lookAngle;
@@ -67,6 +69,8 @@ public class Playercontroller : MonoBehaviour
         {
             //print("No volume setting detected, setting to default");
         }
+
+        P = this;
     }
 
     void Update()
@@ -229,6 +233,7 @@ public class Playercontroller : MonoBehaviour
     {
         isMoving = false;
         playerAnimator.SetBool("IsDead", true);
+        MessageScript.StartMessage("Nooo...");
         yield return new WaitForSeconds(2);
 
         StartCoroutine(levelTransport_Script.J.RegularTransit("GameOver"));

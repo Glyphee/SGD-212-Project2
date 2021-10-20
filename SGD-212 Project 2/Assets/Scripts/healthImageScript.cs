@@ -11,24 +11,12 @@ public class healthImageScript : MonoBehaviour
     private Image currentImage;
 
     public int playerHealth = 3;
-    public Playercontroller playercontroller;
-
-    void Awake()
-    {
-        if(instance == null)
-        {
-            DontDestroyOnLoad(gameObject);
-            instance = this;
-        }
-        else if(instance != null)
-        {
-            Destroy(gameObject);
-        }
-    }
 
     void Start()
     {
-        currentImage = healthImages[3];
+        instance = this;
+        
+        currentImage = healthImages[playerHealth];
         // Debug.Log("Current health image " + currentImage);
     }
 
@@ -51,7 +39,7 @@ public class healthImageScript : MonoBehaviour
         {
             ChangeHealthImage();
             Debug.Log("Starting GameOver");
-            StartCoroutine(playercontroller.GameOver());
+            StartCoroutine(Playercontroller.P.GameOver());
             this.gameObject.GetComponent<healthImageScript>().enabled = false;
         }
     }
