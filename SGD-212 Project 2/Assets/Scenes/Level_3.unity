@@ -1033,6 +1033,10 @@ PrefabInstance:
       propertyPath: playerGO
       value: 
       objectReference: {fileID: 785096029}
+    - target: {fileID: 6367397531574971462, guid: 9af7eda66260fe347be517e5f57dbcd2, type: 3}
+      propertyPath: doorScript
+      value: 
+      objectReference: {fileID: 1827065914}
     - target: {fileID: 7791083421023565138, guid: 9af7eda66260fe347be517e5f57dbcd2, type: 3}
       propertyPath: m_Name
       value: SkeletonEnemy (1)
@@ -1352,7 +1356,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3192436010658034064, guid: 32cd6146f723aca499931cbc1c4ece1a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.746
+      value: -1.696
       objectReference: {fileID: 0}
     - target: {fileID: 3192436010658034064, guid: 32cd6146f723aca499931cbc1c4ece1a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1360,7 +1364,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3192436010658034064, guid: 32cd6146f723aca499931cbc1c4ece1a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.963
+      value: 5.967
       objectReference: {fileID: 0}
     - target: {fileID: 3192436010658034064, guid: 32cd6146f723aca499931cbc1c4ece1a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1588,7 +1592,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3177674042874574829, guid: f7f124bac4525704995c3053eb574816, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.9148097
+      value: 6.26
       objectReference: {fileID: 0}
     - target: {fileID: 3177674042874574829, guid: f7f124bac4525704995c3053eb574816, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1596,7 +1600,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3177674042874574829, guid: f7f124bac4525704995c3053eb574816, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.798105
+      value: -10.52
       objectReference: {fileID: 0}
     - target: {fileID: 3177674042874574829, guid: f7f124bac4525704995c3053eb574816, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2173,6 +2177,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 504576112304678669, guid: 02c774442065ecb428da9e122b90f213, type: 3}
+      propertyPath: deadBosses
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 504576112304678669, guid: 02c774442065ecb428da9e122b90f213, type: 3}
       propertyPath: deadEnemies
       value: 14
       objectReference: {fileID: 0}
@@ -2682,7 +2690,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1490887128366784676, guid: 6efa2668371982c4a9a6e91f53a279af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.197
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1490887128366784676, guid: 6efa2668371982c4a9a6e91f53a279af, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2690,7 +2698,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1490887128366784676, guid: 6efa2668371982c4a9a6e91f53a279af, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.585
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1490887128366784676, guid: 6efa2668371982c4a9a6e91f53a279af, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2804,6 +2812,10 @@ PrefabInstance:
       propertyPath: playerGO
       value: 
       objectReference: {fileID: 785096029}
+    - target: {fileID: 6367397531574971462, guid: 9af7eda66260fe347be517e5f57dbcd2, type: 3}
+      propertyPath: doorScript
+      value: 
+      objectReference: {fileID: 1827065914}
     - target: {fileID: 7791083421023565138, guid: 9af7eda66260fe347be517e5f57dbcd2, type: 3}
       propertyPath: m_Name
       value: SkeletonEnemy (2)
@@ -3000,7 +3012,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasKey: 1
-  deadBosses: 0
+  deadBosses: 3
   deadEnemies: 0
   stringArray: []
   MessageScript: {fileID: 468341325}
@@ -3616,6 +3628,10 @@ PrefabInstance:
       propertyPath: playerGO
       value: 
       objectReference: {fileID: 785096029}
+    - target: {fileID: 6367397531574971462, guid: 9af7eda66260fe347be517e5f57dbcd2, type: 3}
+      propertyPath: doorScript
+      value: 
+      objectReference: {fileID: 1827065914}
     - target: {fileID: 7791083421023565138, guid: 9af7eda66260fe347be517e5f57dbcd2, type: 3}
       propertyPath: m_Name
       value: SkeletonEnemy

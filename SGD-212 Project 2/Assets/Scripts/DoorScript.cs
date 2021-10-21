@@ -23,18 +23,18 @@ public class DoorScript : MonoBehaviour
         {
             doorBool = true;
             finalDoorBool = false;
-            deadBosses = 3;
+            deadBosses = 0;
         }
         else if(this.gameObject.tag == "FinalDoor")
         {
             finalDoorBool = true;
             doorBool = false;
-            deadBosses = 3;
+            deadBosses = 0;
             print("Enemy count " + deadEnemies);
         }
         else if(this.gameObject.tag == "castleDoor")
         {
-            deadBosses = 0;
+            deadBosses = 3;
             print("Boss count " + deadBosses);
         }
         
@@ -59,7 +59,7 @@ public class DoorScript : MonoBehaviour
             audioMan.Play("Open");
             this.gameObject.SetActive(false);
         }
-        else if(Input.GetKeyDown(KeyCode.E) && isPresent && deadBosses == 3 && this.gameObject.tag == "castleDoor") // casleDoor
+        else if(Input.GetKeyDown(KeyCode.E) && isPresent && deadBosses == 0 && this.gameObject.tag == "castleDoor") // casleDoor
         {
             isPresent = false;
             MessageScript.J.DismissPrompt();
@@ -86,11 +86,11 @@ public class DoorScript : MonoBehaviour
             {
                 MessageScript.J.StartMessage("Seems like it's still jammed a little. Must have not taken care of all the enemies on this floor.");
             }
-            else if(deadBosses != 3)
+            else if(deadBosses != 0 && hasKey)
             {
                 MessageScript.StartMessage("The door is a bit stuck. Might want to defeat the skeletons around here first.");
             }
-            else if(doorBool || finalDoorBool && hasKey && deadEnemies <= 0 || deadBosses == 3) // turns on promptPanel when player enters
+            else if(doorBool || finalDoorBool && hasKey && deadEnemies <= 0 || deadBosses == 0 && hasKey) // turns on promptPanel when player enters
             {
                 MessageScript.J.SummonPrompt();
             }

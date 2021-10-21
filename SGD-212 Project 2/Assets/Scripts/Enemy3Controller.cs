@@ -13,6 +13,7 @@ public class Enemy3Controller : MonoBehaviour
     AudioManager audioMan;
     private GameObject thisTemp;
     public Animator enemyAnimator;
+    public DoorScript doorScript;
 
     private void Start()
     {
@@ -44,10 +45,11 @@ public class Enemy3Controller : MonoBehaviour
         this.gameObject.GetComponent<Collider>().enabled = false;
 
         yield return new WaitForSeconds(2);
-        DoorScript.D.deadBosses++;
         GameObject dust = Instantiate(deathDust) as GameObject;
         dust.transform.position = transform.position;
         dust.transform.localScale = new Vector3(3, 3, 3);
+        DoorScript.D.deadBosses--;
+        Debug.Log("Dead Bosses: " + DoorScript.D.deadBosses + "/3");
         Destroy(this.gameObject);
     }
 

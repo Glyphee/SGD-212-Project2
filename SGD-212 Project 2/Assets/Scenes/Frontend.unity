@@ -3897,27 +3897,26 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Move around with WASD and look around with the mouse! Esc to pause.
+  m_Text: 'Move around with WASD and look around with the mouse!
 
 
-    Press
-    space to switch between which of your slime friends you hold.
+    Press space
+    to switch between which of your slime friends you hold.
 
 
-    Left-click
-    to throw your slime companions to attack your enemies!
+    Left-click to throw
+    your slime companions to attack your enemies!
 
 
-    Press E to open
-    doors, though some need a key.
+    Press E to open doors, though
+    some need a key.
 
 
     Press ESC to bring up the pause menu.
 
 
-    You
-    can only take 3 hits, so be careful otherwise you''ll find yourself back at the
-    beginning!'
+    You can only
+    take 3 hits, so be careful otherwise you''ll find yourself back at the beginning!'
 --- !u!222 &981754119
 CanvasRenderer:
   m_ObjectHideFlags: 0
